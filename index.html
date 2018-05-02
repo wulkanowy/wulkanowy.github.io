@@ -47,6 +47,9 @@
             text-align: center;
         }
         .button {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px 0;
             background: rgb(112, 50, 50);
             border-radius: 3px;
             color: #eee;
@@ -55,6 +58,9 @@
             padding: 15px 25px;
             text-decoration: none;
             transition: background 0.3s;
+        }
+        .button--nightly {
+            background: #333;
         }
         .button:hover, .button:focus, .button:active {
             background: rgb(90, 45, 45);
@@ -81,12 +87,25 @@
         </header>
         <main id="main" class="main">
             <a
-                title="Pobierz wersję rozwojową"
+                id="beta-button"
+                title="Pobierz wersję beta"
+                href="https://github.com/wulkanowy/wulkanowy/releases"
+                class="button button--beta"
+                >Pobierz wersję beta<br>
+                <span id="beta-version">0.0.0</span>
+            </a>
+            <a
+                title="Pobierz wersję nightly"
                 href="https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk"
-                class="button">Pobierz</a>
+                class="button button--nightly"
+                >Pobierz wersję nightly<br>
+                <span id="alfa-version">000</span>
+            </a>
+
         </main>
         <footer id="footer" class="footer">
             <a
+                id="alfa-button"
                 title="Zobacz repozytorium na Githubie"
                 href="https://github.com/wulkanowy/wulkanowy"
                 class="github">
@@ -94,5 +113,28 @@
             </a>
         </footer>
     </section>
+    <script>
+        const disableClick = e => e.preventDefault();
+
+        const betaButton = document.querySelector("#beta-button");
+        betaButton.addEventListener("click", disableClick);
+        fetch("https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest")
+            .then(res => { return res.json() })
+            .then(json => {
+                betaButton.removeEventListener("click", disableClick);
+                betaButton.href = json.assets[0].browser_download_url;
+                document.querySelector("#beta-version").innerHTML = json.name;
+            });
+
+        const alfaButton = document.querySelector("#alfa-button")
+        alfaButton.addEventListener("click", disableClick);
+        fetch("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info")
+            .then(res => { return res.json() })
+            .then(json => {
+                alfaButton.removeEventListener("click", disableClick);
+                alfaButton.href = json.url;
+                document.querySelector("#alfa-version").innerHTML = json.latestVersionCode;
+            });
+    </script>
 </body>
 </html>
