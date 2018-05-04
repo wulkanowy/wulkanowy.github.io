@@ -27,7 +27,7 @@
                 href="https://github.com/wulkanowy/wulkanowy/releases"
                 class="button button--beta"
                 >Pobierz wersję beta<br>
-                <span id="beta-version">0.0.0</span>
+                <span id="beta-version">v0.0.0</span>
             </a>
             <a
                 id="alfa-button"
@@ -35,7 +35,7 @@
                 href="https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk"
                 class="button button--nightly"
                 >Pobierz wersję nightly<br>
-                <span id="alfa-version">000</span>
+                <span id="alfa-version">v000</span>
             </a>
 
         </main>
@@ -62,7 +62,7 @@
             if(betaRes.status === 200) {
                 var json = JSON.parse(betaRes.responseText);
                 betaButton.href = json.assets[0].browser_download_url;
-                betaVersion.innerHTML = json.name;
+                betaVersion.innerHTML = "v" + json.name;
             } else {
                 betaVersion.innerHTML = 'wersja nieznana';
             }
@@ -81,7 +81,7 @@
             if(alfaRes.status === 200) {
                 var json = JSON.parse(alfaRes.responseText);
                 alfaButton.href = json.url;
-                alfaVersion.innerHTML = json.latestVersionCode;
+                alfaVersion.innerHTML = "v" + json.latestVersionCode;
             } else {
                 alfaVersion.innerHTML = 'wersja nieznana';
             }
