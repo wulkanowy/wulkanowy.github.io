@@ -23,20 +23,20 @@
         </header>
         <main id="main" class="main">
             <a
-                id="beta-button"
-                title="Pobierz wersję beta"
+                id="alfa-button"
+                title="Pobierz wersję alfa"
                 href="https://github.com/wulkanowy/wulkanowy/releases"
-                class="button button--beta"
-                >Pobierz wersję beta<br>
-                <span id="beta-version">v0.0.0</span>
+                class="button button--alfa"
+                >Pobierz wersję alfa<br>
+                <span id="alfa-version">v0.0.0</span>
             </a>
             <a
-                id="alfa-button"
+                id="nightly-button"
                 title="Pobierz wersję nightly"
                 href="https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk"
                 class="button button--nightly"
                 >Pobierz wersję nightly<br>
-                <span id="alfa-version">v000</span>
+                <span id="nightly-version">v000</span>
             </a>
 
         </main>
@@ -76,7 +76,7 @@
             res.send(null);
         };
 
-        addButtonInfo("https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest", "#beta-button", "#beta-version",
+        addButtonInfo("https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest", "#alfa-button", "#alfa-version",
             function(button, version, res) {
                 var json = JSON.parse(res.responseText);
                 button.href = json.assets[0].browser_download_url;
@@ -85,7 +85,7 @@
         );
 
         var nightly = function() {
-            addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info", "#alfa-button", "#alfa-version",
+            addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info", "#nightly-button", "#nightly-version",
                 function(button, version, res) {
                     var json = JSON.parse(res.responseText);
                     button.href = json.url;
