@@ -58,12 +58,18 @@ body {
     transition: background 0.3s;
 }
 
+.button:hover, .button:focus, .button:active {
+    background: rgb(90, 45, 45);
+}
+
 .button--nightly {
     background: #333;
 }
 
-.button:hover, .button:focus, .button:active {
-    background: rgb(90, 45, 45);
+.button--nightly:hover,
+.button--nightly:focus,
+.button--nightly:active {
+    background: #222;
 }
 
 .github {
