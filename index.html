@@ -84,13 +84,19 @@
             }
         );
 
-        addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info", "#alfa-button", "#alfa-version",
-            function(button, version, res) {
-                var json = JSON.parse(res.responseText);
-                button.href = json.url;
-                version.innerHTML = "v" + json.latestVersionCode;
-            }
-        );
+        var nightly = function() {
+            addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info", "#alfa-button", "#alfa-version",
+                function(button, version, res) {
+                    var json = JSON.parse(res.responseText);
+                    button.href = json.url;
+                    version.innerHTML = "v" + json.latestVersionCode;
+                }
+            )
+        };
+
+        nightly();
+
+        setInterval(nightly, 60 * 1000);
     </script>
 </body>
 </html>
