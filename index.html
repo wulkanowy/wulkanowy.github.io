@@ -57,43 +57,40 @@
     <script>
         var disableClick = function(e) {e.preventDefault()};
 
-        var betaButton = document.querySelector("#beta-button");
-        betaButton.addEventListener("click", disableClick);
-        var betaVersion = document.querySelector("#beta-version");
-        betaVersion.innerHTML = "Ładowanie…";
+        var addButtonInfo = function(url, button, version, cb) {
+            var buttonElement = document.querySelector(button);
+            buttonElement.addEventListener("click", disableClick);
+            var versionElement = document.querySelector(version);
+            versionElement.innerHTML = "Ładowanie…";
 
-        var betaRes = new XMLHttpRequest();
-        betaRes.open('GET', 'https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest', true);
-        betaRes.onloadend = function () {
-            if(betaRes.status === 200) {
-                var json = JSON.parse(betaRes.responseText);
-                betaButton.href = json.assets[0].browser_download_url;
-                betaVersion.innerHTML = "v" + json.name;
-            } else {
-                betaVersion.innerHTML = 'wersja nieznana';
-            }
-            betaButton.removeEventListener("click", disableClick);
+            var res = new XMLHttpRequest();
+            res.open('GET', url, true);
+            res.onloadend = function () {
+                if(res.status === 200) {
+                    cb(buttonElement, versionElement, res);
+                } else {
+                    versionElement.innerHTML = 'wersja nieznana';
+                }
+                buttonElement.removeEventListener("click", disableClick);
+            };
+            res.send(null);
         };
-        betaRes.send(null);
 
-        var alfaButton = document.querySelector("#alfa-button");
-        alfaButton.addEventListener("click", disableClick);
-        var alfaVersion = document.querySelector("#alfa-version");
-        alfaVersion.innerHTML = "Ładowanie…";
-
-        var alfaRes = new XMLHttpRequest();
-        alfaRes.open('GET', 'https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info', true);
-        alfaRes.onloadend = function () {
-            if(alfaRes.status === 200) {
-                var json = JSON.parse(alfaRes.responseText);
-                alfaButton.href = json.url;
-                alfaVersion.innerHTML = "v" + json.latestVersionCode;
-            } else {
-                alfaVersion.innerHTML = 'wersja nieznana';
+        addButtonInfo("https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest", "#beta-button", "#beta-version",
+            function(button, version, res) {
+                var json = JSON.parse(res.responseText);
+                button.href = json.assets[0].browser_download_url;
+                version.innerHTML = "v" + json.name;
             }
-            alfaButton.removeEventListener("click", disableClick);
-        };
-        alfaRes.send(null);
+        );
+
+        addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info", "#alfa-button", "#alfa-version",
+            function(button, version, res) {
+                var json = JSON.parse(res.responseText);
+                button.href = json.url;
+                version.innerHTML = "v" + json.latestVersionCode;
+            }
+        );
     </script>
 </body>
 </html>
