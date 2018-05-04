@@ -1,0 +1,75 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body, .wrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background: url(wallpaper.jpg) no-repeat center / cover fixed;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    align-items: center;
+    background: -moz-radial-gradient(center center, circle cover, transparent, #000);
+    background: -ms-radial-gradient(center center, circle cover, transparent, #000);
+    background: -webkit-radial-gradient(center center, circle cover, transparent, #000);
+    background: radial-gradient(center center, circle cover, transparent, #000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header__title {
+    color: #fff;
+    font-size: 60px;
+    font-size: calc(50px + 16 * (100vw - 320px) / (960 - 320));
+    font-weight: normal;
+    text-align: center;
+    text-shadow: #000 5px 5px 5px;
+}
+
+.main {
+    margin: 0 0 50px;
+    text-align: center;
+}
+
+.button {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    background: rgb(112, 50, 50);
+    border-radius: 3px;
+    color: #eee;
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px 25px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.button--nightly {
+    background: #333;
+}
+
+.button:hover, .button:focus, .button:active {
+    background: rgb(90, 45, 45);
+}
+
+.github {
+    transition: opacity 0.3s;
+}
+
+.github:hover, .github:focus, .github:active {
+    opacity: 0.7;
+}
