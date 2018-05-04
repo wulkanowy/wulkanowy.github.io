@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1">
-    <title>Wulkanowy</title>
+    <title>Aplikacja mobilna Androidowy klient dziennika VULCAN UONET+</title>
     <link rel="stylesheet" href="app.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99646499-3"></script>
     <script>
@@ -53,6 +53,8 @@
 
         var betaButton = document.querySelector("#beta-button");
         betaButton.addEventListener("click", disableClick);
+        var betaVersion = document.querySelector("#beta-version");
+        betaVersion.innerHTML = "Ładowanie…";
 
         var betaRes = new XMLHttpRequest();
         betaRes.open('GET', 'https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest', true);
@@ -60,7 +62,7 @@
             if(betaRes.status === 200) {
                 var json = JSON.parse(betaRes.responseText);
                 betaButton.href = json.assets[0].browser_download_url;
-                document.querySelector("#beta-version").innerHTML = json.name;
+                betaVersion.innerHTML = json.name;
             } else {
                 console.log("Błąd podczas ładowania strony\n");
             }
@@ -70,7 +72,8 @@
 
         var alfaButton = document.querySelector("#alfa-button");
         alfaButton.addEventListener("click", disableClick);
-
+        var alfaVersion = document.querySelector("#alfa-version");
+        alfaVersion.innerHTML = "Ładowanie…";
 
         var alfaRes = new XMLHttpRequest();
         alfaRes.open('GET', 'https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info', true);
@@ -78,8 +81,9 @@
             if(alfaRes.status === 200) {
                 var json = JSON.parse(alfaRes.responseText);
                 alfaButton.href = json.url;
-                document.querySelector("#alfa-version").innerHTML = json.latestVersionCode;
+                alfaVersion.innerHTML = json.latestVersionCode;
             } else {
+                alfaVersion.innerHTML = 'wersja nieznana';
                 console.log("Błąd podczas ładowania strony\n");
             }
             alfaButton.removeEventListener("click", disableClick);
