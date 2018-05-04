@@ -64,7 +64,7 @@
                 betaButton.href = json.assets[0].browser_download_url;
                 betaVersion.innerHTML = json.name;
             } else {
-                console.log("Błąd podczas ładowania strony\n");
+                betaVersion.innerHTML = 'wersja nieznana';
             }
             betaButton.removeEventListener("click", disableClick);
         };
@@ -84,7 +84,6 @@
                 alfaVersion.innerHTML = json.latestVersionCode;
             } else {
                 alfaVersion.innerHTML = 'wersja nieznana';
-                console.log("Błąd podczas ładowania strony\n");
             }
             alfaButton.removeEventListener("click", disableClick);
         };
