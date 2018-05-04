@@ -56,7 +56,7 @@
 
         var betaRes = new XMLHttpRequest();
         betaRes.open('GET', 'https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest', true);
-        betaRes.onreadystatechange = function () {
+        betaRes.onloadend = function () {
             if(betaRes.status === 200) {
                 var json = JSON.parse(betaRes.responseText);
                 betaButton.href = json.assets[0].browser_download_url;
@@ -74,7 +74,7 @@
 
         var alfaRes = new XMLHttpRequest();
         alfaRes.open('GET', 'https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info', true);
-        alfaRes.onreadystatechange = function () {
+        alfaRes.onloadend = function () {
             if(alfaRes.status === 200) {
                 var json = JSON.parse(alfaRes.responseText);
                 alfaButton.href = json.url;
