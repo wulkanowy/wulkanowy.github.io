@@ -77,7 +77,7 @@
         alfaRes.onreadystatechange = function () {
             if(alfaRes.status === 200) {
                 var json = JSON.parse(alfaRes.responseText);
-                alfaButton.href = json.assets[0].browser_download_url;
+                alfaButton.href = json.url;
                 document.querySelector("#alfa-version").innerHTML = json.latestVersionCode;
             } else {
                 console.log("Błąd podczas ładowania strony\n");
