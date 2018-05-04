@@ -114,27 +114,42 @@
         </footer>
     </section>
     <script>
-        const disableClick = e => e.preventDefault();
+        var disableClick = function(e) {e.preventDefault()};
 
-        const betaButton = document.querySelector("#beta-button");
+        var betaButton = document.querySelector("#beta-button");
         betaButton.addEventListener("click", disableClick);
-        fetch("https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest")
-            .then(res => { return res.json() })
-            .then(json => {
-                betaButton.removeEventListener("click", disableClick);
+
+        var betaRes = new XMLHttpRequest();
+        betaRes.open('GET', 'https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest', true);
+        betaRes.onreadystatechange = function () {
+            if(betaRes.status === 200) {
+                var json = JSON.parse(betaRes.responseText);
                 betaButton.href = json.assets[0].browser_download_url;
                 document.querySelector("#beta-version").innerHTML = json.name;
-            });
+            } else {
+                console.log("Błąd podczas ładowania strony\n");
+            }
+            betaButton.removeEventListener("click", disableClick);
+        };
+        betaRes.send(null);
 
-        const alfaButton = document.querySelector("#alfa-button")
+        var alfaButton = document.querySelector("#alfa-button");
         alfaButton.addEventListener("click", disableClick);
-        fetch("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info")
-            .then(res => { return res.json() })
-            .then(json => {
-                alfaButton.removeEventListener("click", disableClick);
-                alfaButton.href = json.url;
+
+
+        var alfaRes = new XMLHttpRequest();
+        alfaRes.open('GET', 'https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info', true);
+        alfaRes.onreadystatechange = function () {
+            if(alfaRes.status === 200) {
+                var json = JSON.parse(alfaRes.responseText);
+                alfaButton.href = json.assets[0].browser_download_url;
                 document.querySelector("#alfa-version").innerHTML = json.latestVersionCode;
-            });
+            } else {
+                console.log("Błąd podczas ładowania strony\n");
+            }
+            alfaButton.removeEventListener("click", disableClick);
+        };
+        alfaRes.send(null);
     </script>
 </body>
 </html>
