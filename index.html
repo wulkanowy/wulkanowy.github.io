@@ -9,42 +9,44 @@
     <link rel="stylesheet" href="app.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99646499-3"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-99646499-3');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag("js", new Date());
+        gtag("config", "UA-99646499-3");
     </script>
 </head>
 <body>
-    <section class="wrapper">
-        <header id="header" class="header">
+<section class="wrapper">
+    <div class="container">
+        <header class="header">
             <h1 class="header__title">Wulkanowy</h1>
             <p class="header__description">Nieoficjalna aplikacja mobilna dla dziennika <br>VULCAN UONET+</p>
         </header>
-        <main id="main" class="main">
-            <a
-                id="alfa-button"
-                title="Pobierz wersję alfa"
-                href="https://github.com/wulkanowy/wulkanowy/releases"
-                class="button button--alfa"
-                >Pobierz wersję alfa<br>
-                <span id="alfa-version">v0.0.0</span>
+        <main class="main">
+            <a class="play-button" href="https://play.google.com/store/apps/details?id=io.github.wulkanowy&amp;utm_source=homepage">
+                <img class="play-image" alt="pobierz z Google Play" src="google-play-badge.png">
             </a>
-            <a
-                id="nightly-button"
-                title="Pobierz wersję nightly"
-                href="https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk"
-                class="button button--nightly"
-                >Pobierz wersję nightly<br>
-                <span id="nightly-version">v000</span>
-            </a>
-
+            <section class="section">
+                <h3 class="section__header">Więcej opcji</h3>
+                <a class="button button--alfa" id="alfa-button" title="Pobierz wersję alfa" href="https://github.com/wulkanowy/wulkanowy/releases">
+                    Pobierz wersję alfa<br>
+                    <span id="alfa-version">v0.0.0</span>
+                </a>
+                <a class="button button--nightly"
+                   id="nightly-button"
+                   title="Pobierz wersję nightly"
+                   href="https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk">
+                    Pobierz wersję nightly<br>
+                    <span id="nightly-version">v000</span>
+                </a>
+            </section>
         </main>
         <footer id="footer" class="footer">
-            <a
-                title="Zobacz repozytorium na Githubie"
-                href="https://github.com/wulkanowy/wulkanowy"
-                class="github">
+            <a title="Zobacz repozytorium na Githubie" href="https://github.com/wulkanowy/wulkanowy" class="github">
                 <img src="./github.svg" alt="Zobacz repozytorium na Githubie">
             </a>
             <ul class="footer__nav">
@@ -53,48 +55,8 @@
                 </li>
             </ul>
         </footer>
-    </section>
-    <script>
-        var disableClick = function(e) {e.preventDefault()};
-
-        var addButtonInfo = function(url, button, version, cb) {
-            var buttonElement = document.querySelector(button);
-            buttonElement.addEventListener("click", disableClick);
-            var versionElement = document.querySelector(version);
-            versionElement.innerHTML = "Ładowanie…";
-
-            var res = new XMLHttpRequest();
-            res.open('GET', url, true);
-            res.onloadend = function () {
-                if(res.status === 200) {
-                    cb(buttonElement, versionElement, res);
-                } else {
-                    versionElement.innerHTML = 'wersja nieznana';
-                }
-                buttonElement.removeEventListener("click", disableClick);
-            };
-            res.send(null);
-        };
-
-        addButtonInfo("https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest", "#alfa-button", "#alfa-version",
-            function(button, version, res) {
-                var json = JSON.parse(res.responseText);
-                button.href = json.assets[0].browser_download_url;
-                version.innerHTML = "v" + json.name;
-            }
-        );
-
-        addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info", "#nightly-button", "#nightly-version",
-            function(button, version, res) {
-                var json = JSON.parse(res.responseText);
-                button.href = json.expiring_download_url;
-                version.innerHTML = "v" + json.build_number;
-
-                setTimeout(function() {
-                    button.href = json.public_install_page_url;
-                }, 60 * 1000);
-            }
-        )
-    </script>
+    </div>
+</section>
+<script src="app.js"></script>
 </body>
 </html>
