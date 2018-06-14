@@ -31,7 +31,7 @@ addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c81
     function(button, version, res) {
         var json = JSON.parse(res.responseText);
         button.href = json.expiring_download_url;
-        version.innerHTML = "v" + json.build_number;
+        version.innerHTML = "Build" + json.build_number;
 
         setTimeout(function() {
             button.href = json.public_install_page_url;
