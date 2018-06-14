@@ -32,17 +32,27 @@
             </a>
             <section class="section">
                 <h3 class="section__header">Więcej opcji</h3>
-                <a class="button button--beta" id="beta-button" title="Pobierz wersję beta" href="https://github.com/wulkanowy/wulkanowy/releases">
-                    Pobierz wersję beta<br>
-                    <span id="beta-version">v0.0.0</span>
-                </a>
-                <a class="button button--dev"
-                   id="dev-button"
-                   title="Pobierz wersję DEV"
-                   href="https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk">
-                    Pobierz wersję DEV<br>
-                    <span id="dev-version">Build 0000</span>
-                </a>
+                <div class="button-container">
+                    <a class="button button--beta" id="beta-button" title="Pobierz wersję beta" href="https://github.com/wulkanowy/wulkanowy/releases">
+                        Pobierz wersję beta
+                        <p class="button__info">
+                            <span id="beta-version">v0.0.0</span>
+                            <span id="beta-date"></span>
+                        </p>
+                    </a>
+                </div>
+                <div class="button-container">
+                    <a class="button button--dev"
+                       id="dev-button"
+                       title="Pobierz wersję DEV"
+                       href="https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk">
+                        Pobierz wersję DEV
+                        <p class="button__info">
+                            <span id="dev-version">Build 0000</span>
+                            <span id="dev-date"></span>
+                        </p>
+                    </a>
+                </div>
             </section>
         </main>
         <footer id="footer" class="footer">

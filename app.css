@@ -82,19 +82,30 @@ a {
     max-width: 300px;
 }
 
+.button-container {
+    display: inline-block;
+}
+
 .button {
-    width: 100%;
-    max-width: 300px;
+    max-width: 100%;
+    width: 300px;
     margin: 10px 0;
     background: rgb(112, 50, 50);
     border-radius: 3px;
     color: #eee;
-    display: inline-block;
+    display: block;
     font-size: 20px;
     padding: 15px 25px;
     text-align: left;
     text-decoration: none;
     transition: background 0.3s;
+}
+
+.button__info {
+    padding: 0;
+    margin: 5px 0 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .button:hover, .button:focus, .button:active {
@@ -119,8 +130,10 @@ a {
     opacity: 0.7;
 }
 
-[id$="version"] {
+.button span {
     font-size: small;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer {
