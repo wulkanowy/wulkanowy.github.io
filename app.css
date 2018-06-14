@@ -135,6 +135,15 @@ a {
     justify-content: space-between;
 }
 
+.button span[id$="date"] {
+    color: transparent;
+    transition: 0.3s color;
+}
+
+.button:hover span[id$="date"] {
+    color: #fff;
+}
+
 .footer {
     margin-top: 30px;
     text-align: center;
