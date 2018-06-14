@@ -100,13 +100,13 @@ body {
     background: rgb(90, 45, 45);
 }
 
-.button--nightly {
+.button--dev {
     background: #333;
 }
 
-.button--nightly:hover,
-.button--nightly:focus,
-.button--nightly:active {
+.button--dev:hover,
+.button--dev:focus,
+.button--dev:active {
     background: #222;
 }
 

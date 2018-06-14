@@ -19,7 +19,7 @@ var addButtonInfo = function(url, button, version, cb) {
     res.send(null);
 };
 
-addButtonInfo("https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest", "#alfa-button", "#alfa-version",
+addButtonInfo("https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest", "#beta-button", "#beta-version",
     function(button, version, res) {
         var json = JSON.parse(res.responseText);
         button.href = json.assets[0].browser_download_url;
@@ -27,7 +27,7 @@ addButtonInfo("https://api.github.com/repos/wulkanowy/wulkanowy/releases/latest"
     }
 );
 
-addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info", "#nightly-button", "#nightly-version",
+addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/app-debug-bitrise-signed.apk/info", "#dev-button", "#dev-version",
     function(button, version, res) {
         var json = JSON.parse(res.responseText);
         button.href = json.expiring_download_url;
