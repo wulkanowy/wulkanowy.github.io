@@ -46,6 +46,10 @@ a {
     text-shadow: #000 5px 5px 5px;
 }
 
+.header__link {
+    text-decoration: none;
+}
+
 .header__description {
     text-shadow: #000 1px 1px 5px;
     line-height: 1.7;
@@ -135,13 +139,24 @@ a {
     justify-content: space-between;
 }
 
-.button span[id$="date"] {
+.button span[class$="date"] {
     color: transparent;
     transition: 0.3s color;
 }
 
-.button:hover span[id$="date"] {
+.button:hover span[class$="date"] {
     color: #fff;
+}
+
+.button-more__link {
+    text-decoration: none;
+}
+
+.button-more__link:hover,
+.button-more__link:focus,
+.button-more__link:active
+{
+    text-decoration: underline;
 }
 
 .footer {
