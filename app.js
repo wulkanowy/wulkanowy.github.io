@@ -53,18 +53,15 @@ if (null === document.querySelector(".button-container--list")) {
     base.style.display = "none";
 
     var res = new XMLHttpRequest();
-    res.open("GET", "https://api.github.com/repos/wulkanowy/wulkanowy/branches", true);
+    res.open("GET", "https://api.github.com/repos/wulkanowy/wulkanowy/pulls", true);
     res.onloadend = function () {
         if(res.status === 200) {
             JSON.parse(res.responseText).forEach(function (item) {
-                if ("master" === item.name) return;
-
-                var url = "https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/" + item.name + "/artifacts/0";
-
+                var url = "https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/" + item.head.ref + "/artifacts/0";
 
                 var branch = baseCopy.cloneNode(true);
                 branch.href = url;
-                branch.innerText = item.name;
+                branch.innerText = item.head.ref;
 
                 var button_info = d.createElement("p");
                 button_info.setAttribute("class", "button__info");
