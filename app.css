@@ -125,12 +125,35 @@ a {
     background: #222;
 }
 
-.github {
+.icon {
     transition: opacity 0.3s;
 }
 
-.github:hover, .github:focus, .github:active {
+.icon:hover, .icon:focus, .icon:active {
     opacity: 0.7;
+}
+
+.links {
+    font-size: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.links__item {
+    display: inline-block;
+}
+
+.links__item + .links__item {
+    margin-left: 10px;
+}
+
+.links__item {
+    width: 45px;
+    height: 45px;
+}
+
+.links__item--discord img {
+    max-width: 38px;
 }
 
 .button span {
@@ -154,8 +177,7 @@ a {
 
 .button-more__link:hover,
 .button-more__link:focus,
-.button-more__link:active
-{
+.button-more__link:active {
     text-decoration: underline;
 }
 
@@ -178,6 +200,7 @@ a {
     color: #eeeeee;
     text-decoration: none;
 }
+
 .footer__link:hover {
     text-decoration: underline;
 }
