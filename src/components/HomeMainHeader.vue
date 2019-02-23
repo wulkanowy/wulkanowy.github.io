@@ -29,12 +29,17 @@ export default {
 <style lang="scss" scoped>
   #home-main-header {
     padding-bottom: 48px;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .logo {
     width: 768px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 90vw;
     display: block;
     filter:
       drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))
@@ -44,8 +49,6 @@ export default {
 
   .text {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 0;
     margin-bottom: 48px;
     font-family: 'Roboto', sans-serif;
@@ -56,14 +59,24 @@ export default {
       0px 5px 5px rgba(0, 0, 0, 0.2),
       0px 8px 10px rgba(0, 0, 0, 0.14),
       0px 3px 14px rgba(0, 0, 0, 0.12);
+
+    @media screen and (max-width: 550px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 16px;
+    }
   }
 
   .buttons {
-    margin-left: auto;
-    margin-right: auto;
     width: fit-content;
     display: flex;
     flex-direction: row;
+
+    @media screen and (max-width: 550px) {
+      flex-direction: column;
+    }
 
     .google-play-link {
       display: block;
@@ -98,6 +111,11 @@ export default {
         0px 2px 4px -1px rgba(0, 0, 0, 0.2),
         0px 4px 5px 0px rgba(0, 0, 0, 0.14),
         0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+      @media screen and (max-width: 550px) {
+        margin-left: 0;
+        margin-top: 8px;
+      }
     }
   }
 </style>
