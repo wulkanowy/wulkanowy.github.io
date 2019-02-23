@@ -16,6 +16,17 @@
         INNE OPCJE
       </a>
     </div>
+    <div class="quick-links">
+      <a class="discord" title="Discord" href="https://discord.gg/vccAQBr" target="_blank">
+        <img src="../assets/discord.svg" alt="Discord" />
+      </a>
+      <a class="github" title="GitHub" href="https://github.com/wulkanowy/" target="_blank">
+        <img src="../assets/github.svg" alt="GitHub" />
+      </a>
+      <a class="trello" title="Trello" href="https://trello.com/b/A97NUM1s/wulkanowy" target="_blank">
+        <img src="../assets/trello.svg" alt="Trello" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -44,7 +55,7 @@ export default {
     filter:
       drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))
       drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14))
-      drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12))
+      drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12));
   }
 
   .text {
@@ -115,6 +126,22 @@ export default {
       @media screen and (max-width: 550px) {
         margin-left: 0;
         margin-top: 8px;
+      }
+    }
+  }
+
+  .quick-links {
+    margin-top: 32px;
+
+    .github, .trello, .discord {
+      margin: 8px;
+      img {
+        width: 48px;
+        height: 48px;
+        filter:
+          drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))
+          drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14))
+          drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12));
       }
     }
   }
