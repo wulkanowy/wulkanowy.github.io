@@ -1,0 +1,101 @@
+<template>
+  <div class="download-dev">
+    <home-download-dev-master
+      v-if="master"
+      :released="master.released"
+      :download="master.download"
+      :build="master.build" />
+    <home-download-dev-item
+      v-for="version in versions"
+      :key="version.id"
+      :title="version.title"
+      :number="version.number"
+      :released="version.released"
+      :github="version.github"
+      :download="version.download"
+      :avatar="version.avatar"
+      :user="version.user"
+      :build="version.build" />
+    <div v-if="versions === null" class="loading">Loading</div>
+  </div>
+</template>
+
+<script>
+import moment from 'moment';
+import HomeDownloadDevItem from './HomeDownloadDevItem.vue';
+import HomeDownloadDevMaster from './HomeDownloadDevMaster.vue';
+
+export default {
+  name: 'home-download-dev',
+  components: {
+    HomeDownloadDevItem,
+    HomeDownloadDevMaster,
+  },
+  asyncComputed: {
+    async master() {
+      const redirectorUrl = 'https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/0/info';
+      const build = await this.$http.get(redirectorUrl);
+      return {
+        released: build.body.finished_at,
+        download: build.body.public_install_page_url,
+        build: build.body.build_number,
+      };
+    },
+    async versions() {
+      const response = await this.$http.get('https://api.github.com/repos/wulkanowy/wulkanowy/pulls?state=open');
+      return (await Promise.all(response.body.map(async (release) => {
+        const redirectorUrl = `https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/${release.head.ref}/artifacts/0/info`;
+        const build = await this.$http.get(redirectorUrl);
+        return {
+          title: release.title,
+          number: release.number,
+          released: build.body.finished_at,
+          github: release.html_url,
+          download: build.body.public_install_page_url,
+          build: build.body.build_number,
+          avatar: release.user.avatar_url,
+          user: release.user.login,
+          id: release.id,
+        };
+      }))).sort((a, b) => {
+        if (moment(a.released).isBefore(b.released)) return 1;
+        if (moment(a.released).isAfter(b.released)) return -1;
+        return 0;
+      });
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+  .download-dev {
+    overflow: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 4px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: #aaa;
+    }
+  }
+
+  .loading {
+    text-align: center;
+    margin-top: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+  }
+</style>

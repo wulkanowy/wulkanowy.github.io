@@ -1,7 +1,12 @@
 <template>
-  <div class="download-beta-item">
-    <div class="code">{{ code }}</div>
-    <div class="released" :title="releasedString">{{ releasedRelativeString }}</div>
+  <div class="download-dev-item">
+    <div class="title">{{ title }} <span class="number">#{{ number }}</span></div>
+    <div class="subheader">
+      <span class="build-number">{{ build }}</span>
+      <span class="released" :title="releasedString">{{ releasedRelativeString }}</span>
+      <img class="avatar" :src="avatar" />
+      <span class="user">{{ user }}</span>
+    </div>
     <div class="buttons">
       <a class="github-button" :href="github" target="_blank" title="GitHub">
         <span class="mdi mdi-github-circle"></span>
@@ -19,18 +24,30 @@ import moment from 'moment';
 moment.locale('pl');
 
 export default {
-  name: 'home-download-beta-item',
+  name: 'home-download-dev-item',
   props: {
-    code: {
+    title: {
       type: String,
     },
     released: {
       type: String,
     },
+    number: {
+      type: Number,
+    },
+    build: {
+      type: Number,
+    },
     github: {
       type: String,
     },
     download: {
+      type: String,
+    },
+    avatar: {
+      type: String,
+    },
+    user: {
       type: String,
     },
   },
@@ -47,10 +64,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .download-beta-item {
-    height: 56px;
+  .download-dev-item {
+    min-height: 56px;
     padding: 8px;
-    padding-left: 8px;
+    padding-left: 16px;
     display: grid;
     grid-template-rows: 1fr auto auto 1fr;
     grid-template-columns: 1fr auto;
@@ -60,27 +77,57 @@ export default {
       0px 3px 1px -2px rgba(0, 0, 0, 0.2),
       0px 2px 2px 0px rgba(0, 0, 0, 0.14),
       0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-
-    &:not(:first-child) {
-      margin-top: 16px;
-    }
+    margin-top: 16px;
   }
 
-  .code {
+  .title {
     grid-column: 1;
     grid-row: 2;
     color: #D32F2F;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    margin-bottom: 2px;
+    font-size: 20px;
+    margin-bottom: 8px;
+    line-height: 24px;
+
+    .number {
+      color: #0009;
+      font-weight: 300;
+    }
   }
 
-  .released {
+  .subheader {
     grid-column: 1;
     grid-row: 3;
-    color: #0009;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    flex-direction: row;
+
+    .build-number {
+      color: #0009;
+    }
+
+    .released {
+      margin-left: 4px;
+      color: #0006;
+    }
+
+    .avatar {
+      width: 16px;
+      height: 16px;
+      margin-left: 8px;
+      border-radius: 2px;
+      box-shadow:
+        0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .user {
+      color: #0009;
+      margin-left: 4px;
+    }
   }
 
   .buttons {

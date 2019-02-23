@@ -1,19 +1,42 @@
 <template>
   <div id="download">
     <h2 class="title">Pobieranie</h2>
-    <h3 class="section-name section-name-beta">Beta</h3>
-    <h3 class="section-name section-name-dev">Dev</h3>
-    <home-download-beta />
+    <home-download-version-switcher v-if="$mq === 'md'" :activeSection="activeSection" />
+    <h3 class="section-name section-name-beta" v-if="$mq === 'lg'">BETA</h3>
+    <h3 class="section-name section-name-dev" v-if="$mq === 'lg'">DEV</h3>
+    <home-download-beta v-if="$mq === 'lg' || active === 'beta'" />
+    <home-download-dev v-if="$mq === 'lg' || active === 'dev'" />
   </div>
 </template>
 
 <script>
 import HomeDownloadBeta from './HomeDownloadBeta.vue';
+import HomeDownloadDev from './HomeDownloadDev.vue';
+import HomeDownloadVersionSwitcher from './HomeDownloadVersionSwitcher.vue';
 
 export default {
   name: 'home-download-section',
   components: {
     HomeDownloadBeta,
+    HomeDownloadDev,
+    HomeDownloadVersionSwitcher,
+  },
+  data() {
+    return {
+      activeSection: {
+        data: 'beta',
+      },
+    };
+  },
+  computed: {
+    active: {
+      get() {
+        return this.activeSection.data;
+      },
+      set(value) {
+        this.activeSection.data = value;
+      },
+    },
   },
 };
 </script>
@@ -27,6 +50,10 @@ export default {
     display: grid;
     grid-template-columns: 1fr 32px 1fr;
     grid-template-rows: auto auto 1fr 64px;
+
+    @media screen and (max-width: 875px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .title {
@@ -37,6 +64,9 @@ export default {
     font-weight: 400;
     grid-column: 1/4;
     grid-row: 1;
+    @media screen and (max-width: 875px) {
+      grid-column: 1;
+    }
   }
 
   .section-name {
@@ -61,5 +91,17 @@ export default {
     grid-row: 3;
     grid-column: 1;
     margin-top: 8px;
+    @media screen and (max-width: 875px) {
+      grid-column: 1;
+    }
+  }
+
+  .download-dev {
+    grid-row: 3;
+    grid-column: 3;
+    margin-top: 8px;
+    @media screen and (max-width: 875px) {
+      grid-column: 1;
+    }
   }
 </style>

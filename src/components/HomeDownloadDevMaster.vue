@@ -1,11 +1,11 @@
 <template>
-  <div class="download-beta-item">
-    <div class="code">{{ code }}</div>
-    <div class="released" :title="releasedString">{{ releasedRelativeString }}</div>
+  <div class="download-dev-master">
+    <div class="title">Najnowsza stabilna wersja DEV</div>
+    <div class="subheader">
+      <span class="build-number">{{ build }}</span>
+      <span class="released" :title="releasedString">{{ releasedRelativeString }}</span>
+    </div>
     <div class="buttons">
-      <a class="github-button" :href="github" target="_blank" title="GitHub">
-        <span class="mdi mdi-github-circle"></span>
-      </a>
       <a class="download-button" :href="download" target="_blank" title="Download">
         <span class="mdi mdi-download"></span>
       </a>
@@ -19,16 +19,13 @@ import moment from 'moment';
 moment.locale('pl');
 
 export default {
-  name: 'home-download-beta-item',
+  name: 'home-download-dev-master',
   props: {
-    code: {
-      type: String,
-    },
     released: {
       type: String,
     },
-    github: {
-      type: String,
+    build: {
+      type: Number,
     },
     download: {
       type: String,
@@ -47,10 +44,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .download-beta-item {
-    height: 56px;
+  .download-dev-master {
+    min-height: 56px;
     padding: 8px;
-    padding-left: 8px;
+    padding-left: 16px;
     display: grid;
     grid-template-rows: 1fr auto auto 1fr;
     grid-template-columns: 1fr auto;
@@ -60,27 +57,40 @@ export default {
       0px 3px 1px -2px rgba(0, 0, 0, 0.2),
       0px 2px 2px 0px rgba(0, 0, 0, 0.14),
       0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-
-    &:not(:first-child) {
-      margin-top: 16px;
-    }
   }
 
-  .code {
+  .title {
     grid-column: 1;
     grid-row: 2;
     color: #D32F2F;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    margin-bottom: 2px;
+    font-size: 20px;
+    margin-bottom: 8px;
+    line-height: 24px;
+
+    .number {
+      color: #0009;
+      font-weight: 300;
+    }
   }
 
-  .released {
+  .subheader {
     grid-column: 1;
     grid-row: 3;
-    color: #0009;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    flex-direction: row;
+
+    .build-number {
+      color: #0009;
+    }
+
+    .released {
+      margin-left: 4px;
+      color: #0006;
+    }
   }
 
   .buttons {
@@ -89,7 +99,7 @@ export default {
     grid-column: 2;
     grid-row: 1/5;
 
-    .github-button, .download-button {
+    .download-button {
       font-size: 32px;
       color: #000;
       padding: 4px;

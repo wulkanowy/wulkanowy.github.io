@@ -2,7 +2,7 @@
   <div class="download-beta">
     <home-download-beta-item
       v-for="version in versions"
-      :key="version.code"
+      :key="version.id"
       :code="version.code"
       :released="version.released"
       :github="version.github"
@@ -22,12 +22,12 @@ export default {
   asyncComputed: {
     async versions() {
       const response = await this.$http.get('https://api.github.com/repos/wulkanowy/wulkanowy/releases');
-      console.log(response.body);
       return response.body.map(release => ({
         code: release.tag_name,
         released: release.published_at,
         github: release.html_url,
         download: release.assets[0].browser_download_url,
+        id: release.id,
       }));
       // return [
       //   {
@@ -87,6 +87,7 @@ export default {
 <style lang="scss" scoped>
   .download-beta {
     overflow: auto;
+    padding-left: 8px;
     padding-right: 8px;
 
     &::-webkit-scrollbar-track {
