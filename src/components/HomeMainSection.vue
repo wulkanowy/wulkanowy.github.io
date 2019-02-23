@@ -1,13 +1,16 @@
 <template>
   <div id="home-main-section">
+    <home-main-header />
   </div>
 </template>
 
 <script>
+import HomeMainHeader from './HomeMainHeader.vue';
+
 export default {
   name: 'home-main-section',
   components: {
-
+    HomeMainHeader,
   },
 };
 </script>
@@ -26,5 +29,8 @@ export default {
     background-position: center;
     background-attachment: fixed;
     overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
