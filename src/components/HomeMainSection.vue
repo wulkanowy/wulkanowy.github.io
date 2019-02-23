@@ -1,5 +1,5 @@
 <template>
-  <div id="home-main-section">
+  <div id="main">
     <home-main-header />
   </div>
 </template>
@@ -16,8 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  #home-main-section {
-    width: 100vw;
+  #main {
     height: 100vh;
     background:
       linear-gradient(

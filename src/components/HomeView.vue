@@ -1,16 +1,19 @@
 <template>
   <div id="home">
     <home-main-section />
+    <home-download-section />
   </div>
 </template>
 
 <script>
 import HomeMainSection from './HomeMainSection.vue';
+import HomeDownloadSection from './HomeDownloadSection.vue';
 
 export default {
   name: 'home-view',
   components: {
     HomeMainSection,
+    HomeDownloadSection,
   },
 };
 </script>

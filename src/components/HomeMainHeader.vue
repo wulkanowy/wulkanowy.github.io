@@ -1,5 +1,5 @@
 <template>
-  <div id="home-main-header">
+  <div id="main-header">
     <img class="logo" src="../assets/wulkanowy-full-flat.svg" alt="Wulkanowy" />
     <h3 class="text">
       APLIKACJA UCZNIA I RODZICA<br />
@@ -12,7 +12,7 @@
         target="_blank">
         <img src="../assets/google-play-badge.svg" alt="Pobierz z Google Play" />
       </a>
-      <a class="other-options" href="#home-download-section">
+      <a class="other-options" href="#download">
         INNE OPCJE
       </a>
     </div>
@@ -27,7 +27,7 @@ export default {
 
 
 <style lang="scss" scoped>
-  #home-main-header {
+  #main-header {
     padding-bottom: 48px;
     height: 100vh;
     box-sizing: border-box;
