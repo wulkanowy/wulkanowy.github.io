@@ -3,10 +3,10 @@
     <div class="code">{{ code }}</div>
     <div class="released" :title="releasedString">{{ releasedRelativeString }}</div>
     <div class="buttons">
-      <a class="github-button" href="https://google.com/" target="_blank" title="GitHub">
+      <a class="github-button" :href="github" target="_blank" title="GitHub">
         <span class="mdi mdi-github-circle"></span>
       </a>
-      <a class="download-button" href="https://google.com/" target="_blank" title="Download">
+      <a class="download-button" :href="download" target="_blank" title="Download">
         <span class="mdi mdi-download"></span>
       </a>
     </div>
@@ -27,13 +27,20 @@ export default {
     released: {
       type: String,
     },
+    github: {
+      type: String,
+    },
+    download: {
+      type: String,
+    },
   },
   computed: {
     releasedString() {
       return moment(this.released).format('dddd, D MMM YYYY HH:mm:ss');
     },
     releasedRelativeString() {
-      return moment(this.released).fromNow();
+      const string = moment(this.released).fromNow();
+      return string.charAt(0).toUpperCase() + string.slice(1);
     },
   },
 };

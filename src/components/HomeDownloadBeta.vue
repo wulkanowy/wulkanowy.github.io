@@ -4,7 +4,10 @@
       v-for="version in versions"
       :key="version.code"
       :code="version.code"
-      :released="version.released" />
+      :released="version.released"
+      :github="version.github"
+      :download="version.download" />
+    <div v-if="versions === null" class="loading">Loading</div>
   </div>
 </template>
 
@@ -16,8 +19,16 @@ export default {
   components: {
     HomeDownloadBetaItem,
   },
-  computed: {
-    versions() {
+  asyncComputed: {
+    async versions() {
+      const response = await this.$http.get('https://api.github.com/repos/wulkanowy/wulkanowy/releases');
+      console.log(response.body);
+      return response.body.map(release => ({
+        code: release.tag_name,
+        released: release.published_at,
+        github: release.html_url,
+        download: release.assets[0].browser_download_url,
+      }));
       // return [
       //   {
       //     code: '0.7.0',
@@ -68,7 +79,6 @@ export default {
       //     released: '2019-01-08T21:14:07Z',
       //   },
       // ];
-      return null;
     },
   },
 };
@@ -93,5 +103,15 @@ export default {
       border-radius: 4px;
       background-color: #aaa;
     }
+  }
+
+  .loading {
+    text-align: center;
+    margin-top: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
   }
 </style>
