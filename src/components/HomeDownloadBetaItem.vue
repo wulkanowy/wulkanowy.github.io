@@ -64,6 +64,10 @@ export default {
     &:not(:first-child) {
       margin-top: 16px;
     }
+
+    &:last-child {
+      margin-bottom: 8px;
+    }
   }
 
   .code {
