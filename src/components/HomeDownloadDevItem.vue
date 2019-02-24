@@ -1,6 +1,11 @@
 <template>
   <div class="download-dev-item">
-    <div class="title">{{ title }} <span class="number">#{{ number }}</span></div>
+    <a
+      class="title"
+      :href="github"
+      target="_blank">
+      {{ title }} <span class="number">#{{ number }}</span>
+    </a>
     <div class="subheader">
       <span class="build-number">{{ build }}</span>
       <span class="released" :title="releasedString">{{ releasedRelativeString }}</span>
@@ -92,6 +97,11 @@ export default {
     font-size: 20px;
     margin-bottom: 8px;
     line-height: 24px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     .number {
       color: #0009;
