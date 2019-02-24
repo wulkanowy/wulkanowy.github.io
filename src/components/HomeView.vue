@@ -23,5 +23,6 @@ export default {
 
   body {
     margin: 0;
+    scroll-behavior: smooth;
   }
 </style>
