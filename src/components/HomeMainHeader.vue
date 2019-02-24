@@ -2,8 +2,8 @@
   <div id="main-header">
     <h1 class="logo"><img src="../assets/wulkanowy-full-flat.svg" alt="Wulkanowy" /></h1>
     <p class="text">
-      APLIKACJA UCZNIA I RODZICA<br />
-      DLA DZIENNIKA UONET+
+      Aplikacja ucznia i rodzica<br />
+      Dla dziennika UONET+
     </p>
     <div class="buttons">
       <a
@@ -77,6 +77,7 @@ export default {
       0px 5px 5px rgba(0, 0, 0, 0.2),
       0px 8px 10px rgba(0, 0, 0, 0.14),
       0px 3px 14px rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
 
     @media screen and (max-width: 550px) {
       font-size: 24px;
@@ -149,6 +150,12 @@ export default {
           drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))
           drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14))
           drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12));
+      }
+
+      @media screen and (max-width: 375px) {
+        margin: 4px;
+        width: 32px;
+        height: 32px;
       }
     }
   }
