@@ -103,6 +103,7 @@ export default {
     line-height: 16px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
     .build-number {
       color: #0009;
