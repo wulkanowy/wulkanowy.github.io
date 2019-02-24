@@ -26,6 +26,9 @@
       <a class="trello" title="Trello" href="https://trello.com/b/A97NUM1s/wulkanowy" target="_blank">
         <img src="../assets/trello.svg" alt="Trello" />
       </a>
+      <a class="paypal" title="PayPal" href="https://paypal.me/wulkanowy" target="_blank">
+        <img src="../assets/paypal.svg" alt="PayPal" />
+      </a>
     </div>
   </div>
 </template>
@@ -137,7 +140,7 @@ export default {
   .quick-links {
     margin-top: 32px;
 
-    .github, .trello, .discord {
+    .github, .trello, .discord, .paypal {
       margin: 8px;
       img {
         width: 48px;
