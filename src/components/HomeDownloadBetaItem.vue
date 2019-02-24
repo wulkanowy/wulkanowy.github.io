@@ -1,6 +1,6 @@
 <template>
   <div class="download-beta-item">
-    <a class="code" :href="github" target="_blank">{{ code }}</a>
+    <div class="code"><a :href="github" target="_blank">{{ code }}</a></div>
     <div class="released" :title="releasedString">{{ releasedRelativeString }}</div>
     <div class="buttons">
       <a class="github-button" :href="github" target="_blank" title="GitHub">
@@ -73,14 +73,17 @@ export default {
   .code {
     grid-column: 1;
     grid-row: 2;
-    color: #D32F2F;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     margin-bottom: 2px;
-    text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
+    a {
+      color: #D32F2F;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

@@ -1,11 +1,11 @@
 <template>
   <div class="download-dev-item">
-    <a
-      class="title"
-      :href="github"
-      target="_blank">
-      {{ title }} <span class="number">#{{ number }}</span>
-    </a>
+    <div class="header">
+      <a :href="github" target="_blank">
+        <span class="title">{{ title }}</span>
+        <span class="number">#{{ number }}</span>
+      </a>
+    </div>
     <div class="subheader">
       <span class="build-number">{{ build }}</span>
       <span class="released" :title="releasedString">{{ releasedRelativeString }}</span>
@@ -89,23 +89,30 @@ export default {
     }
   }
 
-  .title {
+  .header {
     grid-column: 1;
     grid-row: 2;
-    color: #D32F2F;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin-bottom: 8px;
     line-height: 24px;
-    text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
+    .title {
+      color: #D32F2F;
     }
 
     .number {
       color: #0009;
       font-weight: 300;
+      margin-left: 4px;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover .title, &:hover .number {
+        text-decoration: underline;
+      }
     }
   }
 
