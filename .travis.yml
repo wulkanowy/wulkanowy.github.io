@@ -10,8 +10,6 @@ deploy:
   local-dir: dist
   on:
     branch: master
-  script:
-    - npm run build
 
 branches:
   only:
@@ -19,3 +17,4 @@ branches:
 
 script:
   - npm run lint
+  - npm run build
