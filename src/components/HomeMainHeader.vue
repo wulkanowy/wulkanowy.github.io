@@ -1,10 +1,10 @@
 <template>
   <div id="main-header">
     <img class="logo" src="../assets/wulkanowy-full-flat.svg" alt="Wulkanowy" />
-    <h3 class="text">
+    <p class="text">
       APLIKACJA UCZNIA I RODZICA<br />
       DLA DZIENNIKA UONET+
-    </h3>
+    </p>
     <div class="buttons">
       <a
         class="google-play-link"
