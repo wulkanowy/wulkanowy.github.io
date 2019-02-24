@@ -150,12 +150,11 @@ export default {
           drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))
           drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14))
           drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12));
-      }
 
-      @media screen and (max-width: 375px) {
-        margin: 4px;
-        width: 32px;
-        height: 32px;
+        @media screen and (max-width: 375px) {
+          width: 32px;
+          height: 32px;
+        }
       }
     }
   }
