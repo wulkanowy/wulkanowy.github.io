@@ -1,7 +1,13 @@
 <template>
   <div class="download-beta-item">
     <div class="code"><a :href="github" target="_blank">{{ code }}</a></div>
-    <div class="released" :title="releasedString">{{ releasedRelativeString }}</div>
+    <a
+      class="released"
+      :title="releasedString"
+      :href="`https://github.com/wulkanowy/wulkanowy/tree/${code}`"
+      target="_blank">
+      {{ releasedRelativeString }}
+    </a>
     <div class="buttons">
       <a class="github-button" :href="github" target="_blank" title="GitHub">
         <span class="mdi mdi-github-circle"></span>
@@ -93,6 +99,11 @@ export default {
     color: #0009;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .buttons {
