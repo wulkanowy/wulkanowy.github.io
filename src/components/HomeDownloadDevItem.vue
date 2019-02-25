@@ -8,7 +8,13 @@
     </div>
     <div class="subheader">
       <span class="build-number">{{ build }}</span>
-      <span class="released" :title="releasedString">{{ releasedRelativeString }}</span>
+      <a
+        class="released"
+        :title="releasedString"
+        :href="`https://github.com/wulkanowy/wulkanowy/pull/${number}/commits/${commit}`"
+        target="_blank">
+        {{ releasedRelativeString }}
+      </a>
       <img class="avatar" :src="avatar" />
       <span class="user">{{ user }}</span>
     </div>
@@ -53,6 +59,9 @@ export default {
       type: String,
     },
     user: {
+      type: String,
+    },
+    commit: {
       type: String,
     },
   },
@@ -133,6 +142,11 @@ export default {
     .released {
       margin-left: 4px;
       color: #0006;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .avatar {

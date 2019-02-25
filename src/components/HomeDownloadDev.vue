@@ -4,7 +4,8 @@
       v-if="master"
       :released="master.released"
       :download="master.download"
-      :build="master.build" />
+      :build="master.build"
+      :commit-url="master.commitUrl" />
     <home-download-dev-item
       v-for="version in versions"
       :key="version.id"
@@ -15,7 +16,8 @@
       :download="version.download"
       :avatar="version.avatar"
       :user="version.user"
-      :build="version.build" />
+      :build="version.build"
+      :commit="version.commit" />
     <div v-if="versions === null" class="loading">Loading</div>
   </div>
 </template>
@@ -39,6 +41,7 @@ export default {
         released: build.body.finished_at,
         download: build.body.public_install_page_url,
         build: build.body.build_number,
+        commitUrl: build.body.commit_view_url,
       };
     },
     async versions() {
@@ -55,6 +58,7 @@ export default {
           build: build.body.build_number,
           avatar: release.user.avatar_url,
           user: release.user.login,
+          commit: release.head.sha,
           id: release.id,
         };
       }))).sort((a, b) => {

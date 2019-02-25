@@ -3,7 +3,13 @@
     <div class="title">Najnowsza stabilna wersja DEV</div>
     <div class="subheader">
       <span class="build-number">{{ build }}</span>
-      <span class="released" :title="releasedString">{{ releasedRelativeString }}</span>
+      <a
+        class="released"
+        :title="releasedString"
+        :href="commitUrl"
+        target="_blank">
+        {{ releasedRelativeString }}
+      </a>
     </div>
     <div class="buttons">
       <a class="download-button" :href="download" target="_blank" title="Download">
@@ -28,6 +34,9 @@ export default {
       type: Number,
     },
     download: {
+      type: String,
+    },
+    commitUrl: {
       type: String,
     },
   },
@@ -90,6 +99,11 @@ export default {
     .released {
       margin-left: 4px;
       color: #0006;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
