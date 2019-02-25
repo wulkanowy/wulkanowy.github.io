@@ -34,7 +34,7 @@ if (null === document.querySelector(".button-container--list")) {
         }
     );
 
-    addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/0/info", "dev",
+    addButtonInfo("https://bitrise-redirector.herokuapp.com/v0.1/apps/f841f20d8f8b1dc8/builds/master/artifacts/0/info", "dev",
         function(res, button, version, date) {
             if (null !== document.querySelector(".button-container--list")) return;
             var json = JSON.parse(res.responseText);
@@ -57,7 +57,7 @@ if (null === document.querySelector(".button-container--list")) {
     res.onloadend = function () {
         if(res.status === 200) {
             JSON.parse(res.responseText).forEach(function (item) {
-                var url = "https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/" + item.head.ref + "/artifacts/0";
+                var url = "https://bitrise-redirector.herokuapp.com/v0.1/apps/f841f20d8f8b1dc8/builds/" + item.head.ref + "/artifacts/0";
 
                 var branch = baseCopy.cloneNode(true);
                 branch.href = url;
