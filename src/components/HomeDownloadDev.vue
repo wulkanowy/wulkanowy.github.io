@@ -35,7 +35,7 @@ export default {
   },
   asyncComputed: {
     async master() {
-      const redirectorUrl = 'https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/master/artifacts/0/info';
+      const redirectorUrl = 'https://bitrise-redirector.herokuapp.com/v0.1/apps/f841f20d8f8b1dc8/builds/master/artifacts/0/info';
       const build = await this.$http.get(redirectorUrl);
       return {
         released: build.body.finished_at,
@@ -47,7 +47,7 @@ export default {
     async versions() {
       const response = await this.$http.get('https://api.github.com/repos/wulkanowy/wulkanowy/pulls?state=open');
       return (await Promise.all(response.body.map(async (release) => {
-        const redirectorUrl = `https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/${release.head.ref}/artifacts/0/info`;
+        const redirectorUrl = `https://bitrise-redirector.herokuapp.com/v0.1/apps/f841f20d8f8b1dc8/builds/${release.head.ref}/artifacts/0/info`;
         const build = await this.$http.get(redirectorUrl);
         return {
           title: release.title,
