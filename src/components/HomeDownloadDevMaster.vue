@@ -77,6 +77,10 @@ export default {
     margin-bottom: 8px;
     line-height: 24px;
 
+    @media screen and (max-width: 450px) {
+      font-size: 18px;
+    }
+
     .number {
       color: #0009;
       font-weight: 300;

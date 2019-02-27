@@ -44,15 +44,21 @@ export default {
 <style lang="scss" scoped>
   #download {
     height: 100vh;
-    padding: 0 32px;
+    box-sizing: border-box;
+    padding: 0 32px 32px;
     overflow: hidden;
     background-color: #F6F6F6;
     display: grid;
     grid-template-columns: 1fr 32px 1fr;
-    grid-template-rows: auto auto 1fr 64px;
+    grid-template-rows: auto auto 1fr;
 
     @media screen and (max-width: 875px) {
       grid-template-columns: 1fr;
+      padding: 0 16px 16px;
+    }
+
+    @media screen and (max-width: 450px) {
+      padding: 0 8px 16px;
     }
   }
 

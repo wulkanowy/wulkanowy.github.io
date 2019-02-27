@@ -3,7 +3,7 @@
     <div class="header">
       <a :href="github" target="_blank">
         <span class="title">{{ title }}</span>
-        <span class="number">#{{ number }}</span>
+        <span class="number"> #{{ number }}</span>
       </a>
     </div>
     <div class="subheader">
@@ -106,6 +106,10 @@ export default {
     margin-bottom: 8px;
     line-height: 24px;
 
+    @media screen and (max-width: 450px) {
+      font-size: 18px;
+    }
+
     .title {
       color: #D32F2F;
     }
@@ -113,7 +117,6 @@ export default {
     .number {
       color: #0009;
       font-weight: 300;
-      margin-left: 4px;
     }
 
     a {
