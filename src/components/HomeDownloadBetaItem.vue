@@ -1,6 +1,6 @@
 <template>
   <div class="download-beta-item">
-    <div class="code"><a :href="github" @click="codeClick">{{ code }}</a></div>
+    <a :href="github" @click="codeClick" class="code">{{ code }}</a>
     <a
       class="released"
       :title="releasedString"
@@ -120,14 +120,12 @@ export default {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     margin-bottom: 2px;
+    color: #D32F2F;
+    text-decoration: none;
+    justify-self: start;
 
-    a {
-      color: #D32F2F;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -138,6 +136,7 @@ export default {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     text-decoration: none;
+    justify-self: start;
 
     &:hover {
       text-decoration: underline;
