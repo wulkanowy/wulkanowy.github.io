@@ -1,18 +1,29 @@
 <template>
   <div class="download-beta-item">
-    <div class="code"><a :href="github" target="_blank">{{ code }}</a></div>
+    <div class="code"><a :href="github" target="_blank" @click="codeClick">{{ code }}</a></div>
     <a
       class="released"
       :title="releasedString"
       :href="`https://github.com/wulkanowy/wulkanowy/tree/${code}`"
-      target="_blank">
+      target="_blank"
+      @click="releasedClick">
       {{ releasedRelativeString }}
     </a>
     <div class="buttons">
-      <a class="github-button" :href="github" target="_blank" title="GitHub">
+      <a
+      class="github-button"
+      :href="github"
+      target="_blank"
+      title="GitHub"
+      @click="githubClick">
         <span class="mdi mdi-github-circle"></span>
       </a>
-      <a class="download-button" :href="download" target="_blank" title="Download">
+      <a
+        class="download-button"
+        :href="download"
+        target="_blank"
+        title="Download"
+        @click="downloadClick">
         <span class="mdi mdi-download"></span>
       </a>
     </div>
@@ -38,6 +49,36 @@ export default {
     },
     download: {
       type: String,
+    },
+  },
+  methods: {
+    codeClick() {
+      this.$ga.event({
+        eventCategory: 'beta-item',
+        eventAction: 'code-click',
+        eventLabel: this.code,
+      });
+    },
+    releasedClick() {
+      this.$ga.event({
+        eventCategory: 'beta-item',
+        eventAction: 'released-click',
+        eventLabel: this.code,
+      });
+    },
+    githubClick() {
+      this.$ga.event({
+        eventCategory: 'beta-item',
+        eventAction: 'github-click',
+        eventLabel: this.code,
+      });
+    },
+    downloadClick() {
+      this.$ga.event({
+        eventCategory: 'beta-item',
+        eventAction: 'download-click',
+        eventLabel: this.code,
+      });
     },
   },
   computed: {
