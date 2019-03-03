@@ -7,17 +7,19 @@
       :released="version.released"
       :github="version.github"
       :download="version.download" />
-    <div v-if="versions === null" class="loading">Loading</div>
+    <spinner class="loading" v-if="versions === null" />
   </div>
 </template>
 
 <script>
 import HomeDownloadBetaItem from './HomeDownloadBetaItem.vue';
+import Spinner from './Spinner.vue';
 
 export default {
   name: 'home-download-beta',
   components: {
     HomeDownloadBetaItem,
+    Spinner,
   },
   asyncComputed: {
     async versions() {
@@ -107,12 +109,8 @@ export default {
   }
 
   .loading {
-    text-align: center;
     margin-top: 16px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
     margin-left: auto;
     margin-right: auto;
-    font-size: 24px;
   }
 </style>

@@ -18,7 +18,7 @@
       :user="version.user"
       :build="version.build"
       :commit="version.commit" />
-    <div v-if="versions === null" class="loading">Loading</div>
+    <spinner class="loading" v-if="versions === null || master === null" />
   </div>
 </template>
 
@@ -26,12 +26,14 @@
 import moment from 'moment';
 import HomeDownloadDevItem from './HomeDownloadDevItem.vue';
 import HomeDownloadDevMaster from './HomeDownloadDevMaster.vue';
+import Spinner from './Spinner.vue';
 
 export default {
   name: 'home-download-dev',
   components: {
     HomeDownloadDevItem,
     HomeDownloadDevMaster,
+    Spinner,
   },
   asyncComputed: {
     async master() {
@@ -94,12 +96,8 @@ export default {
   }
 
   .loading {
-    text-align: center;
     margin-top: 16px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
     margin-left: auto;
     margin-right: auto;
-    font-size: 24px;
   }
 </style>
