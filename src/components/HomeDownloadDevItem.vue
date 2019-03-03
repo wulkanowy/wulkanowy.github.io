@@ -1,7 +1,7 @@
 <template>
   <div class="download-dev-item">
     <div class="header">
-      <a :href="github" target="_blank">
+      <a :href="github" target="_blank" @click="titleClick">
         <span class="title">{{ title }}</span>
         <span class="number"> #{{ number }}</span>
       </a>
@@ -12,17 +12,28 @@
         class="released"
         :title="releasedString"
         :href="`https://github.com/wulkanowy/wulkanowy/pull/${number}/commits/${commit}`"
-        target="_blank">
+        target="_blank"
+        @click="releasedClick">
         {{ releasedRelativeString }}
       </a>
       <img class="avatar" :src="avatar" />
       <span class="user">{{ user }}</span>
     </div>
     <div class="buttons">
-      <a class="github-button" :href="github" target="_blank" title="GitHub">
+      <a
+        class="github-button"
+        :href="github"
+        target="_blank"
+        title="GitHub"
+        @click="githubClick">
         <span class="mdi mdi-github-circle"></span>
       </a>
-      <a class="download-button" :href="download" target="_blank" title="Download">
+      <a
+        class="download-button"
+        :href="download"
+        target="_blank"
+        title="Download"
+        @click="downloadClick">
         <span class="mdi mdi-download"></span>
       </a>
     </div>
@@ -63,6 +74,36 @@ export default {
     },
     commit: {
       type: String,
+    },
+  },
+  methods: {
+    titleClick() {
+      this.$ga.event({
+        eventCategory: 'dev-item',
+        eventAction: 'title-click',
+        eventLabel: this.number,
+      });
+    },
+    releasedClick() {
+      this.$ga.event({
+        eventCategory: 'dev-item',
+        eventAction: 'released-click',
+        eventLabel: this.number,
+      });
+    },
+    githubClick() {
+      this.$ga.event({
+        eventCategory: 'dev-item',
+        eventAction: 'github-click',
+        eventLabel: this.number,
+      });
+    },
+    downloadClick() {
+      this.$ga.event({
+        eventCategory: 'dev-item',
+        eventAction: 'download-click',
+        eventLabel: this.number,
+      });
     },
   },
   computed: {
