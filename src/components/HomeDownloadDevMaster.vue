@@ -7,12 +7,18 @@
         class="released"
         :title="releasedString"
         :href="commitUrl"
-        target="_blank">
+        target="_blank"
+        @click="releasedClick">
         {{ releasedRelativeString }}
       </a>
     </div>
     <div class="buttons">
-      <a class="download-button" :href="download" target="_blank" title="Download">
+      <a
+        class="download-button"
+        :href="download"
+        target="_blank"
+        title="Download"
+        @click="downloadClick">
         <span class="mdi mdi-download"></span>
       </a>
     </div>
@@ -38,6 +44,20 @@ export default {
     },
     commitUrl: {
       type: String,
+    },
+  },
+  methods: {
+    releasedClick() {
+      this.$ga.event({
+        eventCategory: 'dev-master-item',
+        eventAction: 'released-click',
+      });
+    },
+    downloadClick() {
+      this.$ga.event({
+        eventCategory: 'dev-master-item',
+        eventAction: 'download-click',
+      });
     },
   },
   computed: {
