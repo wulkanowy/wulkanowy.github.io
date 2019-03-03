@@ -9,7 +9,6 @@
       <a
         class="google-play-link"
         href="https://play.google.com/store/apps/details?id=io.github.wulkanowy&utm_source=homepage"
-        target="_blank"
         @click="googlePlayClick">
         <img src="../assets/google-play-badge.svg" alt="Pobierz z Google Play" />
       </a>
@@ -18,16 +17,16 @@
       </a>
     </div>
     <div class="quick-links">
-      <a class="discord" title="Discord" href="https://discord.gg/vccAQBr" target="_blank" @click="discordClick">
+      <a class="discord" title="Discord" href="https://discord.gg/vccAQBr" @click="discordClick">
         <img src="../assets/discord.svg" alt="Discord" />
       </a>
-      <a class="github" title="GitHub" href="https://github.com/wulkanowy/" target="_blank" @click="githubClick">
+      <a class="github" title="GitHub" href="https://github.com/wulkanowy/" @click="githubClick">
         <img src="../assets/github.svg" alt="GitHub" />
       </a>
-      <a class="trello" title="Trello" href="https://trello.com/b/A97NUM1s/wulkanowy" target="_blank" @click="trelloClick">
+      <a class="trello" title="Trello" href="https://trello.com/b/A97NUM1s/wulkanowy" @click="trelloClick">
         <img src="../assets/trello.svg" alt="Trello" />
       </a>
-      <a class="paypal" title="PayPal" href="https://paypal.me/wulkanowy" target="_blank" @click="paypalClick">
+      <a class="paypal" title="PayPal" href="https://paypal.me/wulkanowy" @click="paypalClick">
         <img src="../assets/paypal.svg" alt="PayPal" />
       </a>
     </div>

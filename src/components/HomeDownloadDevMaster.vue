@@ -7,7 +7,6 @@
         class="released"
         :title="releasedString"
         :href="commitUrl"
-        target="_blank"
         @click="releasedClick">
         {{ releasedRelativeString }}
       </a>
@@ -16,7 +15,6 @@
       <a
         class="download-button"
         :href="download"
-        target="_blank"
         title="Download"
         @click="downloadClick">
         <span class="mdi mdi-download"></span>

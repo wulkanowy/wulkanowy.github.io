@@ -1,7 +1,7 @@
 <template>
   <div class="download-dev-item">
     <div class="header">
-      <a :href="github" target="_blank" @click="titleClick">
+      <a :href="github" @click="titleClick">
         <span class="title">{{ title }}</span>
         <span class="number"> #{{ number }}</span>
       </a>
@@ -12,7 +12,6 @@
         class="released"
         :title="releasedString"
         :href="`https://github.com/wulkanowy/wulkanowy/pull/${number}/commits/${commit}`"
-        target="_blank"
         @click="releasedClick">
         {{ releasedRelativeString }}
       </a>
@@ -23,7 +22,6 @@
       <a
         class="github-button"
         :href="github"
-        target="_blank"
         title="GitHub"
         @click="githubClick">
         <span class="mdi mdi-github-circle"></span>
@@ -31,7 +29,6 @@
       <a
         class="download-button"
         :href="download"
-        target="_blank"
         title="Download"
         @click="downloadClick">
         <span class="mdi mdi-download"></span>
