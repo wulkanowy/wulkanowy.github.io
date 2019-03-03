@@ -19,6 +19,7 @@ Vue.use(VueAnalytics, {
   id: 'UA-99646499-3',
   debug: {
     enabled: window.location.hostname === 'localhost',
+    sendHitTask: window.location.hostname !== 'localhost',
   },
 });
 Vue.$ga.page(window.location.pathname);
