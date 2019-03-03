@@ -1,11 +1,9 @@
 <template>
   <div class="download-dev-item">
-    <div class="header">
-      <a :href="github" @click="titleClick">
-        <span class="title">{{ title }}</span>
-        <span class="number"> #{{ number }}</span>
-      </a>
-    </div>
+    <a class="header" :href="github" @click="titleClick">
+      <span class="title">{{ title }}</span>
+      <span class="number"> #{{ number }}</span>
+  </a>
     <div class="subheader">
       <span class="build-number">{{ build }}</span>
       <a
@@ -143,6 +141,12 @@ export default {
     font-size: 20px;
     margin-bottom: 8px;
     line-height: 24px;
+    text-decoration: none;
+    justify-self: start;
+
+    &:hover .title, &:hover .number {
+      text-decoration: underline;
+    }
 
     @media screen and (max-width: 450px) {
       font-size: 18px;
@@ -155,14 +159,6 @@ export default {
     .number {
       color: #0009;
       font-weight: 300;
-    }
-
-    a {
-      text-decoration: none;
-
-      &:hover .title, &:hover .number {
-        text-decoration: underline;
-      }
     }
   }
 
