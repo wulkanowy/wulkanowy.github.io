@@ -27,6 +27,12 @@ export default {
         return this.activeSection.data;
       },
       set(value) {
+        this.$ga.event({
+          eventCategory: 'dev-section',
+          eventAction: 'switch',
+          eventLabel: value,
+          eventValue: value === 'beta' ? 0 : 1,
+        });
         this.activeSection.data = value;
       },
     },
