@@ -5,7 +5,7 @@
       <span class="number"> #{{ number }}</span>
   </a>
     <div class="subheader">
-      <span class="build-number">{{ build }}</span>
+      <a class="build-number" :href="url" @click="buildNumberClick">{{ build }}</a>
       <a
         class="released"
         :title="releasedString"
@@ -61,6 +61,9 @@ export default {
     download: {
       type: String,
     },
+    url: {
+      type: String,
+    },
     avatar: {
       type: String,
     },
@@ -76,6 +79,13 @@ export default {
       this.$ga.event({
         eventCategory: 'dev-item',
         eventAction: 'title-click',
+        eventLabel: this.number,
+      });
+    },
+    buildNumberClick() {
+      this.$ga.event({
+        eventCategory: 'dev-item',
+        eventAction: 'build-number-click',
         eventLabel: this.number,
       });
     },
@@ -174,6 +184,11 @@ export default {
 
     .build-number {
       color: #0009;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .released {

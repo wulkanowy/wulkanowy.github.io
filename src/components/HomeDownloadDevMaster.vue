@@ -2,7 +2,7 @@
   <div class="download-dev-master">
     <div class="title">Najnowsza stabilna wersja DEV</div>
     <div class="subheader">
-      <span class="build-number">{{ build }}</span>
+      <a class="build-number" :href="url" @click="buildNumberClick">{{ build }}</a>
       <a
         class="released"
         :title="releasedString"
@@ -43,8 +43,17 @@ export default {
     commitUrl: {
       type: String,
     },
+    url: {
+      type: String,
+    },
   },
   methods: {
+    buildNumberClick() {
+      this.$ga.event({
+        eventCategory: 'dev-master-item',
+        eventAction: 'build-number-click',
+      });
+    },
     releasedClick() {
       this.$ga.event({
         eventCategory: 'dev-master-item',
@@ -116,6 +125,11 @@ export default {
 
     .build-number {
       color: #0009;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .released {

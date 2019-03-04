@@ -4,6 +4,7 @@
       v-if="master"
       :released="master.released"
       :download="master.download"
+      :url="master.url"
       :build="master.build"
       :commit-url="master.commitUrl" />
     <home-download-dev-item
@@ -14,6 +15,7 @@
       :released="version.released"
       :github="version.github"
       :download="version.download"
+      :url="version.url"
       :avatar="version.avatar"
       :user="version.user"
       :build="version.build"
@@ -43,6 +45,7 @@ export default {
         released: build.body.finished_at,
         download: build.body.public_install_page_url,
         build: build.body.build_number,
+        url: build.body.build_url,
         commitUrl: build.body.commit_view_url,
       };
     },
@@ -57,6 +60,7 @@ export default {
           released: build.body.finished_at,
           github: release.html_url,
           download: build.body.public_install_page_url,
+          url: build.body.build_url,
           build: build.body.build_number,
           avatar: release.user.avatar_url,
           user: release.user.login,
