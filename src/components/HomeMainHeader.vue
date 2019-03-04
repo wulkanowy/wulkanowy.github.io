@@ -56,6 +56,8 @@ export default {
         element.scrollIntoView({
           behavior: 'smooth',
         });
+        window.location.hash = 'download';
+        element.focus();
       }
     },
     discordClick() {
