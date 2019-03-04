@@ -43,11 +43,20 @@ export default {
         eventAction: 'click',
       });
     },
-    otherOptionsClick() {
+    otherOptionsClick(e) {
       this.$ga.event({
         eventCategory: 'other-download-options-link',
         eventAction: 'click',
       });
+
+      const element = document.getElementById('download');
+      if (element.scrollIntoView) {
+        e.preventDefault();
+
+        element.scrollIntoView({
+          behavior: 'smooth',
+        });
+      }
     },
     discordClick() {
       this.$ga.event({
