@@ -1,6 +1,6 @@
 <template>
   <div class="download-dev-master">
-    <div class="title">Najnowsza stabilna wersja DEV</div>
+    <div class="title">Ostatnia wersja DEV</div>
     <div class="subheader">
       <a class="build-number" :href="url" @click="buildNumberClick">{{ build }}</a>
       <a
