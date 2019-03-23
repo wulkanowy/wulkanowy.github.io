@@ -3,7 +3,7 @@
     <a class="header" :href="github" @click="titleClick">
       <span class="title">{{ title }}</span>
       <span class="number"> #{{ number }}</span>
-  </a>
+    </a>
     <div class="subheader">
       <a class="build-number" :href="url" @click="buildNumberClick">{{ build }}</a>
       <a
@@ -13,7 +13,7 @@
         @click="releasedClick">
         {{ releasedRelativeString }}
       </a>
-      <img class="avatar" :src="avatar" />
+      <img class="avatar" :src="avatar" alt="" />
       <span class="user">{{ user }}</span>
     </div>
     <div class="buttons">
@@ -36,107 +36,105 @@
 </template>
 
 <script>
-import moment from 'moment';
+  import moment from 'moment';
 
-moment.locale('pl');
+  moment.locale('pl');
 
-export default {
-  name: 'home-download-dev-item',
-  props: {
-    title: {
-      type: String,
+  export default {
+    name: 'home-download-dev-item',
+    props: {
+      title: {
+        type: String,
+      },
+      released: {
+        type: String,
+      },
+      number: {
+        type: Number,
+      },
+      build: {
+        type: Number,
+      },
+      github: {
+        type: String,
+      },
+      download: {
+        type: String,
+      },
+      url: {
+        type: String,
+      },
+      avatar: {
+        type: String,
+      },
+      user: {
+        type: String,
+      },
+      commit: {
+        type: String,
+      },
     },
-    released: {
-      type: String,
+    methods: {
+      titleClick() {
+        this.$ga.event({
+          eventCategory: 'dev-item',
+          eventAction: 'title-click',
+          eventLabel: this.number,
+        });
+      },
+      buildNumberClick() {
+        this.$ga.event({
+          eventCategory: 'dev-item',
+          eventAction: 'build-number-click',
+          eventLabel: this.number,
+        });
+      },
+      releasedClick() {
+        this.$ga.event({
+          eventCategory: 'dev-item',
+          eventAction: 'released-click',
+          eventLabel: this.number,
+        });
+      },
+      githubClick() {
+        this.$ga.event({
+          eventCategory: 'dev-item',
+          eventAction: 'github-click',
+          eventLabel: this.number,
+        });
+      },
+      downloadClick() {
+        this.$ga.event({
+          eventCategory: 'dev-item',
+          eventAction: 'download-click',
+          eventLabel: this.number,
+        });
+      },
     },
-    number: {
-      type: Number,
+    computed: {
+      releasedString() {
+        return moment(this.released).format('dddd, D MMM YYYY HH:mm:ss');
+      },
+      releasedRelativeString() {
+        const string = moment(this.released).fromNow();
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      },
     },
-    build: {
-      type: Number,
-    },
-    github: {
-      type: String,
-    },
-    download: {
-      type: String,
-    },
-    url: {
-      type: String,
-    },
-    avatar: {
-      type: String,
-    },
-    user: {
-      type: String,
-    },
-    commit: {
-      type: String,
-    },
-  },
-  methods: {
-    titleClick() {
-      this.$ga.event({
-        eventCategory: 'dev-item',
-        eventAction: 'title-click',
-        eventLabel: this.number,
-      });
-    },
-    buildNumberClick() {
-      this.$ga.event({
-        eventCategory: 'dev-item',
-        eventAction: 'build-number-click',
-        eventLabel: this.number,
-      });
-    },
-    releasedClick() {
-      this.$ga.event({
-        eventCategory: 'dev-item',
-        eventAction: 'released-click',
-        eventLabel: this.number,
-      });
-    },
-    githubClick() {
-      this.$ga.event({
-        eventCategory: 'dev-item',
-        eventAction: 'github-click',
-        eventLabel: this.number,
-      });
-    },
-    downloadClick() {
-      this.$ga.event({
-        eventCategory: 'dev-item',
-        eventAction: 'download-click',
-        eventLabel: this.number,
-      });
-    },
-  },
-  computed: {
-    releasedString() {
-      return moment(this.released).format('dddd, D MMM YYYY HH:mm:ss');
-    },
-    releasedRelativeString() {
-      const string = moment(this.released).fromNow();
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    },
-  },
-};
+  };
 </script>
 
 <style lang="scss" scoped>
   .download-dev-item {
     min-height: 56px;
-    padding: 8px;
-    padding-left: 16px;
+    padding: 8px 8px 8px 16px;
     display: grid;
     grid-template-rows: 1fr auto auto 1fr;
     grid-template-columns: 1fr auto;
     background-color: #fff;
     border-radius: 4px;
-    box-shadow:
-      0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0px 2px 2px 0px rgba(0, 0, 0, 0.14),
-      0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
     margin-top: 16px;
 
     &:last-child {
@@ -206,10 +204,9 @@ export default {
       height: 16px;
       margin-left: 8px;
       border-radius: 2px;
-      box-shadow:
-        0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-        0px 2px 2px 0px rgba(0, 0, 0, 0.14),
-        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12);
     }
 
     .user {

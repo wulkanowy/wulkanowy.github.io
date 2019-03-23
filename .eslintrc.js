@@ -10,8 +10,18 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'vue/script-indent': ['error', 2, { baseIndent: 1 }],
+    'max-len': 'off',
   },
   parserOptions: {
     parser: 'babel-eslint',
   },
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        indent: 'off',
+      },
+    },
+  ],
 };

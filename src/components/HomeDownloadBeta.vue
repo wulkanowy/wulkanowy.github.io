@@ -12,28 +12,28 @@
 </template>
 
 <script>
-import HomeDownloadBetaItem from './HomeDownloadBetaItem.vue';
-import Spinner from './Spinner.vue';
+  import HomeDownloadBetaItem from './HomeDownloadBetaItem.vue';
+  import Spinner from './Spinner.vue';
 
-export default {
-  name: 'home-download-beta',
-  components: {
-    HomeDownloadBetaItem,
-    Spinner,
-  },
-  asyncComputed: {
-    async versions() {
-      const response = await this.$http.get('https://api.github.com/repos/wulkanowy/wulkanowy/releases');
-      return response.body.map(release => ({
-        code: release.tag_name,
-        released: release.published_at,
-        github: release.html_url,
-        download: release.assets[0].browser_download_url,
-        id: release.id,
-      }));
+  export default {
+    name: 'home-download-beta',
+    components: {
+      HomeDownloadBetaItem,
+      Spinner,
     },
-  },
-};
+    asyncComputed: {
+      async versions() {
+        const response = await this.$http.get('https://api.github.com/repos/wulkanowy/wulkanowy/releases');
+        return response.body.map(release => ({
+          code: release.tag_name,
+          released: release.published_at,
+          github: release.html_url,
+          download: release.assets[0].browser_download_url,
+          id: release.id,
+        }));
+      },
+    },
+  };
 </script>
 
 <style lang="scss" scoped>

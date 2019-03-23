@@ -2,42 +2,41 @@
   <div class="download-version-switcher">
     <span
       class="section-name section-name-beta"
-      :class="{ active: active == 'beta' }"
+      :class="{ active: active === 'beta' }"
       @click="active = 'beta'">BETA</span>
-    <div class="devider" />
+    <div class="devider"></div>
     <span
       class="section-name section-name-dev"
-      :class="{ active: active == 'dev' }"
+      :class="{ active: active === 'dev' }"
       @click="active = 'dev'">DEV</span>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'home-download-version-switcher',
-  components: {
-  },
-  props: {
-    activeSection: Object,
-    default: {},
-  },
-  computed: {
-    active: {
-      get() {
-        return this.activeSection.data;
-      },
-      set(value) {
-        this.$ga.event({
-          eventCategory: 'dev-section',
-          eventAction: 'switch',
-          eventLabel: value,
-          eventValue: value === 'beta' ? 0 : 1,
-        });
-        this.activeSection.data = value;
+  export default {
+    name: 'home-download-version-switcher',
+    components: {},
+    props: {
+      activeSection: Object,
+      default: {},
+    },
+    computed: {
+      active: {
+        get() {
+          return this.activeSection.data;
+        },
+        set(value) {
+          this.$ga.event({
+            eventCategory: 'dev-section',
+            eventAction: 'switch',
+            eventLabel: value,
+            eventValue: value === 'beta' ? 0 : 1,
+          });
+          this.activeSection.data = value;
+        },
       },
     },
-  },
-};
+  };
 </script>
 
 <style lang="scss" scoped>

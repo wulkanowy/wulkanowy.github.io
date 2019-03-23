@@ -10,35 +10,35 @@
 </template>
 
 <script>
-import HomeDownloadBeta from './HomeDownloadBeta.vue';
-import HomeDownloadDev from './HomeDownloadDev.vue';
-import HomeDownloadVersionSwitcher from './HomeDownloadVersionSwitcher.vue';
+  import HomeDownloadBeta from './HomeDownloadBeta.vue';
+  import HomeDownloadDev from './HomeDownloadDev.vue';
+  import HomeDownloadVersionSwitcher from './HomeDownloadVersionSwitcher.vue';
 
-export default {
-  name: 'home-download-section',
-  components: {
-    HomeDownloadBeta,
-    HomeDownloadDev,
-    HomeDownloadVersionSwitcher,
-  },
-  data() {
-    return {
-      activeSection: {
-        data: 'beta',
-      },
-    };
-  },
-  computed: {
-    active: {
-      get() {
-        return this.activeSection.data;
-      },
-      set(value) {
-        this.activeSection.data = value;
+  export default {
+    name: 'home-download-section',
+    components: {
+      HomeDownloadBeta,
+      HomeDownloadDev,
+      HomeDownloadVersionSwitcher,
+    },
+    data() {
+      return {
+        activeSection: {
+          data: 'beta',
+        },
+      };
+    },
+    computed: {
+      active: {
+        get() {
+          return this.activeSection.data;
+        },
+        set(value) {
+          this.activeSection.data = value;
+        },
       },
     },
-  },
-};
+  };
 </script>
 
 <style lang="scss" scoped>

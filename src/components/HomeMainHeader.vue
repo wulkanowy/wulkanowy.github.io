@@ -34,58 +34,58 @@
 </template>
 
 <script>
-export default {
-  name: 'home-main-header',
-  methods: {
-    googlePlayClick() {
-      this.$ga.event({
-        eventCategory: 'google-play-link',
-        eventAction: 'click',
-      });
-    },
-    otherOptionsClick(e) {
-      this.$ga.event({
-        eventCategory: 'other-download-options-link',
-        eventAction: 'click',
-      });
-
-      const element = document.getElementById('download');
-      if (element.scrollIntoView) {
-        e.preventDefault();
-
-        element.scrollIntoView({
-          behavior: 'smooth',
+  export default {
+    name: 'home-main-header',
+    methods: {
+      googlePlayClick() {
+        this.$ga.event({
+          eventCategory: 'google-play-link',
+          eventAction: 'click',
         });
-        window.location.hash = 'download';
-        element.focus();
-      }
+      },
+      otherOptionsClick(e) {
+        this.$ga.event({
+          eventCategory: 'other-download-options-link',
+          eventAction: 'click',
+        });
+
+        const element = document.getElementById('download');
+        if (element.scrollIntoView) {
+          e.preventDefault();
+
+          element.scrollIntoView({
+            behavior: 'smooth',
+          });
+          window.location.hash = 'download';
+          element.focus();
+        }
+      },
+      discordClick() {
+        this.$ga.event({
+          eventCategory: 'discord-link',
+          eventAction: 'click',
+        });
+      },
+      githubClick() {
+        this.$ga.event({
+          eventCategory: 'github-link',
+          eventAction: 'click',
+        });
+      },
+      trelloClick() {
+        this.$ga.event({
+          eventCategory: 'trello-link',
+          eventAction: 'click',
+        });
+      },
+      paypalClick() {
+        this.$ga.event({
+          eventCategory: 'paypal-link',
+          eventAction: 'click',
+        });
+      },
     },
-    discordClick() {
-      this.$ga.event({
-        eventCategory: 'discord-link',
-        eventAction: 'click',
-      });
-    },
-    githubClick() {
-      this.$ga.event({
-        eventCategory: 'github-link',
-        eventAction: 'click',
-      });
-    },
-    trelloClick() {
-      this.$ga.event({
-        eventCategory: 'trello-link',
-        eventAction: 'click',
-      });
-    },
-    paypalClick() {
-      this.$ga.event({
-        eventCategory: 'paypal-link',
-        eventAction: 'click',
-      });
-    },
-  },
-};
+  };
 </script>
 
 
@@ -107,10 +107,7 @@ export default {
       width: 768px;
       max-width: 90vw;
       display: block;
-      filter:
-        drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))
-        drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14))
-        drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12));
+      filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2)) drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12));
     }
   }
 
@@ -122,10 +119,9 @@ export default {
     font-weight: 300;
     color: #fff;
     font-size: 32px;
-    text-shadow:
-      0px 5px 5px rgba(0, 0, 0, 0.2),
-      0px 8px 10px rgba(0, 0, 0, 0.14),
-      0px 3px 14px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2),
+    0 8px 10px rgba(0, 0, 0, 0.14),
+    0 3px 14px rgba(0, 0, 0, 0.12);
     text-transform: uppercase;
 
     @media screen and (max-width: 550px) {
@@ -150,13 +146,12 @@ export default {
       display: block;
 
       img {
-        widows: 216px;
+        width: 216px;
         height: 64px;
-        box-shadow:
-          0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-          0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-          0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-          border-radius: 8px;
+        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+        0 4px 5px 0 rgba(0, 0, 0, 0.14),
+        0 1px 10px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
         transition: box-shadow 150ms;
       }
 
@@ -165,10 +160,9 @@ export default {
       }
 
       &:hover img, &:focus img {
-        box-shadow:
-          0px 11px 15px -7px rgba(0, 0, 0, 0.2),
-          0px 24px 38px 3px rgba(0, 0, 0, 0.14),
-          0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+        0 24px 38px 3px rgba(0, 0, 0, 0.14),
+        0 9px 46px 8px rgba(0, 0, 0, 0.12);
       }
     }
 
@@ -187,10 +181,9 @@ export default {
       font-weight: 500;
       border-radius: 4px;
       margin-left: 32px;
-      box-shadow:
-        0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-        0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-        0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12);
       transition: box-shadow 150ms;
 
       &:focus {
@@ -198,10 +191,9 @@ export default {
       }
 
       &:focus, &:hover {
-        box-shadow:
-          0px 11px 15px -7px rgba(0, 0, 0, 0.2),
-          0px 24px 38px 3px rgba(0, 0, 0, 0.14),
-          0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+        0 24px 38px 3px rgba(0, 0, 0, 0.14),
+        0 9px 46px 8px rgba(0, 0, 0, 0.12);
       }
 
       @media screen and (max-width: 550px) {
@@ -216,13 +208,11 @@ export default {
 
     .github, .trello, .discord, .paypal {
       margin: 8px;
+
       img {
         width: 48px;
         height: 48px;
-        filter:
-          drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))
-          drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14))
-          drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12));
+        filter: drop-shadow(0 5px 5px rgba(0, 0, 0, .2)) drop-shadow(0 8px 10px rgba(0, 0, 0, .14)) drop-shadow(0 3px 14px rgba(0, 0, 0, .12));
 
         @media screen and (max-width: 375px) {
           width: 32px;

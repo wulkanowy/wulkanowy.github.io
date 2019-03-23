@@ -6,16 +6,16 @@
 </template>
 
 <script>
-import HomeMainSection from './HomeMainSection.vue';
-import HomeDownloadSection from './HomeDownloadSection.vue';
+  import HomeMainSection from './HomeMainSection.vue';
+  import HomeDownloadSection from './HomeDownloadSection.vue';
 
-export default {
-  name: 'home-view',
-  components: {
-    HomeMainSection,
-    HomeDownloadSection,
-  },
-};
+  export default {
+    name: 'home-view',
+    components: {
+      HomeMainSection,
+      HomeDownloadSection,
+    },
+  };
 </script>
 
 <style lang="scss">

@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import HomeView from './components/HomeView.vue';
+  import HomeView from './components/HomeView.vue';
 
-export default {
-  name: 'app',
-  components: {
-    HomeView,
-  },
-};
+  export default {
+    name: 'app',
+    components: {
+      HomeView,
+    },
+  };
 </script>
 
 <style lang="scss">

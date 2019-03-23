@@ -10,10 +10,10 @@
     </a>
     <div class="buttons">
       <a
-      class="github-button"
-      :href="github"
-      title="GitHub"
-      @click="githubClick">
+        class="github-button"
+        :href="github"
+        title="GitHub"
+        @click="githubClick">
         <span class="mdi mdi-github-circle"></span>
       </a>
       <a
@@ -28,82 +28,80 @@
 </template>
 
 <script>
-import moment from 'moment';
+  import moment from 'moment';
 
-moment.locale('pl');
+  moment.locale('pl');
 
-export default {
-  name: 'home-download-beta-item',
-  props: {
-    code: {
-      type: String,
+  export default {
+    name: 'home-download-beta-item',
+    props: {
+      code: {
+        type: String,
+      },
+      released: {
+        type: String,
+      },
+      github: {
+        type: String,
+      },
+      download: {
+        type: String,
+      },
     },
-    released: {
-      type: String,
+    methods: {
+      codeClick() {
+        this.$ga.event({
+          eventCategory: 'beta-item',
+          eventAction: 'code-click',
+          eventLabel: this.code,
+        });
+      },
+      releasedClick() {
+        this.$ga.event({
+          eventCategory: 'beta-item',
+          eventAction: 'released-click',
+          eventLabel: this.code,
+        });
+      },
+      githubClick() {
+        this.$ga.event({
+          eventCategory: 'beta-item',
+          eventAction: 'github-click',
+          eventLabel: this.code,
+        });
+      },
+      downloadClick() {
+        this.$ga.event({
+          eventCategory: 'beta-item',
+          eventAction: 'download-click',
+          eventLabel: this.code,
+        });
+      },
     },
-    github: {
-      type: String,
+    computed: {
+      releasedString() {
+        return moment(this.released).format('dddd, D MMM YYYY HH:mm:ss');
+      },
+      releasedRelativeString() {
+        const string = moment(this.released).fromNow();
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      },
     },
-    download: {
-      type: String,
-    },
-  },
-  methods: {
-    codeClick() {
-      this.$ga.event({
-        eventCategory: 'beta-item',
-        eventAction: 'code-click',
-        eventLabel: this.code,
-      });
-    },
-    releasedClick() {
-      this.$ga.event({
-        eventCategory: 'beta-item',
-        eventAction: 'released-click',
-        eventLabel: this.code,
-      });
-    },
-    githubClick() {
-      this.$ga.event({
-        eventCategory: 'beta-item',
-        eventAction: 'github-click',
-        eventLabel: this.code,
-      });
-    },
-    downloadClick() {
-      this.$ga.event({
-        eventCategory: 'beta-item',
-        eventAction: 'download-click',
-        eventLabel: this.code,
-      });
-    },
-  },
-  computed: {
-    releasedString() {
-      return moment(this.released).format('dddd, D MMM YYYY HH:mm:ss');
-    },
-    releasedRelativeString() {
-      const string = moment(this.released).fromNow();
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    },
-  },
-};
+  };
 </script>
 
 <style lang="scss" scoped>
   .download-beta-item {
     height: 56px;
     padding: 8px;
-    padding-left: 8px;
     display: grid;
     grid-template-rows: 1fr auto auto 1fr;
     grid-template-columns: 1fr auto;
     background-color: #fff;
     border-radius: 4px;
-    box-shadow:
-      0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0px 2px 2px 0px rgba(0, 0, 0, 0.14),
-      0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 
     &:not(:first-child) {
       margin-top: 16px;
