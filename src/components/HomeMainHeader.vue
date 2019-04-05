@@ -30,6 +30,9 @@
         <img src="../assets/paypal.svg" alt="PayPal" />
       </a>
     </div>
+    <div class="privacy-policy">
+      <a class="privacy-policy__link" href="./polityka-prywatnosci.html">Polityka prywatności</a>
+    </div>
   </div>
 </template>
 
@@ -219,6 +222,15 @@
           height: 32px;
         }
       }
+    }
+  }
+
+  .privacy-policy {
+    margin-top: 35px;
+
+    &__link {
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
     }
   }
 </style>
