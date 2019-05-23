@@ -13,8 +13,8 @@ deploy:
     branch: develop
 
 branches:
-  only:
-    develop
+  except:
+    master
 
 script:
   - npm run lint
