@@ -1,5 +1,7 @@
 # wulkanowy-landing-page
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wulkanowy/wulkanowy.github.io.svg)](https://greenkeeper.io/)
+
 ## Project setup
 ```
 npm install
