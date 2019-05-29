@@ -39,7 +39,7 @@
     },
     asyncComputed: {
       async master() {
-        const redirectorUrl = 'https://bitrise-redirector.herokuapp.com/v0.1/apps/f841f20d8f8b1dc8/builds/master/artifacts/0/info';
+        const redirectorUrl = 'https://bitrise-redirector.herokuapp.com/v0.1/apps/f841f20d8f8b1dc8/builds/develop/artifacts/0/info';
         const build = await this.$http.get(redirectorUrl);
         return {
           released: build.body.finished_at,
