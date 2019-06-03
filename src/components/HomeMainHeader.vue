@@ -12,9 +12,9 @@
         @click="googlePlayClick">
         <img src="../assets/google-play-badge.svg" alt="Pobierz z Google Play" />
       </a>
-      <a class="other-options" href="#download" @click="otherOptionsClick">
+      <button class="other-options" @click="otherOptionsClick">
         INNE OPCJE
-      </a>
+      </button>
     </div>
     <div class="quick-links">
       <a class="discord" title="Discord" href="https://discord.gg/vccAQBr" @click="discordClick">
@@ -31,7 +31,7 @@
       </a>
     </div>
     <div class="privacy-policy">
-      <a class="privacy-policy__link" href="./polityka-prywatnosci.html">Polityka prywatności</a>
+      <router-link class="privacy-policy__link" to="polityka-prywatnosci">Polityka prywatności</router-link>
     </div>
   </div>
 </template>
@@ -46,7 +46,7 @@
           eventAction: 'click',
         });
       },
-      otherOptionsClick(e) {
+      otherOptionsClick() {
         this.$ga.event({
           eventCategory: 'other-download-options-link',
           eventAction: 'click',
@@ -54,12 +54,9 @@
 
         const element = document.getElementById('download');
         if (element.scrollIntoView) {
-          e.preventDefault();
-
           element.scrollIntoView({
             behavior: 'smooth',
           });
-          window.location.hash = 'download';
           element.focus();
         }
       },
@@ -187,6 +184,8 @@
       box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
       0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12);
+      border: none;
+      cursor: pointer;
       transition: box-shadow 150ms;
 
       &:focus {

@@ -6,6 +6,7 @@ import VueMq from 'vue-mq';
 import VueAnalytics from 'vue-analytics';
 
 import App from './App.vue';
+import router from './router';
 
 Vue.use(AsyncComputed);
 Vue.use(VueResource);
@@ -27,5 +28,6 @@ Vue.$ga.page(window.location.pathname);
 Vue.config.productionTip = false;
 
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app');

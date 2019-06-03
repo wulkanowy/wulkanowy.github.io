@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import HomeMainSection from './HomeMainSection.vue';
-  import HomeDownloadSection from './HomeDownloadSection.vue';
+  import HomeMainSection from '../components/HomeMainSection.vue';
+  import HomeDownloadSection from '../components/HomeDownloadSection.vue';
 
   export default {
     name: 'home-view',
