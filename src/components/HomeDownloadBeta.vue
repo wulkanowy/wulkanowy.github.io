@@ -28,7 +28,7 @@
           code: release.tag_name,
           released: release.published_at,
           github: release.html_url,
-          download: release.assets[0].browser_download_url,
+          download: release.assets.length === 0 ? release.html_url : release.assets[0].browser_download_url,
           id: release.id,
         }));
       },
