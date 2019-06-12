@@ -15,7 +15,8 @@
     "vue-async-computed": "^3.7.0",
     "vue-material-design-icons": "^3.2.0",
     "vue-mq": "^1.0.1",
-    "vue-resource": "^1.5.1"
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",

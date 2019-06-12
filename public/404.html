@@ -4,61 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=./#download">
+    <meta http-equiv="refresh" content="0;URL='./'">
     <link rel="icon" href="./favicon.ico">
     <title>Przekierowywanie | Wulkanowy</title>
-    <style>
-      body {
-        margin: 0;
-        background-color: #d32f2f;
-        font-family: sans-serif;
-      }
-
-      .container {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .text {
-        font-size: 32px;
-        font-weight: 100;
-        color: #fff;
-      }
-
-      .link {
-        font-size: 20px;
-        font-weight: 200;
-        color: #000;
-        background-color: #fff;
-        text-decoration: none;
-        display: block;
-        padding: 8px 12px;
-        margin-top: 20px;
-        transition: opacity 300ms;
-        border-radius: 4px;
-        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-      }
-    </style>
   </head>
   <body>
     <div class="container">
       <div class="text">Przekierowywanie</div>
-      <a href="./#download" class="link">Jeżeli nie nastąpiło automatyczne przekierowanie, kliknij tutaj</a>
     </div>
   </body>
   <script>
-    document.querySelector('.link').style.opacity = 0;
-
-    setTimeout(() => {
-      window.location = './#download';
-    }, 0);
-
-    setTimeout(() => {
-      document.querySelector('.link').style.opacity = 1;
-    }, 2000);
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
   </script>
 </html>
