@@ -34,7 +34,7 @@ new Vue({
     if (sessionStorage.redirect) {
       const { redirect } = sessionStorage;
       delete sessionStorage.redirect;
-      this.$router.push(redirect);
+      router.push(redirect);
     }
   },
 }).$mount('#app');
