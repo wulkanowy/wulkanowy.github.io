@@ -1,5 +1,5 @@
 <template>
-  <div id="download">
+  <div id="download" class="home-section">
     <h2 class="title">Pobieranie</h2>
     <home-download-version-switcher v-if="$mq === 'md'" :activeSection="activeSection" />
     <h3 class="section-name section-name-beta" v-if="$mq === 'lg'">BETA</h3>
