@@ -6,13 +6,13 @@
     "wulkanowy": "y"
   },
   {
-    "feature": "Frekwencja Widok dni",
+    "feature": "Frekwencja (widok dni)",
     "uonet": "y",
     "dzienniczek": "y",
     "wulkanowy": "y"
   },
   {
-    "feature": "Frekwencja Podsumowanie",
+    "feature": "Frekwencja (podsumowanie)",
     "uonet": "y",
     "dzienniczek": "n",
     "wulkanowy": "y"
