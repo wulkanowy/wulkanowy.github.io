@@ -42,7 +42,6 @@
 <style lang="scss">
   #features-table {
     min-height: 100vh;
-    width: 100vw;
     overflow: hidden;
     box-sizing: border-box;
     padding: 0 32px 32px;
