@@ -1,24 +1,26 @@
 <template>
   <div id="features-table" class="home-section">
     <h2 class="title">Porównanie funkcji</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Funkcja</th>
-          <th>Strona UONET+</th>
-          <th>Aplikacja Dzienniczek+</th>
-          <th class="wulkanowy">Aplikacja Wulkanowy</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(row, i) in table" :key="i">
-          <td class="feature-name" v-html="row.feature"></td>
-          <table-cell :value="row.uonet" />
-          <table-cell :value="row.dzienniczek" />
-          <table-cell :value="row.wulkanowy" wulkanowy />
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Funkcja</th>
+            <th>Strona UONET+</th>
+            <th>Aplikacja Dzienniczek+</th>
+            <th class="wulkanowy">Aplikacja Wulkanowy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(row, i) in table" :key="i">
+            <td class="feature-name" v-html="row.feature"></td>
+            <table-cell :value="row.uonet" />
+            <table-cell :value="row.dzienniczek" />
+            <table-cell :value="row.wulkanowy" wulkanowy />
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -40,6 +42,8 @@
 <style lang="scss">
   #features-table {
     min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     box-sizing: border-box;
     padding: 0 32px 32px;
     background-color: #d32f2f;
@@ -49,11 +53,11 @@
     font-family: 'Roboto', sans-serif;
 
     @media screen and (max-width: 875px) {
-      padding: 0 16px 16px;
+      padding: 0 0 16px;
     }
 
     @media screen and (max-width: 450px) {
-      padding: 0 8px 16px;
+      padding: 0 0 16px;
     }
 
     .title {
@@ -66,9 +70,20 @@
       grid-column: 1;
     }
 
+    .table-wrapper {
+      grid-row: 3;
+      width: fit-content;
+      max-width: 100vw;
+      box-sizing: border-box;
+      overflow-x: auto;
+      justify-self: center;
+    }
+
     table {
       border-spacing: 5px;
-      grid-row: 3;
+      width: fit-content;
+      min-width: 75vw;
+      padding: 0 16px;
 
       th {
         padding: 8px;

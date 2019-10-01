@@ -28,14 +28,13 @@
 <style lang="scss" scoped>
   td {
     text-align: center;
+    min-width: 95px;
 
     &.wulkanowy {
-      // background-color: #ffebee;
       background-color: #fff !important;
     }
 
     &.other {
-      // background-color: #e3f2fd;
       color: #1e88e5;
     }
   }
