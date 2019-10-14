@@ -98,7 +98,7 @@
     &__cell {
       padding: 8px;
 
-      &__feature-name {
+      &--feature-name {
         font-weight: 500;
       }
     }

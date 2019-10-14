@@ -33,7 +33,7 @@
       background-color: #fff;
     }
 
-    &--wulkanowy {
+    &--other {
       color: #1e88e5;
     }
   }
