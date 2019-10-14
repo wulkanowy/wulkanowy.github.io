@@ -1,19 +1,19 @@
 <template>
-  <div id="features-table" class="home-section">
-    <h2 class="title">Porównanie funkcji</h2>
-    <div class="table-wrapper">
-      <table>
+  <div id="features-table-section" class="home-section">
+    <h2 class="features-table-section__title">Porównanie funkcji</h2>
+    <div class="features-table">
+      <table class="features-table__table">
         <thead>
           <tr>
-            <th>Funkcja</th>
-            <th>Strona UONET+</th>
-            <th>Aplikacja Dzienniczek+</th>
-            <th class="wulkanowy">Aplikacja Wulkanowy</th>
+            <th class="features-table__th">Funkcja</th>
+            <th class="features-table__th">Strona UONET+</th>
+            <th class="features-table__th">Aplikacja Dzienniczek+</th>
+            <th class="features-table__th features-table__th--wulkanowy">Aplikacja Wulkanowy</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="(row, i) in table" :key="i">
-            <td class="feature-name" v-html="row.feature"></td>
+            <td class="features-table__cell features-table__cell--feature-name" v-html="row.feature"></td>
             <table-cell :value="row.uonet" />
             <table-cell :value="row.dzienniczek" />
             <table-cell :value="row.wulkanowy" wulkanowy />
@@ -40,7 +40,7 @@
 </script>
 
 <style lang="scss">
-  #features-table {
+  #features-table-section {
     min-height: 100vh;
     overflow: hidden;
     box-sizing: border-box;
@@ -58,55 +58,58 @@
     @media screen and (max-width: 450px) {
       padding: 0 0 16px;
     }
+  }
 
-    .title {
-      font-size: 32px;
-      text-align: center;
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      grid-row: 1;
-      grid-column: 1;
-    }
+  .features-table-section__title {
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    grid-row: 1;
+    grid-column: 1;
+  }
 
-    .table-wrapper {
-      grid-row: 3;
-      width: fit-content;
-      max-width: 100vw;
-      box-sizing: border-box;
-      overflow-x: auto;
-      justify-self: center;
-    }
+  .features-table {
+    grid-row: 3;
+    width: fit-content;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: auto;
+    justify-self: center;
 
-    table {
+    &__table {
       border-spacing: 5px;
       width: fit-content;
       min-width: 75vw;
       padding: 0 16px;
+    }
 
-      th {
-        padding: 8px;
+    &__th, &__cell {
+      text-align: center;
+      background-color: #ffffffcc;
+      border-radius: 3px;
+      box-shadow:
+        0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+        0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    }
 
-        &.wulkanowy {
-          color: #f44336;
-          background-color: #fff;
-          font-size: 18px;
-        }
-      }
+    &__cell {
+      padding: 8px;
 
-      .feature-name {
+      &__feature-name {
         font-weight: 500;
       }
+    }
 
-      th, td {
-        text-align: center;
-        padding: 4px 8px;
-        background-color: #ffffffcc;
-        border-radius: 3px;
-        box-shadow:
-          0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-          0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-          0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    &__th {
+      padding: 4px 8px;
+
+      &--wulkanowy {
+        color: #f44336;
+        background-color: #fff;
+        font-size: 18px;
       }
     }
   }
