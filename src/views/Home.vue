@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div class="home">
     <home-main-section />
     <home-features-table-section />
     <home-download-section />
@@ -30,7 +30,7 @@
     scroll-snap-type: y proximity;
   }
 
-  #home .home-section {
+  .home .home-section {
     scroll-snap-align: start;
   }
 </style>

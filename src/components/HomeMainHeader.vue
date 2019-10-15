@@ -1,5 +1,5 @@
 <template>
-  <div id="main-header">
+  <div class="home-main-header">
     <h1 class="logo"><img src="../assets/wulkanowy-full-flat.svg" alt="Wulkanowy" /></h1>
     <p class="text">
       Aplikacja ucznia i rodzica<br />
@@ -90,7 +90,7 @@
 
 
 <style lang="scss" scoped>
-  #main-header {
+  .home-main-header {
     padding-bottom: 48px;
     height: 100vh;
     box-sizing: border-box;

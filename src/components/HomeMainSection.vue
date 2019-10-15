@@ -1,5 +1,5 @@
 <template>
-  <div id="main" class="home-section">
+  <div class="main home-section">
     <home-main-header />
   </div>
 </template>
@@ -16,7 +16,7 @@
 </script>
 
 <style lang="scss" scoped>
-  #main {
+  .main {
     height: 100vh;
     background: linear-gradient(
         rgba(0, 0, 0, 0.3),

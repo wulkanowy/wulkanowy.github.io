@@ -1,5 +1,5 @@
 <template>
-  <div id="features-table-section" class="home-section">
+  <div class="features-table-section home-section">
     <h2 class="features-table-section__title">Porównanie funkcji</h2>
     <div class="features-table">
       <table class="features-table__table">
@@ -40,7 +40,7 @@
 </script>
 
 <style lang="scss">
-  #features-table-section {
+  .features-table-section {
     min-height: 100vh;
     overflow: hidden;
     box-sizing: border-box;
