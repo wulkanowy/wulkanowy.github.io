@@ -63,6 +63,12 @@
           element.focus();
         }
       },
+      emailClick() {
+        this.$ga.event({
+          eventCategory: 'email-link',
+          eventAction: 'click',
+        });
+      },
       discordClick() {
         this.$ga.event({
           eventCategory: 'discord-link',
