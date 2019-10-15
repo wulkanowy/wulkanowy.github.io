@@ -98,6 +98,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
   }
 
   .logo {
@@ -115,7 +116,6 @@
     text-align: center;
     margin-top: 0;
     margin-bottom: 48px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #fff;
     font-size: 32px;
@@ -177,7 +177,6 @@
       color: rgba(0, 0, 0, 0.87);
       line-height: 64px;
       font-size: 20px;
-      font-family: 'Roboto', sans-serif;
       font-weight: 500;
       border-radius: 4px;
       margin-left: 32px;
@@ -228,7 +227,6 @@
     margin-top: 35px;
 
     &__link {
-      font-family: 'Roboto', sans-serif;
       color: #fff;
     }
   }

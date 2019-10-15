@@ -54,17 +54,12 @@
     @media screen and (max-width: 875px) {
       padding: 0 0 16px;
     }
-
-    @media screen and (max-width: 450px) {
-      padding: 0 0 16px;
-    }
   }
 
   .features-table-section__title {
     font-size: 32px;
     text-align: center;
     color: #fff;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     grid-row: 1;
     grid-column: 1;

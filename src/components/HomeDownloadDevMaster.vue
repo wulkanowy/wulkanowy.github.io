@@ -88,6 +88,7 @@
     grid-template-columns: 1fr auto;
     background-color: #fff;
     border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
     0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -97,7 +98,6 @@
     grid-column: 1;
     grid-row: 2;
     color: #D32F2F;
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin-bottom: 8px;
     line-height: 24px;
@@ -115,7 +115,6 @@
   .subheader {
     grid-column: 1;
     grid-row: 3;
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 16px;
     display: flex;
