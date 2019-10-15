@@ -17,6 +17,9 @@
       </button>
     </div>
     <div class="quick-links">
+      <a class="email" title="Email" href="mailto:wulkanowyinc@gmail.com" @click="emailClick">
+        <img src="../assets/email.svg" alt="Email" />
+      </a>
       <a class="discord" title="Discord" href="https://discord.gg/vccAQBr" @click="discordClick">
         <img src="../assets/discord.svg" alt="Discord" />
       </a>
@@ -59,6 +62,12 @@
           });
           element.focus();
         }
+      },
+      emailClick() {
+        this.$ga.event({
+          eventCategory: 'email-link',
+          eventAction: 'click',
+        });
       },
       discordClick() {
         this.$ga.event({
@@ -208,7 +217,7 @@
   .quick-links {
     margin-top: 32px;
 
-    .github, .trello, .discord, .paypal {
+    .email, .github, .trello, .discord, .paypal {
       margin: 8px;
 
       img {
