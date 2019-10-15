@@ -52,7 +52,7 @@
           eventAction: 'click',
         });
 
-        const element = document.getElementById('download');
+        const element = document.querySelector('.download');
         if (element.scrollIntoView) {
           element.scrollIntoView({
             behavior: 'smooth',
@@ -177,6 +177,7 @@
       color: rgba(0, 0, 0, 0.87);
       line-height: 64px;
       font-size: 20px;
+      font-family: 'Roboto', sans-serif;
       font-weight: 500;
       border-radius: 4px;
       margin-left: 32px;
