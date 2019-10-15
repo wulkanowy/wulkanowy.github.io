@@ -52,7 +52,7 @@
           eventAction: 'click',
         });
 
-        const element = document.getElementById('download');
+        const element = document.querySelector('.download');
         if (element.scrollIntoView) {
           element.scrollIntoView({
             behavior: 'smooth',
