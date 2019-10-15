@@ -13,7 +13,7 @@
     "vue": "^2.6.10",
     "vue-analytics": "^5.17.0",
     "vue-async-computed": "^3.7.0",
-    "vue-material-design-icons": "^3.3.1",
+    "vue-material-design-icons": "^3.4.0",
     "vue-mq": "^1.0.1",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.3"

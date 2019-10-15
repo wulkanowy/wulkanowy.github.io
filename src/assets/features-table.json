@@ -1,0 +1,74 @@
+[
+  {
+    "feature": "Średnia ocen",
+    "uonet": "Zależy od ustawień szkoły",
+    "dzienniczek": "Zależy od ustawień szkoły",
+    "wulkanowy": "y"
+  },
+  {
+    "feature": "Frekwencja (widok dni)",
+    "uonet": "y",
+    "dzienniczek": "y",
+    "wulkanowy": "y"
+  },
+  {
+    "feature": "Frekwencja (podsumowanie)",
+    "uonet": "y",
+    "dzienniczek": "n",
+    "wulkanowy": "y"
+  },
+  {
+    "feature": "Uwagi",
+    "uonet": "y",
+    "dzienniczek": "y",
+    "wulkanowy": "y"
+  },
+  {
+    "feature": "Uczeń na tle klasy",
+    "uonet": "y",
+    "dzienniczek": "n",
+    "wulkanowy": "y"
+  },
+  {
+    "feature": "Dane ucznia",
+    "uonet": "y",
+    "dzienniczek": "n",
+    "wulkanowy": "n"
+  },
+  {
+    "feature": "Dane szkoły",
+    "uonet": "y",
+    "dzienniczek": "n",
+    "wulkanowy": "n"
+  },
+  {
+    "feature": "Nauczyciele",
+    "uonet": "y",
+    "dzienniczek": "y",
+    "wulkanowy": "y"
+  },
+  {
+    "feature": "Lekcje zrealizowane",
+    "uonet": "y",
+    "dzienniczek": "n",
+    "wulkanowy": "y"
+  },
+  {
+    "feature": "Wiadomości",
+    "uonet": "y",
+    "dzienniczek": "y",
+    "wulkanowy": "y"
+  },
+  {
+    "feature": "Usprawiedliwienia",
+    "uonet": "y",
+    "dzienniczek": "n",
+    "wulkanowy": "w"
+  },
+  {
+    "feature": "Szczęśliwy numerek",
+    "uonet": "y",
+    "dzienniczek": "n",
+    "wulkanowy": "y"
+  }
+]

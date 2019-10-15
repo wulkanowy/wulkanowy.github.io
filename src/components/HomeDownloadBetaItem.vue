@@ -99,6 +99,7 @@
     grid-template-columns: 1fr auto;
     background-color: #fff;
     border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14),
     0px 1px 5px 0px rgba(0, 0, 0, 0.12);
@@ -115,7 +116,6 @@
   .code {
     grid-column: 1;
     grid-row: 2;
-    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     margin-bottom: 2px;
     color: #D32F2F;
@@ -131,7 +131,6 @@
     grid-column: 1;
     grid-row: 3;
     color: #0009;
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     text-decoration: none;
     justify-self: start;
