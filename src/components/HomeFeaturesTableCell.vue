@@ -29,7 +29,7 @@
   .features-table__cell {
     min-width: 95px;
 
-    &--wulkanowy {
+    &.features-table__cell--wulkanowy {
       background-color: #fff;
     }
 
