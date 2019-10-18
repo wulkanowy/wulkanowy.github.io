@@ -96,6 +96,18 @@
       &--feature-name {
         font-weight: 500;
       }
+
+      &--feature {
+        min-width: 95px;
+      }
+
+      &--wulkanowy {
+        background-color: #fff;
+      }
+
+      &--other {
+        color: #1e88e5;
+      }
     }
 
     &__th {
