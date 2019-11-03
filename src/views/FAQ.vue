@@ -6,6 +6,7 @@
     </div>
     <div class="questions" v-if="window.width > 850 || !faqCurrent">
       <router-link
+        class="questions__link"
         v-for="question in faqMap"
         :key="question.id"
         :to="`/czesto-zadawane-pytania/${question.id}`"
@@ -81,6 +82,8 @@
 </script>
 
 <style lang="scss">
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
   body {
     background:
       linear-gradient(
@@ -97,7 +100,7 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: minmax(256px, auto) 1fr;
 
     @media screen and (max-width: 850px) {
       grid-template-columns: 1fr;
@@ -109,6 +112,19 @@
 
       .questions {
         margin-right: 16px;
+
+        .questions__link {
+          background-color: #fff4;
+          padding: 12px;
+
+          &:hover {
+            background-color: #fff8;
+          }
+
+          &:not(:last-of-type) {
+            margin-bottom: 12px;
+          }
+        }
       }
 
       .answer {
@@ -163,6 +179,31 @@
       0px 2px 4px -1px rgba(0, 0, 0, 0.2),
       0px 4px 5px 0px rgba(0, 0, 0, 0.14),
       0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .questions__link {
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 3px;
+    transition: background-color 300ms;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+
+    &:hover {
+      background-color: #fff4;
+    }
+
+    &.router-link-active {
+      background-color: #fff8;
+      font-weight: 400;
+    }
   }
 
   .answer {
