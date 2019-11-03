@@ -15,7 +15,7 @@
       </router-link>
     </div>
     <div class="answer answer--no-question-selected" v-if="!faqCurrent && window.width > 850">
-      <h1>Brak wybranego pytania</h1>
+      <h1>Żadne pytanie nie jest wybrane</h1>
     </div>
     <div class="answer answer--question-selected" v-if="faqCurrent">
       <vue-markdown :source="faqCurrent" />
@@ -221,8 +221,23 @@
       0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     font-family: 'Roboto', sans-serif;
 
-    h1:first-child {
+    &--question-selected h1:first-child {
       margin-top: 8px;
+    }
+
+    &--no-question-selected {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 32px;
+
+      h1 {
+        margin: 0;
+        font-weight: 300;
+        font-size: 28px;
+      }
     }
   }
 </style>
