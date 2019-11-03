@@ -100,7 +100,7 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: minmax(256px, auto) 1fr;
+    grid-template-columns: minmax(320px, auto) 1fr;
 
     @media screen and (max-width: 850px) {
       grid-template-columns: 1fr;
