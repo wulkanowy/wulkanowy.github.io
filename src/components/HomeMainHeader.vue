@@ -26,9 +26,6 @@
       <a class="github" title="GitHub" href="https://github.com/wulkanowy/" @click="githubClick">
         <img src="../assets/github.svg" alt="GitHub" />
       </a>
-      <a class="trello" title="Trello" href="https://trello.com/b/A97NUM1s/wulkanowy" @click="trelloClick">
-        <img src="../assets/trello.svg" alt="Trello" />
-      </a>
       <a class="paypal" title="PayPal" href="https://paypal.me/wulkanowy" @click="paypalClick">
         <img src="../assets/paypal.svg" alt="PayPal" />
       </a>
@@ -217,7 +214,7 @@
   .quick-links {
     margin-top: 32px;
 
-    .email, .github, .trello, .discord, .paypal {
+    .email, .github, .discord, .paypal {
       margin: 8px;
 
       img {
