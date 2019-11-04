@@ -221,8 +221,12 @@
       0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     font-family: 'Roboto', sans-serif;
 
-    &--question-selected h1:first-child {
-      margin-top: 8px;
+    &--question-selected {
+      text-align: justify;
+
+      h1:first-child {
+        margin-top: 8px;
+      }
     }
 
     &--no-question-selected {
