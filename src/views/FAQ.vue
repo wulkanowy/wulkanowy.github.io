@@ -100,7 +100,7 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: minmax(320px, auto) 1fr;
+    grid-template-columns: 1fr auto minmax(auto, 850px) 1fr;
 
     @media screen and (max-width: 850px) {
       grid-template-columns: 1fr;
@@ -112,6 +112,10 @@
 
       .questions {
         margin-right: 16px;
+        grid-column: 1;
+        min-width: initial;
+        max-width: unset;
+        width: unset;
 
         .questions__link {
           background-color: #fff4;
@@ -135,7 +139,7 @@
 
   .header {
     grid-row: 1;
-    grid-column: 1/3;
+    grid-column: 1/5;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     margin: 8px 0;
@@ -167,7 +171,7 @@
 
   .questions {
     grid-row: 2;
-    grid-column: 1;
+    grid-column: 2;
     margin: 16px;
     margin-top: 0;
     margin-right: 0;
@@ -175,6 +179,9 @@
     padding: 8px;
     border-radius: 4px;
     overflow-y: auto;
+    width: fit-content;
+    min-width: 320px;
+    max-width: 480px;
     box-shadow:
       0px 2px 4px -1px rgba(0, 0, 0, 0.2),
       0px 4px 5px 0px rgba(0, 0, 0, 0.14),
@@ -208,7 +215,7 @@
 
   .answer {
     grid-row: 2;
-    grid-column: 2;
+    grid-column: 3;
     margin: 16px;
     margin-top: 0;
     background-color: #fff8;
