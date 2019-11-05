@@ -1,14 +1,6 @@
 [
   {
-    "name": "Artykuł #1",
-    "id": "artykul-1"
-  },
-  {
-    "name": "Fajny Artykuł #2",
-    "id": "fajny-artykul-2"
-  },
-  {
-    "name": "Zaskakująco długi artykuł numer trzy",
-    "id": "zaskakujaco-dlugi-artykul-3"
+    "name": "Czym jest Wulkanowy?",
+    "id": "czym-jest-wulkanowy"
   }
 ]
