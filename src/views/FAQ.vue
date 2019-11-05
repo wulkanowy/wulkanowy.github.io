@@ -227,6 +227,10 @@
       h1:first-child {
         margin-top: 8px;
       }
+
+       p {
+        margin: 24px 0;
+      }
     }
 
     &--no-question-selected {
