@@ -238,6 +238,19 @@
        p {
         margin: 24px 0;
       }
+
+      img {
+        max-height: 512px;
+        margin: 12px 0 32px;
+        border-radius: 4px;
+        box-shadow:
+          0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+          0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
     }
 
     &--no-question-selected {
