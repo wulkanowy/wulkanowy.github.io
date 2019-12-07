@@ -242,6 +242,7 @@
       p {
         text-align: justify;
         margin: 24px 0;
+        line-height: 1.6;
       }
 
       img {
