@@ -30,8 +30,9 @@
         <img src="../assets/paypal.svg" alt="PayPal" />
       </a>
     </div>
-    <div class="privacy-policy">
-      <router-link class="privacy-policy__link" to="polityka-prywatnosci">Polityka prywatności</router-link>
+    <div class="footer">
+      <router-link class="footer__link footer__privacy-policy-link" to="polityka-prywatnosci">Polityka prywatności</router-link>
+      <router-link class="footer__link footer__faq-link" to="czesto-zadawane-pytania">Często zadawane pytania</router-link>
     </div>
   </div>
 </template>
@@ -230,11 +231,19 @@
     }
   }
 
-  .privacy-policy {
-    margin-top: 35px;
+  .footer {
+    margin-top: 32px;
 
     &__link {
       color: #fff;
+      display: block;
+      padding: 2px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    &__privacy-policy-link {
+      margin-bottom: 8px;
     }
   }
 </style>
