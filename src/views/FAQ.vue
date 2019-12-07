@@ -18,7 +18,11 @@
       <h1>Żadne pytanie nie jest wybrane</h1>
     </div>
     <div class="answer answer--question-selected" v-if="faqCurrent">
-      <vue-markdown :source="faqCurrent" :linkify="false" />
+      <vue-markdown
+        :source="faqCurrent"
+        :linkify="false"
+        :breaks="false"
+      />
     </div>
   </div>
 </template>

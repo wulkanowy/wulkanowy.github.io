@@ -9,6 +9,6 @@ Adres do dziennika powinien znajdować się na stronie twojej szkoły.
 - Lubelski Portal Oświatowy - **edu.lublin.eu**
 - EduNet Miasta Tarnowa - **umt.tarnow.pl**
 - ResMan Rzeszów - **resman.pl**
-- **Fakelog** (fakelog.cf) to dziennik przeznaczony do testowania naszej aplikacji&#46;
+- Fakelog - **fakelog.cf** - to dziennik przeznaczony do testowania naszej aplikacji&#46;
 
 ![Wybór dziennika na ekranie logowania](https://i.imgur.com/tPFTMT2.jpg)
