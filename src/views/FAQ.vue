@@ -254,6 +254,7 @@
           0px 1px 10px 0px rgba(0, 0, 0, 0.12);
         margin: 12px auto 32px;
         display: block;
+        max-width: 100%;
       }
     }
 
