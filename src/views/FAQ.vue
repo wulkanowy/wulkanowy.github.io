@@ -2,7 +2,7 @@
   <div class="faq">
     <div class="header">
       <router-link to="/czesto-zadawane-pytania" v-if="window.width <= 850 && faqCurrent" class="header__back"><span class="mdi mdi-arrow-left"></span></router-link>
-      <router-link to="/" class="header__wulkanowy"><img src="../assets/wulkanowy-small-flat.svg" /></router-link>
+      <router-link to="/" class="header__wulkanowy"><img src="../assets/wulkanowy-small-flat.svg" alt="" /></router-link>
     </div>
     <div class="questions" v-if="window.width > 850 || !faqCurrent">
       <router-link
@@ -18,7 +18,7 @@
       <h1>Żadne pytanie nie jest wybrane</h1>
     </div>
     <div class="answer answer--question-selected" v-if="faqCurrent">
-      <vue-markdown :source="faqCurrent" />
+      <vue-markdown :source="faqCurrent" :linkify="false" />
     </div>
   </div>
 </template>
@@ -172,9 +172,7 @@
   .questions {
     grid-row: 2;
     grid-column: 2;
-    margin: 16px;
-    margin-top: 0;
-    margin-right: 0;
+    margin: 0 0 16px 16px;
     background-color: #fff8;
     padding: 8px;
     border-radius: 4px;
@@ -216,39 +214,40 @@
   .answer {
     grid-row: 2;
     grid-column: 3;
-    margin: 16px;
-    margin-top: 0;
+    margin: 0 16px 16px;
     background-color: #fff8;
     border-radius: 4px;
     padding: 16px;
     overflow-y: auto;
     box-shadow:
-      0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 2px 4px -1px rgba(0, 0, 0, 0.2),
       0px 4px 5px 0px rgba(0, 0, 0, 0.14),
       0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     font-family: 'Roboto', sans-serif;
 
     &--question-selected {
-      text-align: justify;
 
-      h1:first-child {
+      h1 {
         margin-top: 8px;
       }
 
-       p {
+      h1, h2, h3 {
+        font-weight: normal;
+      }
+
+      p {
+        text-align: justify;
         margin: 24px 0;
       }
 
       img {
         max-height: 512px;
-        margin: 12px 0 32px;
         border-radius: 4px;
         box-shadow:
-          0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+          0 2px 4px -1px rgba(0, 0, 0, 0.2),
           0px 4px 5px 0px rgba(0, 0, 0, 0.14),
           0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-        margin-left: auto;
-        margin-right: auto;
+        margin: 12px auto 32px;
         display: block;
       }
     }
