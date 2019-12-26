@@ -1,5 +1,6 @@
 <template>
   <div class="download home-section">
+    <a id="download">Pobieranie wersji rozwojowych</a>
     <h2 class="title">Pobieranie</h2>
     <home-download-version-switcher v-if="$mq === 'md'" :activeSection="activeSection" />
     <h3 class="section-name section-name-beta" v-if="$mq === 'lg'">BETA</h3>
@@ -42,6 +43,10 @@
 </script>
 
 <style lang="scss" scoped>
+  #download {
+    visibility: hidden;
+  }
+
   .download {
     height: 100vh;
     box-sizing: border-box;
