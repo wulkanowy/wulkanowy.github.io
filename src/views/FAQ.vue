@@ -28,8 +28,8 @@
 </template>
 
 <script>
-  import faqMap from '@/assets/faq-map.json';
   import VueMarkdown from 'vue-markdown';
+  import faqMap from '@/assets/faq-map.json';
 
   export default {
     name: 'faq-view',
