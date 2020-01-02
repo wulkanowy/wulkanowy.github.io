@@ -99,7 +99,7 @@ if (process.env.NODE_ENV === 'production') {
         inject: {
           foo: 'bar',
         },
-        headless: false,
+        headless: true,
         renderAfterDocumentEvent: 'render-event',
       }),
     }),
