@@ -24,7 +24,7 @@
     asyncComputed: {
       async versions() {
         const response = await this.$http.get('https://api.github.com/repos/wulkanowy/wulkanowy/releases');
-        return response.body.map(release => ({
+        return response.body.map((release) => ({
           code: release.tag_name,
           released: release.published_at,
           github: release.html_url,

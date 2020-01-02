@@ -31,7 +31,7 @@ export default new Router({
     },
     {
       path: '*.html',
-      redirect: to => to.params.pathMatch,
+      redirect: (to) => to.params.pathMatch,
     },
     {
       path: '*',
