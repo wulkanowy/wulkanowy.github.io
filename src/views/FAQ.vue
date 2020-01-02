@@ -29,7 +29,7 @@
 
 <script>
   import VueMarkdown from 'vue-markdown';
-  import faqMap from '@/assets/faq-map.json';
+  import faqMap from '../assets/faq-map.json';
 
   export default {
     name: 'faq-view',
@@ -62,7 +62,7 @@
       },
     },
     mounted() {
-      this.importFaqAnswers(require.context('@/assets/faq-answers', true, /\.md$/));
+      this.importFaqAnswers(require.context('../assets/faq-answers', true, /\.md$/));
 
       this.$watch(
         '$route',

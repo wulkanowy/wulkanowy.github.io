@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import table from '@/assets/features-table.json';
+  import table from '../assets/features-table.json';
   import HomeFeaturesTableCell from './HomeFeaturesTableCell.vue';
 
   export default {
