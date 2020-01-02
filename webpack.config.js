@@ -84,7 +84,16 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new PrerenderSPAPlugin({
       staticDir: path.join(__dirname, 'dist'),
-      routes: ['/polityka-prywatnosci', '/czesto-zadawane-pytania'],
+      routes: [
+        '/polityka-prywatnosci',
+        '/czesto-zadawane-pytania',
+        '/czesto-zadawane-pytania/czym-jest-wulkanowy',
+        '/czesto-zadawane-pytania/dlaczego-nie-moge-sie-zalogowac',
+        '/czesto-zadawane-pytania/co-jesli-nie-pamietam-hasla',
+        '/czesto-zadawane-pytania/co-to-jest-symbol',
+        '/czesto-zadawane-pytania/jaki-wybrac-dziennik',
+        '/czesto-zadawane-pytania/czym-roznia-sie-wersje-beta-i-dev',
+      ],
 
       renderer: new Renderer({
         inject: {
