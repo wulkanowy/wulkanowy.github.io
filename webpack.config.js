@@ -82,6 +82,14 @@ if (process.env.NODE_ENV === 'production') {
       filename: path.resolve(__dirname, 'dist/index.html'),
       favicon: 'public/favicon.ico',
     }),
+    new HtmlWebpackPlugin({
+      template: 'public/polityka-prywatnosci.html',
+      filename: path.resolve(__dirname, 'dist/polityka-prywatnosci.html'),
+    }),
+    new HtmlWebpackPlugin({
+      template: 'public/404.html',
+      filename: path.resolve(__dirname, 'dist/404.html'),
+    }),
     new PrerenderSPAPlugin({
       staticDir: path.join(__dirname, 'dist'),
       routes: [
