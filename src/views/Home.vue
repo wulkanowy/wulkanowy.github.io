@@ -12,6 +12,7 @@
   import HomeFeaturesTableSection from '../components/HomeFeaturesTableSection.vue';
   import HomeDownloadSection from '../components/HomeDownloadSection.vue';
   import HomeContactFormSection from '../components/HomeContactFormSection.vue';
+  import '@mdi/font/css/materialdesignicons.min.css';
 
   export default {
     name: 'home-view',
