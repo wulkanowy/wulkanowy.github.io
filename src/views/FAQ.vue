@@ -1,7 +1,7 @@
 <template>
   <div class="faq">
     <div class="header">
-      <router-link to="/czesto-zadawane-pytania" v-if="window.width <= 850 && faqCurrent" class="header__back"><span class="mdi mdi-arrow-left"></span></router-link>
+      <router-link to="/czesto-zadawane-pytania" v-if="window.width <= 850 && faqCurrent" class="header__back">←</router-link>
       <router-link to="/" class="header__wulkanowy"><img src="../assets/wulkanowy-small-flat.svg" alt="" /></router-link>
     </div>
     <div class="questions" v-if="window.width > 850 || !faqCurrent">
@@ -112,6 +112,10 @@
       .header {
         grid-column: 1;
         margin: 4px;
+
+        &__back {
+          text-decoration: none;
+        }
       }
 
       .questions {

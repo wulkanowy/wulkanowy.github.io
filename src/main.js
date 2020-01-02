@@ -1,4 +1,3 @@
-import '@mdi/font/css/materialdesignicons.min.css';
 import Vue from 'vue';
 import AsyncComputed from 'vue-async-computed';
 import VueResource from 'vue-resource';
