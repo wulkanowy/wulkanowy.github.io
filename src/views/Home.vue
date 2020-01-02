@@ -3,6 +3,7 @@
     <home-main-section />
     <home-features-table-section />
     <home-download-section />
+    <home-contact-form-section />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
   import HomeMainSection from '../components/HomeMainSection.vue';
   import HomeFeaturesTableSection from '../components/HomeFeaturesTableSection.vue';
   import HomeDownloadSection from '../components/HomeDownloadSection.vue';
+  import HomeContactFormSection from '../components/HomeContactFormSection.vue';
 
   export default {
     name: 'home-view',
@@ -17,6 +19,7 @@
       HomeMainSection,
       HomeFeaturesTableSection,
       HomeDownloadSection,
+      HomeContactFormSection,
     },
   };
 </script>
