@@ -16,7 +16,7 @@ Podstawowa wersja DEV (oznaczona na stronie jako *Ostatnia wersja DEV*) zawiera 
 ale może posiadać problemy ze stabilnością.
 
 Istnieją również wersje DEV generowane automatyczne dla każdej funkcji, nad którą aktualnie pracujemy.
-Zazwyczaj są niestabilne lub niedokończone. Nie zalecamy używania ich niedoświadczonym użytkownikom.
+Zazwyczaj są niestabilne lub niedokończone. Niezalecana niedoświadczonym użytkownikom.
 Wszystkie typy wersji DEV można pobrać jedynie z naszej strony internetowej.
 
 **UWAGA:** Wersji DEV nie można pobrać ze Sklepu Play, dlatego też trzeba je aktualizować ręcznie.
