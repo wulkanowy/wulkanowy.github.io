@@ -2,7 +2,7 @@
 
 ## Wersja *BETA*
 
-Jest to stabilna i zatwierdzona wersja aplikacji, zalecana dla przeciętnego użytkownika.
+To zatwierdzona wersja aplikacji, zalecana dla przeciętnego użytkownika.
 Staramy się, aby wersja *BETA* nie zawierała błędów. Można ją pobrać ze
 [Sklepu Play](https://play.google.com/store/apps/details?id=io.github.wulkanowy&utm_source=homepage),
 [Katalogu F-Droid](https://f-droid.org/en/packages/io.github.wulkanowy/) lub pobierając plik APK z naszej strony.
@@ -16,7 +16,7 @@ Podstawowa wersja DEV (oznaczona na stronie jako *Ostatnia wersja DEV*) zawiera 
 ale może posiadać problemy ze stabilnością.
 
 Istnieją również wersje DEV generowane automatyczne dla każdej funkcji, nad którą aktualnie pracujemy.
-Zazwyczaj są niestabilne lub niedokończone.
+Zazwyczaj są niestabilne lub niedokończone. W związku z tym, użytkownicy niedoświadczeni nie powinni z nich korzystać.
 
 Wszystkie typy wersji DEV można pobrać jedynie z naszej strony internetowej.
 
