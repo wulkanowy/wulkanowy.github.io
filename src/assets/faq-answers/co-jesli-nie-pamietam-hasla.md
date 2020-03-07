@@ -19,3 +19,5 @@ Sprawdź swoją skrzynkę mail'ową. Jężeli wiadomości nie ma w skrzynce **Od
 Na tym ekranie wpisz dwa razy nowe hasło. **Tym razem postaraj się je zapamiętać, aby nie powtarzać czynności w przyszłości**. Potwierdź ponownie swoje żądanie zmiany hasła klikając w **Nie jestem robotem**. Aby zmienić hasło kliknij w przycisk **Ustaw nowe hasło**:
 
 ![Ekran zmiany hasła](https://i.imgur.com/MGvDDsd.png)
+
+Twoje hasło zostało zmienione!
