@@ -35,6 +35,7 @@
     "lint-staged": "^9.5.0",
     "raw-loader": "^4.0.0",
     "sass-loader": "^8.0.0",
+    "vue-cli-plugin-prerender-spa": "^1.1.6",
     "vue-cli-plugin-sitemap": "^2.1.1",
     "vue-template-compiler": "^2.6.11"
   },

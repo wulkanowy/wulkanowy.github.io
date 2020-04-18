@@ -1,4 +1,5 @@
 const routes = require('./src/routes');
+const faqMap = require('./src/assets/faq-map.json');
 
 module.exports = {
   publicPath: '/',
@@ -8,6 +9,17 @@ module.exports = {
       outputDir: 'dist/',
       pretty: true,
       routes,
+    },
+    prerenderSpa: {
+      renderRoutes: [
+        '/',
+        '/polityka-prywatnosci',
+        '/czesto-zadawane-pytania',
+        ...faqMap.map((item) => `/czesto-zadawane-pytania/${item.id}`),
+      ],
+      useRenderEvent: true,
+      headless: true,
+      onlyProduction: true,
     },
   },
   chainWebpack: (config) => {
