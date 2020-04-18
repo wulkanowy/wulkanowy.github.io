@@ -1,3 +1,5 @@
+const faqMap = require('./assets/faq-map.json');
+
 const Home = () => import(/* webpackChunkName: "home" */ './views/Home.vue');
 const PrivacyPolicy = () => import(/* webpackChunkName: "privacy-policy" */ './views/PrivacyPolicy.vue');
 const FAQ = () => import(/* webpackChunkName: "faq" */ './views/FAQ.vue');
@@ -21,6 +23,11 @@ module.exports = [
   {
     path: '/czesto-zadawane-pytania/:question_id',
     component: FAQ,
+    meta: {
+      sitemap: {
+        slugs: faqMap.map((item) => item.id),
+      },
+    },
   },
   // {
   //   path: '*.html',

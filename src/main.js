@@ -36,7 +36,4 @@ new Vue({
       router.push(redirect);
     }
   },
-  mounted() {
-    document.dispatchEvent(new Event('render-event'));
-  },
 }).$mount('#app');
