@@ -97,15 +97,7 @@
   }
 
   body {
-    background:
-      linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-      ),
-      url("../assets/wallpaper.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    margin: 0;
   }
 
   .faq {
@@ -113,6 +105,15 @@
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr auto minmax(auto, 850px) 1fr;
+    background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.6)
+      ),
+      url("../assets/wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
     @media screen and (max-width: 850px) {
       grid-template-columns: 1fr;
