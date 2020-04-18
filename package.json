@@ -12,7 +12,9 @@
     "@mdi/font": "^4.7.95",
     "babel-runtime": "^6.26.0",
     "github-markdown-css": "^3.0.1",
+    "html-webpack-plugin": "^4.2.0",
     "moment": "^2.24.0",
+    "prerender-spa-plugin": "^3.4.0",
     "sass": "^1.24.0",
     "vue": "^2.6.11",
     "vue-analytics": "^5.20.2",
@@ -35,7 +37,6 @@
     "lint-staged": "^9.5.0",
     "raw-loader": "^4.0.0",
     "sass-loader": "^8.0.0",
-    "vue-cli-plugin-prerender-spa": "^1.1.6",
     "vue-cli-plugin-sitemap": "^2.1.1",
     "vue-template-compiler": "^2.6.11"
   },
