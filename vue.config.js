@@ -13,9 +13,9 @@ module.exports = {
     prerenderSpa: {
       renderRoutes: [
         '/',
-        '/polityka-prywatnosci',
-        '/czesto-zadawane-pytania',
-        ...faqMap.map((item) => `/czesto-zadawane-pytania/${item.id}`),
+        '/polityka-prywatnosci/',
+        '/czesto-zadawane-pytania/',
+        ...faqMap.map((item) => `/czesto-zadawane-pytania/${item.id}/`),
       ],
       useRenderEvent: true,
       headless: true,
