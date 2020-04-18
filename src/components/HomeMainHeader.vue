@@ -115,7 +115,10 @@
       width: 768px;
       max-width: 90vw;
       display: block;
-      filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2)) drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12));
+      filter:
+        drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2))
+        drop-shadow(0 8px 10px rgba(0, 0, 0, 0.14))
+        drop-shadow(0 3px 14px rgba(0, 0, 0, 0.12));
     }
   }
 

@@ -118,9 +118,9 @@
       text-decoration: none;
       color: #000;
       box-shadow:
-        0px 5px 5px -3px rgba(0, 0, 0, 0.2),
-        0px 8px 10px 1px rgba(0, 0, 0, 0.14),
-        0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+        0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
       transition: box-shadow 150ms;
       font-family: 'Roboto', sans-serif;
       flex-direction: row;
@@ -192,7 +192,6 @@
 
     &__form-email, &__form-message, &__form-subject {
       background: none;
-      border: none;
       color: #fff;
       font-size: 20px;
       border: 1px solid #fff;

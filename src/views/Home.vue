@@ -30,11 +30,5 @@
 
   body {
     margin: 0;
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-  }
-
-  .home .home-section {
-    scroll-snap-align: start;
   }
 </style>
