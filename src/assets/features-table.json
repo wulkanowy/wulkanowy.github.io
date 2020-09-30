@@ -82,5 +82,19 @@
     "dzienniczek": "n",
     "hebe": "y",
     "wulkanowy": "y"
+  },
+  {
+    "feature": "Szybkie skróty",
+    "uonet": "n",
+    "dzienniczek": "n",
+    "hebe": "n",
+    "wulkanowy": "y"
+  },
+  {
+    "feature": "Oznaczanie zadań jako wykonane",
+    "uonet": "n",
+    "dzienniczek": "n",
+    "hebe": "n",
+    "wulkanowy": "y"
   }
 ]
