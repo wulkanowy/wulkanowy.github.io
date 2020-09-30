@@ -3,72 +3,84 @@
     "feature": "Średnia ocen",
     "uonet": "Zależy od ustawień szkoły",
     "dzienniczek": "Zależy od ustawień szkoły",
+    "hebe": "Zależy od ustawień szkoły",
     "wulkanowy": "y"
   },
   {
     "feature": "Frekwencja (widok dni)",
     "uonet": "y",
     "dzienniczek": "y",
+    "hebe": "y",
     "wulkanowy": "y"
   },
   {
     "feature": "Frekwencja (podsumowanie)",
     "uonet": "y",
     "dzienniczek": "n",
+    "hebe": "y",
     "wulkanowy": "y"
   },
   {
     "feature": "Uwagi",
     "uonet": "y",
     "dzienniczek": "y",
+    "hebe": "y",
     "wulkanowy": "y"
   },
   {
     "feature": "Uczeń na tle klasy",
     "uonet": "y",
     "dzienniczek": "n",
+    "hebe": "n",
     "wulkanowy": "y"
   },
   {
     "feature": "Dane ucznia",
     "uonet": "y",
     "dzienniczek": "n",
+    "hebe": "Częściowo",
     "wulkanowy": "n"
   },
   {
     "feature": "Dane szkoły",
     "uonet": "y",
     "dzienniczek": "n",
+    "hebe": "Częściowo",
     "wulkanowy": "y"
   },
   {
     "feature": "Nauczyciele",
     "uonet": "y",
     "dzienniczek": "y",
+    "hebe": "y",
     "wulkanowy": "y"
   },
   {
     "feature": "Lekcje zrealizowane",
     "uonet": "y",
     "dzienniczek": "n",
+    "hebe": "y",
     "wulkanowy": "y"
   },
   {
     "feature": "Wiadomości",
     "uonet": "y",
     "dzienniczek": "y",
+    "hebe": "y",
     "wulkanowy": "y"
   },
   {
     "feature": "Usprawiedliwienia",
     "uonet": "y",
     "dzienniczek": "n",
+    "hebe": "y",
     "wulkanowy": "y"
   },
   {
     "feature": "Szczęśliwy numerek",
     "uonet": "y",
     "dzienniczek": "n",
+    "hebe": "y",
     "wulkanowy": "y"
   }
 ]
