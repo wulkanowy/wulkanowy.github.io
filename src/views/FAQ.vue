@@ -1,10 +1,21 @@
 <template>
   <div class="faq">
     <div class="header">
-      <router-link to="/czesto-zadawane-pytania" v-if="window.width <= 850 && faqCurrent" class="header__back">←</router-link>
+      <router-link
+        to="/czesto-zadawane-pytania"
+        v-if="faqCurrent"
+        class="header__back mobile-only"
+      >
+        ←
+      </router-link>
       <router-link to="/" class="header__wulkanowy"><img src="../assets/wulkanowy-small-flat.svg" alt="" /></router-link>
     </div>
-    <div class="questions" v-if="window.width > 850 || !faqCurrent">
+    <div
+      class="questions"
+      :class="{
+        'desktop-only': faqCurrent,
+      }"
+    >
       <router-link
         class="questions__link"
         v-for="question in faqMap"
@@ -14,7 +25,7 @@
         {{ question.name }}
       </router-link>
     </div>
-    <div class="answer answer--no-question-selected" v-if="!faqCurrent && window.width > 850">
+    <div class="answer answer--no-question-selected desktop-only" v-if="!faqCurrent">
       <h1>Żadne pytanie nie jest wybrane</h1>
     </div>
     <div class="answer answer--question-selected" v-if="faqCurrent">
@@ -40,25 +51,10 @@
       faqMap,
       faqAnswers: {},
       faqCurrent: null,
-      window: {
-        width: 0,
-        height: 0,
-      },
     }),
-    created() {
-      window.addEventListener('resize', this.handleWindowResize);
-      this.handleWindowResize();
-    },
-    destroyed() {
-      window.removeEventListener('resize', this.handleWindowResize);
-    },
     methods: {
       importFaqAnswers(r) {
         r.keys().forEach((key) => { this.faqAnswers[key] = r(key); });
-      },
-      handleWindowResize() {
-        this.window.width = window.innerWidth;
-        this.window.height = window.innerHeight;
       },
     },
     mounted() {
@@ -88,16 +84,20 @@
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
+  @media screen and (max-width: 850px) {
+    .desktop-only {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 851px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+
   body {
-    background:
-      linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-      ),
-      url("../assets/wallpaper.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    margin: 0;
   }
 
   .faq {
@@ -105,6 +105,15 @@
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr auto minmax(auto, 850px) 1fr;
+    background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.6)
+      ),
+      url("../assets/wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
     @media screen and (max-width: 850px) {
       grid-template-columns: 1fr;
@@ -112,10 +121,6 @@
       .header {
         grid-column: 1;
         margin: 4px;
-
-        &__back {
-          text-decoration: none;
-        }
       }
 
       .questions {
@@ -163,6 +168,7 @@
       width: 32px;
       padding: 8px;
       margin: 8px;
+      text-decoration: none;
     }
 
     &__wulkanowy {
@@ -189,9 +195,9 @@
     min-width: 320px;
     max-width: 480px;
     box-shadow:
-      0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-      0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-      0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+      0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
 
   .questions__link {
@@ -229,8 +235,8 @@
     overflow-y: auto;
     box-shadow:
       0 2px 4px -1px rgba(0, 0, 0, 0.2),
-      0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-      0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12);
     font-family: 'Roboto', sans-serif;
 
     &--question-selected {
@@ -254,8 +260,8 @@
         border-radius: 4px;
         box-shadow:
           0 2px 4px -1px rgba(0, 0, 0, 0.2),
-          0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-          0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+          0 4px 5px 0 rgba(0, 0, 0, 0.14),
+          0 1px 10px 0 rgba(0, 0, 0, 0.12);
         margin: 12px auto 32px;
         display: block;
         max-width: 100%;
@@ -274,6 +280,10 @@
         margin: 0;
         font-weight: 300;
         font-size: 28px;
+      }
+
+      @media screen and (max-width: 850px) {
+        display: none;
       }
     }
   }

@@ -29,14 +29,7 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   render: (h) => h(App),
-  created() {
-    if (sessionStorage.redirect) {
-      const { redirect } = sessionStorage;
-      delete sessionStorage.redirect;
-      router.push(redirect);
-    }
-  },
   mounted() {
-    document.dispatchEvent(new Event('render-event'));
+    document.dispatchEvent(new Event('x-app-rendered'));
   },
 }).$mount('#app');
