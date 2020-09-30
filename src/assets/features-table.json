@@ -38,14 +38,14 @@
     "feature": "Dane ucznia",
     "uonet": "y",
     "dzienniczek": "n",
-    "hebe": "Częściowo",
-    "wulkanowy": "n"
+    "hebe": "Częściowa obsługa",
+    "wulkanowy": "Częściowa obsługa"
   },
   {
     "feature": "Dane szkoły",
     "uonet": "y",
     "dzienniczek": "n",
-    "hebe": "Częściowo",
+    "hebe": "Częściowa obsługa",
     "wulkanowy": "y"
   },
   {
