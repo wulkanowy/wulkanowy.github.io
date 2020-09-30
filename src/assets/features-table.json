@@ -38,8 +38,8 @@
     "feature": "Dane ucznia",
     "uonet": "y",
     "dzienniczek": "n",
-    "hebe": "Częściowa obsługa",
-    "wulkanowy": "Częściowa obsługa"
+    "hebe": "n",
+    "wulkanowy": "n"
   },
   {
     "feature": "Dane szkoły",
