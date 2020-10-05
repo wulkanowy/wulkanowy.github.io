@@ -1,5 +1,4 @@
 import Vue from 'vue';
-import AsyncComputed from 'vue-async-computed';
 import VueResource from 'vue-resource';
 import VueMq from 'vue-mq';
 import VueAnalytics from 'vue-analytics';
@@ -7,7 +6,6 @@ import VueAnalytics from 'vue-analytics';
 import App from './App.vue';
 import router from './router';
 
-Vue.use(AsyncComputed);
 Vue.use(VueResource);
 Vue.use(VueMq, {
   breakpoints: {
