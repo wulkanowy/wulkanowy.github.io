@@ -8,7 +8,9 @@
 </template>
 
 <script>
-  export default {};
+  export default {
+    name: 'home-download-load-more-button',
+  };
 </script>
 
 <style lang="scss">
