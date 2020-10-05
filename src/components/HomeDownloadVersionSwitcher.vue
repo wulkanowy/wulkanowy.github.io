@@ -4,7 +4,7 @@
       class="section-name section-name-beta"
       :class="{ active: active === 'beta' }"
       @click="active = 'beta'">BETA</span>
-    <div class="devider"></div>
+    <div class="divider" />
     <span
       class="section-name section-name-dev"
       :class="{ active: active === 'dev' }"
@@ -17,13 +17,12 @@
     name: 'home-download-version-switcher',
     components: {},
     props: {
-      activeSection: Object,
-      default: {},
+      value: String,
     },
     computed: {
       active: {
         get() {
-          return this.activeSection.data;
+          return this.value;
         },
         set(value) {
           this.$ga.event({
@@ -32,7 +31,7 @@
             eventLabel: value,
             eventValue: value === 'beta' ? 0 : 1,
           });
-          this.activeSection.data = value;
+          this.$emit('input', value);
         },
       },
     },
@@ -43,7 +42,7 @@
   .download-version-switcher {
     height: 32px;
     display: flex;
-    direction: row;
+    flex-direction: row;
     margin-bottom: 16px;
     margin-left: auto;
     margin-right: auto;
@@ -74,7 +73,7 @@
     text-align: left;
   }
 
-  .devider {
+  .divider {
     width: 0;
     border: 1px solid #0006;
     height: 100%;

@@ -95,7 +95,6 @@
   };
 </script>
 
-
 <style lang="scss" scoped>
   .home-main-header {
     padding-bottom: 48px;
