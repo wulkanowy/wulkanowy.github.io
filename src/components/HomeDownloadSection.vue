@@ -1,7 +1,7 @@
 <template>
   <div id="download" class="download home-section">
     <h2 class="title">Pobieranie</h2>
-    <home-download-version-switcher v-if="$mq === 'md'" :activeSection="activeSection" />
+    <home-download-version-switcher v-if="$mq === 'md'" v-model="active" />
     <h3 class="section-name section-name-beta" v-if="$mq === 'lg'">BETA</h3>
     <h3 class="section-name section-name-dev" v-if="$mq === 'lg'">DEV</h3>
     <home-download-beta v-if="$mq === 'lg' || active === 'beta'" />
@@ -21,23 +21,9 @@
       HomeDownloadDev,
       HomeDownloadVersionSwitcher,
     },
-    data() {
-      return {
-        activeSection: {
-          data: 'beta',
-        },
-      };
-    },
-    computed: {
-      active: {
-        get() {
-          return this.activeSection.data;
-        },
-        set(value) {
-          this.activeSection.data = value;
-        },
-      },
-    },
+    data: () => ({
+      active: 'beta',
+    }),
   };
 </script>
 
