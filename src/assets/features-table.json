@@ -97,7 +97,7 @@
   },
   {
     "feature": "Powiadomienia o nadchodzących lekcjach",
-    "uonet": "n",
+    "uonet": "-",
     "dzienniczek": "n",
     "hebe": "n",
     "szkolny": "n",
@@ -105,7 +105,7 @@
   },
   {
     "feature": "Oznaczanie zadań jako wykonane",
-    "uonet": "n",
+    "uonet": "-",
     "dzienniczek": "n",
     "hebe": "n",
     "szkolny": "y",
@@ -113,7 +113,7 @@
   },
   {
     "feature": "Szybkie skróty po przytrzymaniu aplikacji",
-    "uonet": "n",
+    "uonet": "-",
     "dzienniczek": "n",
     "hebe": "n",
     "szkolny": "y",
