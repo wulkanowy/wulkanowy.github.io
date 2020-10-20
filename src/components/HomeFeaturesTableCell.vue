@@ -36,6 +36,17 @@
     />
   </td>
   <td
+    v-else-if="value === '-'"
+    class="features-table__cell features-table__cell--feature features-table__cell--not-applicable"
+    :class="wulkanowy ? 'features-table__cell--wulkanowy' : ''"
+    title="Nie dotyczy"
+  >
+  <minus-icon
+    title="Nie dotyczy"
+    :size="wulkanowy ? 36 : 28"
+    fillColor="#000000"
+  />
+  <td
     v-else
     class="features-table__cell features-table__cell--feature features-table__cell--other"
     :class="wulkanowy ? 'features-table__cell--wulkanowy' : ''"
@@ -47,12 +58,14 @@
 <script>
   import CheckIcon from 'vue-material-design-icons/Check.vue';
   import CloseIcon from 'vue-material-design-icons/Close.vue';
+  import MinusIcon from 'vue-material-design-icons/Minus.vue';
   import ClockIcon from 'vue-material-design-icons/ClockOutline.vue';
 
   export default {
     components: {
       CheckIcon,
       CloseIcon,
+      MinusIcon,
       ClockIcon,
     },
     props: {
