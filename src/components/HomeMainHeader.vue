@@ -7,11 +7,25 @@
     </p>
     <div class="buttons">
       <a
-        class="google-play-link"
+        class="store-link"
         href="https://play.google.com/store/apps/details?id=io.github.wulkanowy&utm_source=homepage"
         @click="googlePlayClick">
         <img src="../assets/google-play-badge.svg" alt="Pobierz z Google Play" />
       </a>
+      <a
+        class="store-link"
+        href="https://appgallery.huawei.com/#/app/C101440411"
+        @click="googlePlayClick">
+        <img src="../assets/appgallery-badge.png" alt="Odkrywaj w AppGallery" />
+      </a>
+      <a
+        class="store-link"
+        href="https://f-droid.org/packages/io.github.wulkanowy"
+        @click="googlePlayClick">
+        <img src="../assets/f-droid-badge.png" alt="Get it on F-Droid">
+      </a>
+    </div>
+    <div class ="buttons">
       <button class="other-options" @click="otherOptionsClick">
         INNE OPCJE
       </button>
@@ -151,8 +165,9 @@
       flex-direction: column;
     }
 
-    .google-play-link {
+    .store-link {
       display: block;
+      margin: 5px;
 
       img {
         width: 216px;
@@ -189,7 +204,6 @@
       font-family: 'Roboto', sans-serif;
       font-weight: 500;
       border-radius: 4px;
-      margin-left: 32px;
       box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
       0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12);
