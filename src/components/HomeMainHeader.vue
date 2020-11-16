@@ -43,6 +43,9 @@
       <a class="paypal" title="PayPal" href="https://paypal.me/wulkanowy" @click="paypalClick">
         <img src="../assets/paypal.svg" alt="PayPal" />
       </a>
+      <a class="facebook" title="Facebook" href="https://www.facebook.com/wulkanowy" @click="facebookClick">
+        <img src="../assets/facebook.png" alt="Facebook" />
+      </a>
     </div>
     <div class="footer">
       <router-link class="footer__link footer__privacy-policy-link" to="polityka-prywatnosci">Polityka prywatności</router-link>
@@ -81,6 +84,12 @@
           eventAction: 'click',
         });
       },
+      facebookClick() {
+        this.$ga.event({
+          eventCategory: 'facebook-link',
+          eventAction: 'click',
+        });
+      },
       discordClick() {
         this.$ga.event({
           eventCategory: 'discord-link',
@@ -90,12 +99,6 @@
       githubClick() {
         this.$ga.event({
           eventCategory: 'github-link',
-          eventAction: 'click',
-        });
-      },
-      trelloClick() {
-        this.$ga.event({
-          eventCategory: 'trello-link',
           eventAction: 'click',
         });
       },
@@ -231,7 +234,7 @@
   .quick-links {
     margin-top: 32px;
 
-    .email, .github, .discord, .paypal {
+    .email, .github, .discord, .paypal, .facebook {
       margin: 8px;
 
       img {
