@@ -23,8 +23,9 @@
         zbiera za pomocą usługi Firebase Crashlytics i&nbsp;Firebase Analytics dane takie jak:
         <ul>
           <li>raporty błędów</li>
-          <li>anonimowe, zbiorcze informacje o wykonanych przez użytkownika użytkownika
+          <li>anonimowe, zbiorcze informacje o wykonanych przez użytkownika
             akcjach w&nbsp;Aplikacji</li>
+          <li>ustawienia Aplikacji</li>
         </ul>
       </li>
       <li>
