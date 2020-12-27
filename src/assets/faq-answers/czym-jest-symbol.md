@@ -1,4 +1,4 @@
-# Co to jest *symbol*?
+# Czym jest *symbol*?
 
 Symbol to w uproszczeniu nazwa miejscowości, powiatu lub gminy, do której należy szkoła, zapisana w odpowiedni sposób.
 Wulkanowy w większości przypadków potrafi automatycznie wykryć odpowiedni symbol, lecz np. przy korzystaniu z innego

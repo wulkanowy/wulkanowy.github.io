@@ -9,19 +9,19 @@
       <a
         class="store-link"
         href="https://play.google.com/store/apps/details?id=io.github.wulkanowy&utm_source=homepage"
-        @click="googlePlayClick">
+        @click="storeClick">
         <img src="../assets/google-play-badge.svg" alt="Pobierz z Google Play" />
       </a>
       <a
         class="store-link"
         href="https://appgallery.huawei.com/#/app/C101440411"
-        @click="googlePlayClick">
+        @click="storeClick">
         <img src="../assets/appgallery-badge.png" alt="Odkrywaj w AppGallery" />
       </a>
       <a
         class="store-link"
         href="https://f-droid.org/packages/io.github.wulkanowy"
-        @click="googlePlayClick">
+        @click="storeClick">
         <img src="../assets/f-droid-badge.png" alt="Get it on F-Droid">
       </a>
     </div>
@@ -58,7 +58,7 @@
   export default {
     name: 'home-main-header',
     methods: {
-      googlePlayClick() {
+      storeClick() {
         this.$ga.event({
           eventCategory: 'google-play-link',
           eventAction: 'click',

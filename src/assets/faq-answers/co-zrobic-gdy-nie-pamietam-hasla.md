@@ -1,4 +1,4 @@
-# Co jeśli nie pamiętam hasła?
+# Co zrobić, gdy nie pamiętam hasła?
 
 Hasło zresetujesz na stronie swojego dziennika klikając w **Przywróć dostęp**:
 
