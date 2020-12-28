@@ -19,7 +19,7 @@
       <a
         class="download-button"
         :href="download"
-        title="Download"
+        title="Pobierz"
         @click="downloadClick">
         <span class="mdi mdi-download"></span>
       </a>
