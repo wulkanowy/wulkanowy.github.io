@@ -1,9 +1,9 @@
-# Jaki dziennik wybrać podczas logowania?
+# Jaki wariant dziennika wybrać podczas logowania?
 
 Dziennik VULCAN jest dostępny pod wieloma adresami, które zależą od miejscowości, do których należą szkoły.
-Wulkanowy stara się automatycznie dopasować typ dziennika, który jest odpowiedni dla Ciebie.
+Wulkanowy stara się automatycznie dopasować wariant dziennika, który jest odpowiedni dla Ciebie.
 Adres do dziennika powinien znajdować się na stronie twojej szkoły.
-Dostępne typy dziennika w aplikacji to:
+Dostępne warianty w aplikacji to:
 
 - Vulcan - **vulcan.net.pl**
 - Opolska eSzkoła - **eszkola.opolskie.pl**
@@ -25,6 +25,6 @@ Dostępne typy dziennika w aplikacji to:
 - Gmina Łopiennik Górny - Platforma oświatowa - **uonetplus.vulcan.net.pl/gminalopiennikgorny**
 - Fakelog - **fakelog.cf** - to dziennik przeznaczony do testowania naszej aplikacji
 
-**Jeżeli nie widzisz swojego typu dziennika, napisz do nas!**
+**Jeżeli nie widzisz swojego wariantu dziennika, napisz do nas!**
 
 ![Wybór dziennika na ekranie logowania](https://i.imgur.com/30zjQvU.jpg)
