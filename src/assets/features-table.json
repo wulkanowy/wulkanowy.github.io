@@ -1,6 +1,7 @@
 [{
         "feature": "Średnia ocen",
         "uonet": "Zależy od ustawień szkoły",
+        "dzienniczek": "Zależy od ustawień szkoły",
         "hebe": "Zależy od ustawień szkoły",
         "szkolny": "y",
         "wulkanowy": "y"
@@ -8,6 +9,7 @@
     {
         "feature": "Frekwencja (widok dni)",
         "uonet": "y",
+        "dzienniczek": "y",
         "hebe": "y",
         "szkolny": "y",
         "wulkanowy": "y"
@@ -15,6 +17,7 @@
     {
         "feature": "Frekwencja (podsumowanie)",
         "uonet": "y",
+        "dzienniczek": "n",
         "hebe": "y",
         "szkolny": "y",
         "wulkanowy": "y"
@@ -22,6 +25,7 @@
     {
         "feature": "Uwagi",
         "uonet": "y",
+        "dzienniczek": "y",
         "hebe": "y",
         "szkolny": "y",
         "wulkanowy": "y"
@@ -29,6 +33,7 @@
     {
         "feature": "Uczeń na tle klasy",
         "uonet": "y",
+        "dzienniczek": "n",
         "hebe": "n",
         "szkolny": "n",
         "wulkanowy": "y"
@@ -36,6 +41,7 @@
     {
         "feature": "Dane ucznia",
         "uonet": "y",
+        "dzienniczek": "n",
         "hebe": "n",
         "szkolny": "n",
         "wulkanowy": "w"
@@ -43,6 +49,7 @@
     {
         "feature": "Dane szkoły",
         "uonet": "y",
+        "dzienniczek": "n",
         "hebe": "Częściowa obsługa",
         "szkolny": "n",
         "wulkanowy": "y"
@@ -50,6 +57,7 @@
     {
         "feature": "Nauczyciele",
         "uonet": "y",
+        "dzienniczek": "y",
         "hebe": "y",
         "szkolny": "n",
         "wulkanowy": "y"
@@ -57,6 +65,7 @@
     {
         "feature": "Lekcje zrealizowane",
         "uonet": "y",
+        "dzienniczek": "n",
         "hebe": "y",
         "szkolny": "n",
         "wulkanowy": "y"
@@ -64,6 +73,7 @@
     {
         "feature": "Wiadomości",
         "uonet": "y",
+        "dzienniczek": "y",
         "hebe": "y",
         "szkolny": "y",
         "wulkanowy": "y"
@@ -71,6 +81,7 @@
     {
         "feature": "Usprawiedliwienia",
         "uonet": "y",
+        "dzienniczek": "n",
         "hebe": "y",
         "szkolny": "n",
         "wulkanowy": "y"
@@ -78,6 +89,7 @@
     {
         "feature": "Szczęśliwy numerek",
         "uonet": "y",
+        "dzienniczek": "n",
         "hebe": "y",
         "szkolny": "n",
         "wulkanowy": "y"
@@ -85,6 +97,7 @@
     {
         "feature": "Powiadomienia o nadchodzących lekcjach",
         "uonet": "-",
+        "dzienniczek": "n",
         "hebe": "n",
         "szkolny": "n",
         "wulkanowy": "y"
@@ -92,6 +105,7 @@
     {
         "feature": "Oznaczanie zadań jako wykonane",
         "uonet": "y",
+        "dzienniczek": "n",
         "hebe": "n",
         "szkolny": "y",
         "wulkanowy": "y"
@@ -99,6 +113,7 @@
     {
         "feature": "Szybkie skróty po przytrzymaniu aplikacji",
         "uonet": "-",
+        "dzienniczek": "n",
         "hebe": "n",
         "szkolny": "y",
         "wulkanowy": "y"
@@ -106,6 +121,7 @@
     {
         "feature": "Logowanie za pomocą loginu i hasła",
         "uonet": "y",
+        "dzienniczek": "n",
         "hebe": "n",
         "szkolny": "n",
         "wulkanowy": "y"
