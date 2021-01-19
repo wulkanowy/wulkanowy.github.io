@@ -1,5 +1,4 @@
-[
-  {
+[{
     "feature": "Średnia ocen",
     "uonet": "Zależy od ustawień szkoły",
     "dzienniczek": "Zależy od ustawień szkoły",
@@ -45,7 +44,7 @@
     "dzienniczek": "n",
     "hebe": "n",
     "szkolny": "n",
-    "wulkanowy": "n"
+    "wulkanowy": "w"
   },
   {
     "feature": "Dane szkoły",

@@ -5,6 +5,7 @@
 To zatwierdzona wersja aplikacji, zalecana dla przeciętnego użytkownika.
 Staramy się, aby wersja *BETA* nie zawierała błędów. Można ją pobrać ze
 [Sklepu Play](https://play.google.com/store/apps/details?id=io.github.wulkanowy&utm_source=homepage),
+[Sklepu AppGallery](https://appgallery.huawei.com/#/app/C101440411),
 [Katalogu F-Droid](https://f-droid.org/en/packages/io.github.wulkanowy/) lub pobierając plik APK z naszej strony.
 
 ## Wersja *DEV*

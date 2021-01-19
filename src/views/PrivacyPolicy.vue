@@ -19,12 +19,16 @@
         informacje zapisywane są lokalnie na urządzeniu Użytkownika.
       </li>
       <li>
+        Dane pobierane przez Aplikację są przechowywane wyłącznie lokalnie na urządzeniu Użytkownika
+      </li>
+      <li>
         Aplikacja w&nbsp;celu ciągłego udoskonalania jakości usługi i&nbsp;do celów statystycznych
         zbiera za pomocą usługi Firebase Crashlytics i&nbsp;Firebase Analytics dane takie jak:
         <ul>
           <li>raporty błędów</li>
-          <li>anonimowe, zbiorcze informacje o wykonanych przez użytkownika użytkownika
+          <li>anonimowe, zbiorcze informacje o wykonanych przez użytkownika
             akcjach w&nbsp;Aplikacji</li>
+          <li>ustawienia Aplikacji</li>
         </ul>
       </li>
       <li>

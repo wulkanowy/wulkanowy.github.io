@@ -9,19 +9,19 @@
       <a
         class="store-link"
         href="https://play.google.com/store/apps/details?id=io.github.wulkanowy&utm_source=homepage"
-        @click="googlePlayClick">
+        @click="storeClick">
         <img src="../assets/google-play-badge.svg" alt="Pobierz z Google Play" />
       </a>
       <a
         class="store-link"
         href="https://appgallery.huawei.com/#/app/C101440411"
-        @click="googlePlayClick">
+        @click="storeClick">
         <img src="../assets/appgallery-badge.png" alt="Odkrywaj w AppGallery" />
       </a>
       <a
         class="store-link"
         href="https://f-droid.org/packages/io.github.wulkanowy"
-        @click="googlePlayClick">
+        @click="storeClick">
         <img src="../assets/f-droid-badge.png" alt="Get it on F-Droid">
       </a>
     </div>
@@ -31,9 +31,6 @@
       </button>
     </div>
     <div class="quick-links">
-      <a class="email" title="Email" href="mailto:wulkanowyinc@gmail.com" @click="emailClick">
-        <img src="../assets/email.svg" alt="Email" />
-      </a>
       <a class="discord" title="Discord" href="https://discord.gg/vccAQBr" @click="discordClick">
         <img src="../assets/discord.svg" alt="Discord" />
       </a>
@@ -58,7 +55,7 @@
   export default {
     name: 'home-main-header',
     methods: {
-      googlePlayClick() {
+      storeClick() {
         this.$ga.event({
           eventCategory: 'google-play-link',
           eventAction: 'click',
@@ -77,12 +74,6 @@
           });
           element.focus();
         }
-      },
-      emailClick() {
-        this.$ga.event({
-          eventCategory: 'email-link',
-          eventAction: 'click',
-        });
       },
       facebookClick() {
         this.$ga.event({
@@ -234,7 +225,7 @@
   .quick-links {
     margin-top: 32px;
 
-    .email, .github, .discord, .paypal, .facebook {
+    .github, .discord, .paypal, .facebook {
       margin: 8px;
 
       img {

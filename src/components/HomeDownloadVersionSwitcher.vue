@@ -4,7 +4,6 @@
       class="section-name section-name-beta"
       :class="{ active: active === 'beta' }"
       @click="active = 'beta'">BETA</span>
-    <div class="divider" />
     <span
       class="section-name section-name-dev"
       :class="{ active: active === 'dev' }"
@@ -66,17 +65,10 @@
   }
 
   .section-name-beta {
-    text-align: right;
-  }
-
-  .section-name-dev {
     text-align: left;
   }
 
-  .divider {
-    width: 0;
-    border: 1px solid #0006;
-    height: 100%;
-    margin: 0 8px;
+  .section-name-dev {
+    text-align: right;
   }
 </style>
