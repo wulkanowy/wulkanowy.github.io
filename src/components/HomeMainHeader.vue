@@ -43,6 +43,9 @@
       <a class="facebook" title="Facebook" href="https://www.facebook.com/wulkanowy" @click="facebookClick">
         <img src="../assets/facebook.png" alt="Facebook" />
       </a>
+            <a class="reddit" title="Reddit" href="https://www.reddit.com/r/wulkanowy/" @click="redditClick">
+        <img src="../assets/reddit.svg" alt="Reddit" />
+      </a>
     </div>
     <div class="footer">
       <router-link class="footer__link footer__privacy-policy-link" to="polityka-prywatnosci">Polityka prywatności</router-link>
@@ -96,6 +99,12 @@
       paypalClick() {
         this.$ga.event({
           eventCategory: 'paypal-link',
+          eventAction: 'click',
+        });
+      },
+      redditClick() {
+        this.$ga.event({
+          eventCategory: 'reddit-link',
           eventAction: 'click',
         });
       },
@@ -225,7 +234,7 @@
   .quick-links {
     margin-top: 32px;
 
-    .github, .discord, .paypal, .facebook {
+    .github, .discord, .paypal, .facebook, .reddit {
       margin: 8px;
 
       img {
