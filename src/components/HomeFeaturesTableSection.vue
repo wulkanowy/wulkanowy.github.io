@@ -7,7 +7,6 @@
           <tr>
             <th class="features-table__th">Funkcja</th>
             <th class="features-table__th">Strona UONET+</th>
-            <th class="features-table__th">Dzienniczek+</th>
             <th class="features-table__th">Dzienniczek VULCAN</th>
             <th class="features-table__th">Szkolny.eu</th>
             <th class="features-table__th features-table__th--wulkanowy">Wulkanowy</th>
@@ -17,7 +16,6 @@
           <tr v-for="(row, i) in table" :key="i">
             <td class="features-table__cell features-table__cell--feature-name" v-html="row.feature"></td>
             <table-cell :value="row.uonet" />
-            <table-cell :value="row.dzienniczek" />
             <table-cell :value="row.hebe" />
             <table-cell :value="row.szkolny" />
             <table-cell :value="row.wulkanowy" wulkanowy />
