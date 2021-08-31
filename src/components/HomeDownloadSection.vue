@@ -2,7 +2,7 @@
   <div id="download" class="download home-section">
     <h2 class="title">Pobieranie</h2>
     <home-download-version-switcher v-if="$mq === 'md'" v-model="active" />
-    <h3 class="section-name section-name-beta" v-if="$mq === 'lg'">BETA</h3>
+    <h3 class="section-name section-name-beta" v-if="$mq === 'lg'">STABILNA</h3>
     <h3 class="section-name section-name-dev" v-if="$mq === 'lg'">DEV</h3>
     <home-download-beta v-if="$mq === 'lg' || active === 'beta'" />
     <home-download-dev v-if="$mq === 'lg' || active === 'dev'" />
