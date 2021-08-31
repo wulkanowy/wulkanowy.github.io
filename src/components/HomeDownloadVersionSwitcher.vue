@@ -3,7 +3,7 @@
     <span
       class="section-name section-name-beta"
       :class="{ active: active === 'beta' }"
-      @click="active = 'beta'">BETA</span>
+      @click="active = 'beta'">STABILNA</span>
     <span
       class="section-name section-name-dev"
       :class="{ active: active === 'dev' }"
