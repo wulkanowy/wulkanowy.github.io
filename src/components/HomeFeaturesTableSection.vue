@@ -1,5 +1,5 @@
 <template>
-  <div class="features-table-section home-section">
+  <div id="features-table" class="features-table-section home-section">
     <h2 class="features-table-section__title">Porównanie funkcji</h2>
     <div class="features-table">
       <table class="features-table__table">

@@ -1,5 +1,5 @@
 <template>
-  <div class="contact home-section">
+  <div id="contact" class="contact home-section">
     <h2 class="contact__title">Kontakt</h2>
     <form class="contact__form" action="https://formspree.io/xdonynaz" method="POST">
       <label for="contact__form-email" class="contact__form-label">Twój adres email:</label>
