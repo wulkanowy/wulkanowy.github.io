@@ -115,7 +115,7 @@
 <style lang="scss" scoped>
   .home-main-header {
     padding-bottom: 48px;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -164,7 +164,7 @@
     display: flex;
     flex-direction: row;
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 725px) {
       flex-direction: column;
     }
 
@@ -224,7 +224,7 @@
         0 9px 46px 8px rgba(0, 0, 0, 0.12);
       }
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 725px) {
         margin-left: 0;
         margin-top: 8px;
       }
