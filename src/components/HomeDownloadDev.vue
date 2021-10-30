@@ -57,14 +57,14 @@
     },
     methods: {
       async loadMaster() {
-        const redirectorUrl = 'https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/develop/artifacts/0/info';
+        const redirectorUrl = 'https://manager.wulkanowy.net.pl/v1/build/app/daeff1893f3c8128/branch/develop';
         const build = await this.$http.get(redirectorUrl);
         this.master = {
-          released: build.body.finished_at,
-          download: build.body.public_install_page_url,
-          build: build.body.build_number,
-          url: build.body.build_url,
-          commitUrl: build.body.commit_view_url,
+          released: build.body.data.finished_at,
+          download: `https://manager.wulkanowy.net.pl/v1/download/app/daeff1893f3c8128/build/${build.body.data.build_slug}/artifact/${build.body.data.artifact_slug}`,
+          build: build.body.data.build_number,
+          url: build.body.data.build_url,
+          commitUrl: build.body.data.commit_view_url,
         };
       },
       async loadMore() {
@@ -74,16 +74,27 @@
           const response = await this.$http.get(this.moreLink);
           this.versions.push(
             ...(await Promise.all(response.body.map(async (release) => {
-              const redirectorUrl = `https://bitrise-redirector.herokuapp.com/v0.1/apps/daeff1893f3c8128/builds/${release.head.ref}/artifacts/0/info`;
+              const redirectorUrl = `https://manager.wulkanowy.net.pl/v1/build/app/daeff1893f3c8128/branch/${release.head.ref}`;
               const build = await this.$http.get(redirectorUrl).catch((error) => error);
+              if (!build.body.success) {
+                return {
+                  title: release.title,
+                  number: release.number,
+                  github: release.html_url,
+                  avatar: release.user.avatar_url,
+                  user: release.user.login,
+                  commit: release.head.sha,
+                  id: release.id,
+                };
+              }
               return {
                 title: release.title,
                 number: release.number,
-                released: build.body.finished_at,
                 github: release.html_url,
-                download: build.body.public_install_page_url,
-                url: build.body.build_url,
-                build: build.body.build_number,
+                released: build.body.data.finished_at,
+                download: `https://manager.wulkanowy.net.pl/v1/download/app/daeff1893f3c8128/build/${build.body.data.build_slug}/artifact/${build.body.data.artifact_slug}`,
+                url: build.body.data.build_slug,
+                build: build.body.data.build_number,
                 avatar: release.user.avatar_url,
                 user: release.user.login,
                 commit: release.head.sha,
