@@ -18,7 +18,7 @@
 <script>
   import HomeDownloadBetaItem from './HomeDownloadBetaItem.vue';
   import HomeDownloadLoadMoreButton from './HomeDownloadLoadMoreButton.vue';
-  import Spinner from './Spinner.vue';
+  import Spinner from './LoadingSpinner.vue';
 
   export default {
     name: 'home-download-beta',

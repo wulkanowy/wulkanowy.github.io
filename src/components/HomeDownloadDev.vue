@@ -33,7 +33,7 @@
   import HomeDownloadDevItem from './HomeDownloadDevItem.vue';
   import HomeDownloadDevMaster from './HomeDownloadDevMaster.vue';
   import HomeDownloadLoadMoreButton from './HomeDownloadLoadMoreButton.vue';
-  import Spinner from './Spinner.vue';
+  import Spinner from './LoadingSpinner.vue';
 
   export default {
     name: 'home-download-dev',
