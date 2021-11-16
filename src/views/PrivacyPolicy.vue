@@ -39,9 +39,11 @@
       </li>
       <li>
         Aplikacja zawiera reklamy na żądanie obsługiwane przez <a href="https://support.google.com/admob/answer/≥6128543">Google AdMob</a>.
-        Zbieranie danych poprzez wyżej wymienioną usługę odbywa się tylko i&nbsp;wyłącznie po włączeniu 
-        reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zakceptowaniu Polityki Prywatności. Aplikacja bez zgody użytkownika 
-        nie zbiera danych w&nbsp;celach reklamowych a&nbsp;także nie wyświetla reklam.
+        Zbieranie danych i wykorzystywanie unikalnego identyfikatora reklamowego poprzez wyżej wymienioną usługę 
+        odbywa się tylko i&nbsp;wyłącznie po włączeniu reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zakceptowaniu 
+        Polityki Prywatności. Aplikacja po zainstalowaniu lub zaaktualizowaniu, domyślnie bez zgody 
+        użytkownika nie zbiera danych w&nbsp;celach reklamowych, nie korzysta z unikalnego 
+        identyfikatora reklamowego a&nbsp;także nie wyświetla reklam.
       </li>
       <li>
         Podanie przez Użytkownika danych osobowych w&nbsp;celu nawiązania kontaktu jest
@@ -54,8 +56,10 @@
         przechowywania nie jest w&nbsp;100% bezpieczna i&nbsp;niezawodna więc nie możemy zagwarantować jej absolutnego bezpieczeństwa.
       </li>
       <li>
-        Zastrzegamy sobie możliwość zmiany naszej Polityki prywatności. Dlatego zaleca się okresowe 
-        przeglądanie tej strony pod kątem wszelkich zmian. Niniejsza polityka obowiązuje od 16.11.2021
+        Zastrzegamy sobie prawo do wprowadzania zmian w&nbsp;Polityce Prywatności, o&nbsp;czym poinformujemy
+        Użytkownika za pośrednictwem Aplikacji. Jeżeli Użytkownik nie wyrazi zgody na wprowadzone zmiany, 
+        zobowiązany jest trwale usunąć Aplikację ze swojego urządzenia mobilnego. 
+        Niniejsza polityka obowiązuje od 16.11.2021
       </li>
       <li>
         Jeśli masz jakiekolwiek pytania lub sugestie dotyczące naszej Polityki Prywatności,
