@@ -39,7 +39,7 @@
       </li>
       <li>
         Aplikacja zawiera reklamy na żądanie obsługiwane przez <a href="https://support.google.com/admob/answer/≥6128543">Google AdMob</a>.
-        Zbieranie danych i wykorzystywanie unikalnego identyfikatora reklamowego poprzez wyżej wymienioną usługę 
+        Zbieranie danych i&nbsp;wykorzystywanie unikalnego identyfikatora reklamowego poprzez wyżej wymienioną usługę 
         odbywa się tylko i&nbsp;wyłącznie po włączeniu reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zakceptowaniu 
         Polityki Prywatności. Aplikacja po zainstalowaniu lub zaaktualizowaniu, domyślnie bez zgody 
         użytkownika nie zbiera danych w&nbsp;celach reklamowych, nie korzysta z unikalnego 
