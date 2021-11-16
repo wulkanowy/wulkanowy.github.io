@@ -40,10 +40,9 @@
       <li>
         Aplikacja zawiera reklamy na żądanie obsługiwane przez <a href="https://support.google.com/admob/answer/≥6128543">Google AdMob</a>.
         Zbieranie danych i&nbsp;wykorzystywanie unikalnego identyfikatora reklamowego poprzez wyżej wymienioną usługę 
-        odbywa się tylko i&nbsp;wyłącznie po włączeniu reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zakceptowaniu 
-        Polityki Prywatności. Aplikacja po zainstalowaniu lub zaaktualizowaniu, domyślnie bez zgody 
-        użytkownika nie zbiera danych w&nbsp;celach reklamowych, nie korzysta z unikalnego 
-        identyfikatora reklamowego a&nbsp;także nie wyświetla reklam.
+        odbywa się tylko i&nbsp;wyłącznie po włączeniu reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zaakceptowaniu 
+        Polityki Prywatności. Po zainstalowaniu, aplikacja domyślnie nie zbiera danych w celach reklamowych, 
+        nie korzysta z unikalnego identyfikatora reklamowego, ani nie wyświetla reklam bez zgody użytkownika.
       </li>
       <li>
         Podanie przez Użytkownika danych osobowych w&nbsp;celu nawiązania kontaktu jest
@@ -52,17 +51,17 @@
       </li>
       <li>
         Cenimy sobie bezpieczeństwo Twoich danych, dlatego staramy się stosować komercyjnie akceptowalne środki
-        ich ochrony. Pamiętaj jednak, że żadna metoda transmisji przez Internet ani metoda elektronicznego 
-        przechowywania nie jest w&nbsp;100% bezpieczna i&nbsp;niezawodna więc nie możemy zagwarantować jej absolutnego bezpieczeństwa.
+        ich ochrony. Pamiętaj jednak, że żadna metoda transmisji danych przez Internet ani metoda elektronicznego 
+        przechowywania ich nie jest w&nbsp;100% bezpieczna, więc nie możemy zagwarantować jej bezpieczeństwa.
       </li>
       <li>
         Zastrzegamy sobie prawo do wprowadzania zmian w&nbsp;Polityce Prywatności, o&nbsp;czym poinformujemy
         Użytkownika za pośrednictwem Aplikacji. Jeżeli Użytkownik nie wyrazi zgody na wprowadzone zmiany, 
         zobowiązany jest trwale usunąć Aplikację ze swojego urządzenia mobilnego. 
-        Niniejsza polityka obowiązuje od 16.11.2021
+        Niniejsza polityka obowiązuje od 16.11.2021.
       </li>
       <li>
-        Jeśli masz jakiekolwiek pytania lub sugestie dotyczące naszej Polityki Prywatności,
+        Jeśli masz jakiekolwiek pytania lub sugestie dotyczące niniejszej Polityki Prywatności,
         skontakuj się z nami pod adresem <a href="mailto:wulkanowyinc@gmail.com">wulkanowyinc@gmail.com</a>.
       </li>
     </ol>
