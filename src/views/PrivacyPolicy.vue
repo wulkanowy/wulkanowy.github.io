@@ -23,10 +23,10 @@
       </li>
       <li>
         Aplikacja w&nbsp;celu ciągłego udoskonalania jakości usługi i&nbsp;do celów statystycznych
-        zbiera za pomocą usługi Firebase Crashlytics i&nbsp;Firebase Analytics dane takie jak:
+        zbiera za pomocą usług <a href="https://firebase.google.com/support/privacy/">Firebase</a> dane takie jak:
         <ul>
-          <li>raporty błędów</li>
-          <li>anonimowe, zbiorcze informacje o wykonanych przez użytkownika
+          <li>raporty błędów zawierające dane o systemie użytkownika</li>
+          <li>anonimowe informacje o wykonanych przez użytkownika
             akcjach w&nbsp;Aplikacji</li>
           <li>ustawienia Aplikacji</li>
         </ul>
@@ -34,8 +34,15 @@
       <li>
         Użytkownik ma prawo usunąć wszelkie dane zapisywane lokalnie na urządzeniu
         poprzez odinstalowanie Aplikacji lub w&nbsp;ramach ustawień Aplikacji. Jednakże
-        nie ma możliwości zmiany bądź usunięcia danych zbieranych za pomocą usługi
-        Firebase Analytics.
+        nie ma możliwości zmiany bądź usunięcia danych zbieranych za pomocą usług
+        Firebase.
+      </li>
+      <li>
+        Aplikacja zawiera reklamy na żądanie obsługiwane przez <a href="https://support.google.com/admob/answer/≥6128543">Google AdMob</a>.
+        Zbieranie danych i&nbsp;wykorzystywanie unikalnego identyfikatora reklamowego poprzez wyżej wymienioną usługę 
+        odbywa się tylko i&nbsp;wyłącznie po włączeniu reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zaakceptowaniu 
+        Polityki Prywatności. Po zainstalowaniu, aplikacja domyślnie nie zbiera danych w celach reklamowych, 
+        nie korzysta z unikalnego identyfikatora reklamowego, ani nie wyświetla reklam bez zgody użytkownika.
       </li>
       <li>
         Podanie przez Użytkownika danych osobowych w&nbsp;celu nawiązania kontaktu jest
@@ -43,19 +50,19 @@
         pełnej i&nbsp;sprawnej komunikacji.
       </li>
       <li>
-        Staramy się zapewnić użytkownikom wysoki poziom bezpieczeństwa w&nbsp;zakresie
-        korzystania z&nbsp;aplikacji mobilnej. Nie możemy jednak zagwarantować pełnego
-        bezpieczeństwa transmisji przez Internet. Wszelkie zdarzenia dotyczące naruszeń
-        bezpieczeństwa przekazu informacji, w&nbsp;tym np. podejrzenia dystrybucji plików
-        zawierających szkodliwe oprogramowanie i&nbsp;innych plików o&nbsp;podobnym charakterze,
-        należy zgłaszać na adres e-mail:
-        <a href="mailto:wulkanowyinc@gmail.com">wulkanowyinc@gmail.com</a>.
+        Cenimy sobie bezpieczeństwo Twoich danych, dlatego staramy się stosować komercyjnie akceptowalne środki
+        ich ochrony. Pamiętaj jednak, że żadna metoda transmisji danych przez Internet ani metoda elektronicznego 
+        przechowywania ich nie jest w&nbsp;100% bezpieczna, więc nie możemy zagwarantować jej bezpieczeństwa.
       </li>
       <li>
-        Zastrzegamy sobie prawo do wprowadzania zmian w&nbsp;Polityce Prywatności, o&nbsp;czym
-        poinformujemy Użytkownika za pośrednictwem Aplikacji. Jeżeli Użytkownik nie
-        wyrazi zgody na wprowadzone zmiany, zobowiązany jest trwale usunąć Aplikację
-        ze swojego urządzenia mobilnego.
+        Zastrzegamy sobie prawo do wprowadzania zmian w&nbsp;Polityce Prywatności, o&nbsp;czym poinformujemy
+        Użytkownika za pośrednictwem Aplikacji. Jeżeli Użytkownik nie wyrazi zgody na wprowadzone zmiany, 
+        zobowiązany jest trwale usunąć Aplikację ze swojego urządzenia mobilnego. 
+        Niniejsza polityka obowiązuje od 16.11.2021.
+      </li>
+      <li>
+        Jeśli masz jakiekolwiek pytania lub sugestie dotyczące niniejszej Polityki Prywatności,
+        skontakuj się z nami pod adresem <a href="mailto:wulkanowyinc@gmail.com">wulkanowyinc@gmail.com</a>.
       </li>
     </ol>
   </div>
