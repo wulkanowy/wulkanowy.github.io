@@ -39,9 +39,9 @@
       </li>
       <li>
         Aplikacja zawiera reklamy na żądanie obsługiwane przez <a href="https://support.google.com/admob/answer/≥6128543">Google AdMob</a>.
-        Zbieranie danych i&nbsp;wykorzystywanie unikalnego identyfikatora reklamowego poprzez wyżej wymienioną usługę 
-        odbywa się tylko i&nbsp;wyłącznie po włączeniu reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zaakceptowaniu 
-        Polityki Prywatności. Po zainstalowaniu, aplikacja domyślnie nie zbiera danych w celach reklamowych, 
+        Zbieranie danych i&nbsp;wykorzystywanie unikalnego identyfikatora reklamowego poprzez wyżej wymienioną usługę
+        odbywa się tylko i&nbsp;wyłącznie po włączeniu reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zaakceptowaniu
+        Polityki Prywatności. Po zainstalowaniu, aplikacja domyślnie nie zbiera danych w celach reklamowych,
         nie korzysta z unikalnego identyfikatora reklamowego, ani nie wyświetla reklam bez zgody użytkownika.
       </li>
       <li>
@@ -51,13 +51,13 @@
       </li>
       <li>
         Cenimy sobie bezpieczeństwo Twoich danych, dlatego staramy się stosować komercyjnie akceptowalne środki
-        ich ochrony. Pamiętaj jednak, że żadna metoda transmisji danych przez Internet ani metoda elektronicznego 
+        ich ochrony. Pamiętaj jednak, że żadna metoda transmisji danych przez Internet ani metoda elektronicznego
         przechowywania ich nie jest w&nbsp;100% bezpieczna, więc nie możemy zagwarantować jej bezpieczeństwa.
       </li>
       <li>
         Zastrzegamy sobie prawo do wprowadzania zmian w&nbsp;Polityce Prywatności, o&nbsp;czym poinformujemy
-        Użytkownika za pośrednictwem Aplikacji. Jeżeli Użytkownik nie wyrazi zgody na wprowadzone zmiany, 
-        zobowiązany jest trwale usunąć Aplikację ze swojego urządzenia mobilnego. 
+        Użytkownika za pośrednictwem Aplikacji. Jeżeli Użytkownik nie wyrazi zgody na wprowadzone zmiany,
+        zobowiązany jest trwale usunąć Aplikację ze swojego urządzenia mobilnego.
         Niniejsza polityka obowiązuje od 16.11.2021.
       </li>
       <li>
