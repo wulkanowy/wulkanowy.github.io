@@ -38,7 +38,7 @@
         Firebase.
       </li>
       <li>
-        Aplikacja zawiera reklamy na żądanie obsługiwane przez <a href="https://support.google.com/admob/answer/≥6128543">Google AdMob</a>.
+        Aplikacja zawiera reklamy na żądanie obsługiwane przez <a href="https://support.google.com/admob/answer/6128543">Google AdMob</a>.
         Zbieranie danych i&nbsp;wykorzystywanie unikalnego identyfikatora reklamowego poprzez wyżej wymienioną usługę
         odbywa się tylko i&nbsp;wyłącznie po włączeniu reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zaakceptowaniu
         Polityki Prywatności. Po zainstalowaniu, aplikacja domyślnie nie zbiera danych w celach reklamowych,
