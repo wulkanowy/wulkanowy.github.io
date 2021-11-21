@@ -46,6 +46,9 @@
             <a class="reddit" title="Reddit" href="https://www.reddit.com/r/wulkanowy/" @click="redditClick">
         <img src="../assets/reddit.svg" alt="Reddit" />
       </a>
+            <a class="twitter" title="Twitter" href="https://www.twitter.com/wulkanowy" @click="twitterClick">
+        <img src="../assets/twitter.svg" alt="Twitter" />
+      </a>
     </div>
     <div class="footer">
       <router-link class="footer__link footer__privacy-policy-link" to="polityka-prywatnosci">Polityka prywatności</router-link>
@@ -105,6 +108,12 @@
       redditClick() {
         this.$ga.event({
           eventCategory: 'reddit-link',
+          eventAction: 'click',
+        });
+      },
+      twitterClick() {
+        this.$ga.event({
+          eventCategory: 'twitter-link',
           eventAction: 'click',
         });
       },
@@ -234,7 +243,7 @@
   .quick-links {
     margin-top: 32px;
 
-    .github, .discord, .paypal, .facebook, .reddit {
+    .github, .discord, .paypal, .facebook, .reddit, .twitter {
       margin: 8px;
 
       img {
