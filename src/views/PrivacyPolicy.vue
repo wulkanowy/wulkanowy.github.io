@@ -23,7 +23,9 @@
       </li>
       <li>
         Aplikacja w&nbsp;celu ciągłego udoskonalania jakości usługi i&nbsp;do celów statystycznych
-        zbiera za pomocą usług <a href="https://firebase.google.com/support/privacy/">Firebase</a> dane takie jak:
+        zbiera za pomocą usług, <a href="https://firebase.google.com/support/privacy/">Firebase</a> w wersji dla sklepu Google Play
+        i&nbsp;<a href="https://consumer.huawei.com/minisite/cloudservice/hms-core/privacy-statement-new.htm?code=pl&language=pl-PL">HMS Analytics</a>
+        w wersji dla sklepu AppGallery, dane takie jak:
         <ul>
           <li>raporty błędów zawierające dane o systemie użytkownika</li>
           <li>anonimowe informacje o wykonanych przez użytkownika
@@ -33,12 +35,11 @@
       </li>
       <li>
         Użytkownik ma prawo usunąć wszelkie dane zapisywane lokalnie na urządzeniu
-        poprzez odinstalowanie Aplikacji lub w&nbsp;ramach ustawień Aplikacji. Jednakże
-        nie ma możliwości zmiany bądź usunięcia danych zbieranych za pomocą usług
-        Firebase.
+        poprzez odinstalowanie Aplikacji lub w&nbsp;ramach ustawień Aplikacji.
       </li>
       <li>
-        Aplikacja zawiera reklamy na żądanie obsługiwane przez <a href="https://policies.google.com/technologies/partner-sites">Google AdMob</a>.
+        Aplikacja w wersji dla sklepu Google Play zawiera reklamy na żądanie obsługiwane
+        przez <a href="https://policies.google.com/technologies/partner-sites">Google AdMob</a>.
         Zbieranie danych i&nbsp;wykorzystywanie unikalnego identyfikatora reklamowego poprzez wyżej wymienioną usługę
         odbywa się tylko i&nbsp;wyłącznie po włączeniu reklam w&nbsp;ustawieniach aplikacji i&nbsp;po zaakceptowaniu
         Polityki Prywatności. Po zainstalowaniu, aplikacja domyślnie nie zbiera danych w celach reklamowych,
