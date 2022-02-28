@@ -26,7 +26,7 @@
       </router-link>
     </div>
     <div class="answer answer--no-question-selected desktop-only" v-if="!faqCurrent">
-      <h1>Żadne pytanie nie jest wybrane</h1>
+      <h1>Żadne pytanie nie zostało wybrane</h1>
     </div>
     <div class="answer answer--question-selected" v-if="faqCurrent">
       <vue-markdown

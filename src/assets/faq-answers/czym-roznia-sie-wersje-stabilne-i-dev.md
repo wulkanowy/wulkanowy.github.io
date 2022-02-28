@@ -1,9 +1,9 @@
-﻿# Czym różnią się wersje *BETA* i *DEV*?
+﻿# Czym różnią się wersje *STABILNE* i *DEV*?
 
-## Wersja *BETA*
+## Wersja *STABILNA*
 
 To zatwierdzona wersja aplikacji, zalecana dla przeciętnego użytkownika.
-Staramy się, aby wersja *BETA* nie zawierała błędów. Można ją pobrać ze
+Staramy się, aby wersja *STABILNA* nie zawierała błędów. Można ją pobrać ze
 [Sklepu Play](https://play.google.com/store/apps/details?id=io.github.wulkanowy&utm_source=homepage),
 [Sklepu AppGallery](https://appgallery.huawei.com/#/app/C101440411),
 [Katalogu F-Droid](https://f-droid.org/en/packages/io.github.wulkanowy/) lub pobierając plik APK z naszej strony.
@@ -19,6 +19,6 @@ ale może posiadać problemy ze stabilnością.
 Istnieją również wersje DEV generowane automatyczne dla każdej funkcji, nad którą aktualnie pracujemy.
 Zazwyczaj są niestabilne lub niedokończone. W związku z tym, użytkownicy niedoświadczeni nie powinni z nich korzystać.
 
-Wszystkie typy wersji DEV można pobrać jedynie z naszej strony internetowej.
+Wszystkie typy wersji DEV można pobrać z naszej strony internetowej i z naszego serwera Discord.
 
 **UWAGA:** Wersji DEV nie można pobrać ze Sklepu Play, dlatego też trzeba je aktualizować ręcznie.

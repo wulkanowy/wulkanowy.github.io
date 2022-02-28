@@ -63,7 +63,7 @@
       </li>
       <li>
         Jeśli masz jakiekolwiek pytania lub sugestie dotyczące niniejszej Polityki Prywatności,
-        skontakuj się z nami pod adresem <a href="mailto:wulkanowyinc@gmail.com">wulkanowyinc@gmail.com</a>.
+        skontaktuj się z nami pod adresem <a href="mailto:wulkanowyinc@gmail.com">wulkanowyinc@gmail.com</a>.
       </li>
     </ol>
   </div>

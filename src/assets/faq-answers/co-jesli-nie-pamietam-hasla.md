@@ -12,7 +12,7 @@ Na podany przez Ciebie adres e-mail została wysłana wiadomość z linkiem do r
 
 ![Ekran podsumowanie operacji](https://i.imgur.com/Sex5Dmg.png)
 
-Sprawdź swoją skrzynkę mail'ową. Jężeli wiadomości nie ma w skrzynce **Odebrane** sprawdź folder **SPAM**. Kliknij w link znajdujący się w wiadomości:
+Sprawdź swoją skrzynkę mailową. Jeżeli wiadomości nie ma w skrzynce **Odebrane** sprawdź folder **SPAM**. Kliknij w link znajdujący się w wiadomości:
 
 ![E-mail z linkiem resetującym hasło](https://i.imgur.com/kVKat9C.png)
 
