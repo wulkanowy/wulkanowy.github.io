@@ -1,13 +1,13 @@
 <template>
   <div class="download-version-switcher">
-    <span
+    <button
       class="section-name section-name-beta"
       :class="{ active: active === 'beta' }"
-      @click="active = 'beta'">STABILNA</span>
-    <span
+      @click="active = 'beta'">STABILNA</button>
+    <button
       class="section-name section-name-dev"
       :class="{ active: active === 'dev' }"
-      @click="active = 'dev'">DEV</span>
+      @click="active = 'dev'">DEV</button>
   </div>
 </template>
 

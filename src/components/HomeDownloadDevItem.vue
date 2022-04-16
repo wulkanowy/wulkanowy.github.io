@@ -22,14 +22,14 @@
         :href="github"
         title="GitHub"
         @click="githubClick">
-        <span class="mdi mdi-github-circle"></span>
+        <span class="mdi mdi-github-circle">Pobierz</span>
       </a>
       <a
         class="download-button"
         :href="download"
         title="Pobierz"
         @click="downloadClick">
-        <span class="mdi mdi-download"></span>
+        <span class="mdi mdi-download">Pobierz</span>
       </a>
     </div>
   </div>

@@ -18,31 +18,31 @@ module.exports = {
   },
   configureWebpack: {
     plugins: [
-      new HtmlWebpackPlugin({
-        template: 'public/index.html',
-        filename: path.resolve(__dirname, 'dist/index.html'),
-        favicon: 'public/favicon.ico',
-      }),
-      new PrerenderSPAPlugin({
-        staticDir: path.join(__dirname, 'dist'),
-        routes: [
-          '/polityka-prywatnosci',
-          '/czesto-zadawane-pytania',
-          ...faqMap.map((item) => `/czesto-zadawane-pytania/${item.id}`),
-        ],
-        renderer: new Renderer({
-          headless: true,
-          renderAfterDocumentEvent: 'x-app-rendered',
-        }),
-      }),
+      // new HtmlWebpackPlugin({
+        // template: 'public/index.html',
+        // filename: path.resolve(__dirname, 'dist/index.html'),
+        // favicon: 'public/favicon.ico',
+      // }),
+      // new PrerenderSPAPlugin({
+      //   staticDir: path.join(__dirname, 'dist'),
+      //   routes: [
+      //     '/polityka-prywatnosci',
+      //     '/czesto-zadawane-pytania',
+      //     ...faqMap.map((item) => `/czesto-zadawane-pytania/${item.id}`),
+      //   ],
+      //   renderer: new Renderer({
+      //     headless: true,
+      //     renderAfterDocumentEvent: 'x-app-rendered',
+      //   }),
+      // }),
     ],
   },
   chainWebpack: (config) => {
     config.module
       .rule('md')
-      .test(/\.md$/)
-      .use('raw-loader')
-      .loader('raw-loader')
+        .test(/\.md$/)
+        .use('raw-loader')
+        .loader('raw-loader')
       .end();
   },
 };
