@@ -5,7 +5,7 @@ Wulkanowy stara się automatycznie dopasować odmianę dziennika, który jest od
 Adres do dziennika powinien znajdować się na stronie twojej szkoły.
 Odmiany obsługiwane w aplikacji to:
 
-- Vulcan - **vulcan.net.pl**
+- Standardowa - **vulcan.net.pl**
 - Opolska eSzkoła - **eszkola.opolskie.pl**
 - Gdańska Platforma Edukacyjna - **edu.gdansk.pl**
 - Lubelski Portal Oświatowy - **edu.lublin.eu**
