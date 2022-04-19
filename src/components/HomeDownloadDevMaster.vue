@@ -17,7 +17,7 @@
         :href="download"
         title="Pobierz"
         @click="downloadClick">
-        <span class="mdi mdi-download"></span>
+        <span class="mdi mdi-download">Pobierz</span>
       </a>
     </div>
   </div>

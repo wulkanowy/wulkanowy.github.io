@@ -41,11 +41,12 @@
     :class="wulkanowy ? 'features-table__cell--wulkanowy' : ''"
     title="Nie dotyczy"
   >
-  <minus-icon
-    title="Nie dotyczy"
-    :size="wulkanowy ? 36 : 28"
-    fillColor="#000000"
-  />
+    <minus-icon
+      title="Nie dotyczy"
+      :size="wulkanowy ? 36 : 28"
+      fillColor="#000000"
+    />
+  </td>
   <td
     v-else
     class="features-table__cell features-table__cell--feature features-table__cell--other"

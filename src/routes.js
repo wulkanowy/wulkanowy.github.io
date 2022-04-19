@@ -32,8 +32,8 @@ module.exports = [{
 //   path: '*.html',
 //   redirect: (to) => to.params.pathMatch,
 // },
-{
-  path: '*',
-  redirect: '/',
-},
+// {
+//   path: '*',
+//   redirect: '/',
+// },
 ];
