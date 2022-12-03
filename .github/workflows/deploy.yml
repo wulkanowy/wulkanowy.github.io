@@ -8,6 +8,8 @@ jobs:
   lint-and-build:
     name: Deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 16.x
@@ -19,8 +21,6 @@ jobs:
       - run: npm run sitemap
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
-        permissions:
-          contents: write
         with:
           BRANCH: gh-pages
           FOLDER: dist
