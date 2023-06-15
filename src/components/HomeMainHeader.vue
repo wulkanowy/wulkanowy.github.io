@@ -43,10 +43,13 @@
       <a class="facebook" title="Facebook" href="https://www.facebook.com/wulkanowy" @click="facebookClick">
         <img src="../assets/facebook.png" alt="Facebook" />
       </a>
-            <a class="reddit" title="Reddit" href="https://www.reddit.com/r/wulkanowy/" @click="redditClick">
+      <a class="reddit" title="Reddit" href="https://www.reddit.com/r/wulkanowy/" @click="redditClick">
         <img src="../assets/reddit.svg" alt="Reddit" />
       </a>
-            <a class="twitter" title="Twitter" href="https://www.twitter.com/wulkanowy" @click="twitterClick">
+      <a class="tiktok" title="TikTok" href="https://www.tiktok.com/@wulkanowy.official" @click="tiktokClick">
+        <img src="../assets/tiktok.svg" alt="TikTok" />
+      </a>
+      <a class="twitter" title="Twitter" href="https://www.twitter.com/wulkanowy" @click="twitterClick">
         <img src="../assets/twitter.svg" alt="Twitter" />
       </a>
     </div>
@@ -108,6 +111,12 @@
       redditClick() {
         this.$ga.event({
           eventCategory: 'reddit-link',
+          eventAction: 'click',
+        });
+      },
+      tiktokClick() {
+        this.$ga.event({
+          eventCategory: 'tiktok-link',
           eventAction: 'click',
         });
       },
