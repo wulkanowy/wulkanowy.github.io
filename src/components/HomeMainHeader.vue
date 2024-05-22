@@ -31,25 +31,25 @@
       </button>
     </div>
     <div class="quick-links">
-      <a class="discord" title="Discord" href="https://discord.gg/vccAQBr" @click="discordClick">
+      <a title="Discord" href="https://discord.gg/vccAQBr" @click="discordClick">
         <img src="../assets/discord.svg" alt="Discord" />
       </a>
-      <a class="github" title="GitHub" href="https://github.com/wulkanowy/" @click="githubClick">
+      <a title="GitHub" href="https://github.com/wulkanowy/" @click="githubClick">
         <img src="../assets/github.svg" alt="GitHub" />
       </a>
-      <a class="paypal" title="PayPal" href="https://paypal.me/wulkanowy" @click="paypalClick">
+      <a title="PayPal" href="https://paypal.me/wulkanowy" @click="paypalClick">
         <img src="../assets/paypal.svg" alt="PayPal" />
       </a>
-      <a class="facebook" title="Facebook" href="https://www.facebook.com/wulkanowy" @click="facebookClick">
+      <a title="Facebook" href="https://www.facebook.com/wulkanowy" @click="facebookClick">
         <img src="../assets/facebook.png" alt="Facebook" />
       </a>
-      <a class="reddit" title="Reddit" href="https://www.reddit.com/r/wulkanowy/" @click="redditClick">
+      <a title="Reddit" href="https://www.reddit.com/r/wulkanowy/" @click="redditClick">
         <img src="../assets/reddit.svg" alt="Reddit" />
       </a>
-      <a class="tiktok" title="TikTok" href="https://www.tiktok.com/@wulkanowy.official" @click="tiktokClick">
+      <a title="TikTok" href="https://www.tiktok.com/@wulkanowy.official" @click="tiktokClick">
         <img src="../assets/tiktok.svg" alt="TikTok" />
       </a>
-      <a class="twitter" title="Twitter" href="https://www.twitter.com/wulkanowy" @click="twitterClick">
+      <a title="Twitter" href="https://www.twitter.com/wulkanowy" @click="twitterClick">
         <img src="../assets/twitter.svg" alt="Twitter" />
       </a>
     </div>
@@ -252,7 +252,7 @@
   .quick-links {
     margin-top: 32px;
 
-    .github, .discord, .paypal, .facebook, .reddit, .twitter {
+    a {
       margin: 8px;
 
       img {
